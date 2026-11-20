@@ -2,6 +2,7 @@
 <html lang="sv">
 <head>
 <!-- Meta Pixel Code -->
+<!-- BORTTAGEN KOD: Meta Pixel laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,17 +19,70 @@ fbq('track', 'Donate');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1458607096410441&ev=PageView&noscript=1"
 /></noscript>
+-->
 <!-- End Meta Pixel Code -->
 <!-- Google Tag Manager -->
+<!-- BORTTAGEN KOD: Google Tag Manager laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P2QKDSGD');</script>
+-->
 <!-- End Google Tag Manager -->
 <!-- Flock Analytics -->
+<!-- BORTTAGEN KOD: Flock laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script>
+-->
 <!-- End Flock Analytics -->
+<!-- NY KOD: Donate-händelsen som tacksidans pixel skickade, skickas nu bara efter samtycke -->
+<script>window.__byExtraFbq=[['track','Donate']];</script>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: Samtyckesstyrd laddning. Meta Pixel, Google Tag Manager (med Google Ads) och Flock laddas
+     FÖRST när besökaren har sagt ja i cookie-bannern. Valet sparas i webbläsaren (nödvändig lagring). -->
+<script>
+(function(){
+  var KEY='by_cookie_consent', VERSION=1;
+  function read(){try{var c=JSON.parse(localStorage.getItem(KEY));return (c&&c.v===VERSION)?c:null;}catch(e){return null;}}
+  function loadMarketing(){
+    if(window.__byMarketingLoaded)return;window.__byMarketingLoaded=true;
+    // Meta Pixel (samma kod som tidigare, nu bara efter samtycke)
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1458607096410441');
+    fbq('track','PageView');
+    if(window.__byExtraFbq){window.__byExtraFbq.forEach(function(a){fbq.apply(null,a);});}
+    // Google Tag Manager (laddar Google Ads), samma kod som tidigare, nu bara efter samtycke
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2QKDSGD');
+  }
+  function loadStatistics(){
+    if(window.__byStatsLoaded)return;window.__byStatsLoaded=true;
+    var s=document.createElement('script');s.defer=true;s.src='/~flock.js';
+    s.setAttribute('data-proxy-url','/~api/analytics');document.head.appendChild(s);
+  }
+  function apply(c){if(!c)return;if(c.statistics)loadStatistics();if(c.marketing)loadMarketing();}
+  window.byConsent={
+    get:read,
+    save:function(statistics,marketing){
+      var old=read();
+      var c={v:VERSION,statistics:!!statistics,marketing:!!marketing,date:new Date().toISOString()};
+      try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}
+      // Om besökaren drar tillbaka ett tidigare ja laddas sidan om, så att redan startade skript stängs av.
+      if(old&&((old.statistics&&!c.statistics)||(old.marketing&&!c.marketing))){location.reload();return;}
+      apply(c);
+    }
+  };
+  apply(read());
+})();
+</script>
+<!-- SLUT NY KOD -->
 <!-- Google Fonts (endast för gåvobevis-certifikat, sidans UI använder Larsseit) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,8 +166,10 @@ h2{color:var(--navy);font-size:20px;margin-bottom:10px;line-height:1.25}
 <script defer src="/__l5e/events.b979ee024b15adfd.js" data-artifact-kind="dwl_content_hash" data-artifact-id="11268f566d5da8472522ad6bcb18c255b29a72210a5c2aa9292f2215d6f737cd" data-commit-sha="d9a34df33a1f7ef0c6b262eb21c597fe48423c34" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MmpleTI4bXduOHp2dHE5cnYzZTJ4NnRndiIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiIxMTI2OGY1NjZkNWRhODQ3MjUyMmFkNmJjYjE4YzI1NWIyOWE3MjIxMGE1YzJhYTkyOTJmMjIxNWQ2ZjczN2NkIiwiY29tbWl0X3NoYSI6ImQ5YTM0ZGYzM2ExZjdlZjBjNmIyNjJlYjIxYzU5N2ZlNDg0MjNjMzQiLCJleHAiOjE3OTc3NzAzNjF9.wLLX3_pRIzVx2Nk-rRjWK64RO0FXvz_JDWd11FPKX5M" data-autocapture="1" data-consent="1"></script><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_62jey28mwn8zvtq9rv3e2x6tgv/118d70f422b0081722957a7cbedbb400_1794950615450.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_62jey28mwn8zvtq9rv3e2x6tgv/118d70f422b0081722957a7cbedbb400_1794950615450.png"></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
+<!-- BORTTAGEN KOD: GTM laddades utan samtycke (noscript-varianten tas bort helt)
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2QKDSGD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
 <!-- End Google Tag Manager -->
 
 <div class="bar"><img src="/images/certificates/logo_blue.png" alt="Blue/Yellow" style="height:42px;width:auto"><div><b>BLUE / YELLOW</b><span>Sweden</span></div></div>
@@ -487,6 +543,61 @@ function fitPreview(){
 }
 window.addEventListener("resize", fitPreview);
 
+// BORTTAGEN KOD: beviset markerades som nedladdat INNAN PDF:en skapades, så ett fel gick inte att försöka igen
+// let downloaded = false;
+// async function generateCertPDF(){
+//   if (downloaded) return;
+//   const sheet = $("certSheet"), btn = $("certDownload");
+//   btn.classList.add("loading");
+//   btn.disabled = true;
+//   $("certDlLabel").textContent = "Skapar PDF …";
+//   try {
+//     // FÖRST: markera beviset som nedladdat i databasen (atomiskt, en gång).
+//     const mark = await fetch("/api/public/donation-downloaded", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ id: pid }),
+//     });
+//     if (!mark.ok) {
+//       alert("Gåvobeviset har redan laddats ner.");
+//       goHome();
+//       return;
+//     }
+//     downloaded = true;
+//
+//     await document.fonts.ready;
+//     sheet.style.position = "fixed";
+//     sheet.style.left = "0";
+//     sheet.style.top = "0";
+//     sheet.style.zIndex = "-1";
+//     const canvas = await html2canvas(sheet, { scale: 2, useCORS: true, backgroundColor: "#FFFFFF", logging: false });
+//     sheet.style.position = "absolute";
+//     sheet.style.left = "-9999px";
+//     sheet.style.top = "-9999px";
+//     sheet.style.zIndex = "";
+//     const imgData = canvas.toDataURL("image/jpeg", 0.95);
+//     const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+//     const h = (canvas.height * 210) / canvas.width;
+//     pdf.addImage(imgData, "JPEG", 0, 0, 210, h);
+//     const fileBase = (certPurpose === "self" ? certData.giver : certData.recipient).trim() || certData.giver.trim();
+//     pdf.save(`gavobevis_${fileBase.replace(/\s+/g, "_")}.pdf`);
+//
+//     // Efter nedladdning: grå knapp, meddelande och redirect till startsidan.
+//     $("certDlLabel").textContent = "Gåvobeviset har laddats ner";
+//     $("doneMsg").style.display = "block";
+//     setTimeout(goHome, 2000);
+//   } catch (err) {
+//     console.error("PDF generation failed:", err);
+//     sheet.style.position = "absolute";
+//     sheet.style.left = "-9999px";
+//     sheet.style.top = "-9999px";
+//     sheet.style.zIndex = "";
+//     btn.classList.remove("loading");
+//     $("certDlLabel").textContent = "Ladda ner som PDF";
+//     btn.disabled = !certValid();
+//   }
+// }
+// NY KOD: skapa PDF:en först, markera som nedladdad först när det lyckats, och spara sedan filen
 let downloaded = false;
 async function generateCertPDF(){
   if (downloaded) return;
@@ -494,8 +605,41 @@ async function generateCertPDF(){
   btn.classList.add("loading");
   btn.disabled = true;
   $("certDlLabel").textContent = "Skapar PDF …";
+  const hideSheet = () => {
+    sheet.style.position = "absolute";
+    sheet.style.left = "-9999px";
+    sheet.style.top = "-9999px";
+    sheet.style.zIndex = "";
+  };
+  const resetButton = (label) => {
+    btn.classList.remove("loading");
+    $("certDlLabel").textContent = label;
+    btn.disabled = !certValid();
+  };
+
+  // Steg 1: skapa PDF:en i webbläsaren. Misslyckas det är ingenting markerat, och givaren kan försöka igen.
+  let pdf;
   try {
-    // FÖRST: markera beviset som nedladdat i databasen (atomiskt, en gång).
+    await document.fonts.ready;
+    sheet.style.position = "fixed";
+    sheet.style.left = "0";
+    sheet.style.top = "0";
+    sheet.style.zIndex = "-1";
+    const canvas = await html2canvas(sheet, { scale: 2, useCORS: true, backgroundColor: "#FFFFFF", logging: false });
+    hideSheet();
+    const imgData = canvas.toDataURL("image/jpeg", 0.95);
+    pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+    const h = (canvas.height * 210) / canvas.width;
+    pdf.addImage(imgData, "JPEG", 0, 0, 210, h);
+  } catch (err) {
+    console.error("PDF generation failed:", err);
+    hideSheet();
+    resetButton("Något gick fel – försök igen");
+    return;
+  }
+
+  // Steg 2: markera beviset som nedladdat i databasen (en gång per donation).
+  try {
     const mark = await fetch("/api/public/donation-downloaded", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -506,41 +650,78 @@ async function generateCertPDF(){
       goHome();
       return;
     }
-    downloaded = true;
-
-    await document.fonts.ready;
-    sheet.style.position = "fixed";
-    sheet.style.left = "0";
-    sheet.style.top = "0";
-    sheet.style.zIndex = "-1";
-    const canvas = await html2canvas(sheet, { scale: 2, useCORS: true, backgroundColor: "#FFFFFF", logging: false });
-    sheet.style.position = "absolute";
-    sheet.style.left = "-9999px";
-    sheet.style.top = "-9999px";
-    sheet.style.zIndex = "";
-    const imgData = canvas.toDataURL("image/jpeg", 0.95);
-    const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
-    const h = (canvas.height * 210) / canvas.width;
-    pdf.addImage(imgData, "JPEG", 0, 0, 210, h);
-    const fileBase = (certPurpose === "self" ? certData.giver : certData.recipient).trim() || certData.giver.trim();
-    pdf.save(`gavobevis_${fileBase.replace(/\s+/g, "_")}.pdf`);
-
-    // Efter nedladdning: grå knapp, meddelande och redirect till startsidan.
-    $("certDlLabel").textContent = "Gåvobeviset har laddats ner";
-    $("doneMsg").style.display = "block";
-    setTimeout(goHome, 2000);
   } catch (err) {
-    console.error("PDF generation failed:", err);
-    sheet.style.position = "absolute";
-    sheet.style.left = "-9999px";
-    sheet.style.top = "-9999px";
-    sheet.style.zIndex = "";
-    btn.classList.remove("loading");
-    $("certDlLabel").textContent = "Ladda ner som PDF";
-    btn.disabled = !certValid();
+    console.error("Could not mark certificate as downloaded:", err);
+    resetButton("Ingen anslutning – försök igen");
+    return;
   }
+
+  // Steg 3: allt klart, spara filen hos givaren.
+  downloaded = true;
+  const fileBase = (certPurpose === "self" ? certData.giver : certData.recipient).trim() || certData.giver.trim();
+  pdf.save(`gavobevis_${fileBase.replace(/\s+/g, "_")}.pdf`);
+
+  // Efter nedladdning: grå knapp, meddelande och redirect till startsidan.
+  btn.classList.remove("loading");
+  $("certDlLabel").textContent = "Gåvobeviset har laddats ner";
+  $("doneMsg").style.display = "block";
+  setTimeout(goHome, 2000);
 }
+// SLUT NY KOD
 $("certDownload").addEventListener("click", generateCertPDF);
 </script>
+<!-- NY KOD: Cookie-banner. Visas tills besökaren har gjort ett val. "Godkänn alla" och "Endast nödvändiga"
+     är lika stora och lika lätta att välja. Kan öppnas igen via länken "Cookie-inställningar" i sidfoten. -->
+<style>
+#bycc{position:fixed;left:16px;right:16px;bottom:16px;z-index:10000;max-width:560px;margin:0 auto;background:#fff;color:#10203C;border-radius:16px;border-top:5px solid #FFD700;box-shadow:0 12px 40px rgba(0,12,40,.35);padding:22px 22px 18px;font-family:'Helvetica Neue',Arial,sans-serif;display:none}
+#bycc.open{display:block}
+#bycc h2{font-size:19px;color:#00185C;margin:0 0 8px;font-family:Georgia,'Times New Roman',serif}
+#bycc p{font-size:14px;line-height:1.55;margin:0 0 12px}
+#bycc a{color:#0057B7;font-weight:700}
+#bycc .bycc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+#bycc button{font:inherit;font-weight:800;font-size:13.5px;letter-spacing:.04em;padding:12px 10px;border-radius:10px;cursor:pointer;border:2px solid #00185C}
+#bycc .bycc-yes,#bycc .bycc-no{background:#00185C;color:#fff}
+#bycc .bycc-more{background:#fff;color:#00185C;grid-column:1/-1}
+#bycc .bycc-opts{display:none;margin:4px 0 10px;border-top:1px solid #E2E6EF}
+#bycc.custom .bycc-opts{display:block}
+#bycc label{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #E2E6EF;font-size:13.5px;line-height:1.45}
+#bycc label input{margin-top:3px;width:18px;height:18px;flex:none}
+#bycc label b{display:block;color:#00185C;font-size:14px}
+@media(max-width:480px){#bycc{left:8px;right:8px;bottom:8px;padding:18px 16px 14px}#bycc .bycc-btns{grid-template-columns:1fr}}
+</style>
+<div id="bycc" role="dialog" aria-modal="false" aria-labelledby="bycc-title">
+  <h2 id="bycc-title">Vi värnar om din integritet</h2>
+  <p>Vi använder nödvändiga cookies för att webbplatsen och Swish-gåvor ska fungera. Med ditt samtycke använder vi även cookies för besöksstatistik och för att mäta våra annonser hos Meta (Facebook/Instagram) och Google. <a href="/" onclick="if(window.openInfo){openInfo('cookies');return false}">Läs mer om cookies</a></p>
+  <div class="bycc-opts">
+    <label><input type="checkbox" checked disabled><span><b>Nödvändiga</b>Krävs för att sidan, Swish-gåvor och ditt cookie-val ska fungera. Kan inte stängas av.</span></label>
+    <label><input type="checkbox" id="bycc-stats"><span><b>Statistik</b>Hjälper oss förstå hur webbplatsen används (Flock).</span></label>
+    <label><input type="checkbox" id="bycc-mkt"><span><b>Marknadsföring</b>Mäter hur våra annonser hos Meta och Google fungerar (Meta Pixel, Google Ads via Google Tag Manager). Uppgifter delas då med Meta och Google.</span></label>
+  </div>
+  <div class="bycc-btns">
+    <button type="button" class="bycc-no" onclick="byCookieChoice('none')">Endast nödvändiga</button>
+    <button type="button" class="bycc-yes" onclick="byCookieChoice('all')">Godkänn alla</button>
+    <button type="button" class="bycc-more" id="bycc-more" onclick="byCookieChoice('more')">Anpassa</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('bycc');
+  function close(){box.classList.remove('open','custom');document.getElementById('bycc-more').textContent='Anpassa';}
+  window.openCookieSettings=function(){
+    var c=window.byConsent.get();
+    document.getElementById('bycc-stats').checked=!!(c&&c.statistics);
+    document.getElementById('bycc-mkt').checked=!!(c&&c.marketing);
+    box.classList.add('open','custom');document.getElementById('bycc-more').textContent='Spara mina val';
+  };
+  window.byCookieChoice=function(kind){
+    if(kind==='all'){window.byConsent.save(true,true);close();}
+    else if(kind==='none'){window.byConsent.save(false,false);close();}
+    else if(!box.classList.contains('custom')){box.classList.add('custom');document.getElementById('bycc-more').textContent='Spara mina val';}
+    else{window.byConsent.save(document.getElementById('bycc-stats').checked,document.getElementById('bycc-mkt').checked);close();}
+  };
+  if(!window.byConsent.get())box.classList.add('open');
+})();
+</script>
+<!-- SLUT NY KOD -->
 </body>
 </html>

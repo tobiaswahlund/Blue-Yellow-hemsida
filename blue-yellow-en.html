@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <!-- Meta Pixel Code -->
+<!-- BORTTAGEN KOD: Meta Pixel laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,17 +18,67 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1458607096410441&ev=PageView&noscript=1"
 /></noscript>
+-->
 <!-- End Meta Pixel Code -->
 <!-- Google Tag Manager -->
+<!-- BORTTAGEN KOD: Google Tag Manager laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P2QKDSGD');</script>
+-->
 <!-- End Google Tag Manager -->
 <!-- Flock Analytics -->
+<!-- BORTTAGEN KOD: Flock laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script>
+-->
 <!-- End Flock Analytics -->
+<!-- NY KOD: Samtyckesstyrd laddning. Meta Pixel, Google Tag Manager (med Google Ads) och Flock laddas
+     FÖRST när besökaren har sagt ja i cookie-bannern. Valet sparas i webbläsaren (nödvändig lagring). -->
+<script>
+(function(){
+  var KEY='by_cookie_consent', VERSION=1;
+  function read(){try{var c=JSON.parse(localStorage.getItem(KEY));return (c&&c.v===VERSION)?c:null;}catch(e){return null;}}
+  function loadMarketing(){
+    if(window.__byMarketingLoaded)return;window.__byMarketingLoaded=true;
+    // Meta Pixel (samma kod som tidigare, nu bara efter samtycke)
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1458607096410441');
+    fbq('track','PageView');
+    if(window.__byExtraFbq){window.__byExtraFbq.forEach(function(a){fbq.apply(null,a);});}
+    // Google Tag Manager (laddar Google Ads), samma kod som tidigare, nu bara efter samtycke
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2QKDSGD');
+  }
+  function loadStatistics(){
+    if(window.__byStatsLoaded)return;window.__byStatsLoaded=true;
+    var s=document.createElement('script');s.defer=true;s.src='/~flock.js';
+    s.setAttribute('data-proxy-url','/~api/analytics');document.head.appendChild(s);
+  }
+  function apply(c){if(!c)return;if(c.statistics)loadStatistics();if(c.marketing)loadMarketing();}
+  window.byConsent={
+    get:read,
+    save:function(statistics,marketing){
+      var old=read();
+      var c={v:VERSION,statistics:!!statistics,marketing:!!marketing,date:new Date().toISOString()};
+      try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}
+      // Om besökaren drar tillbaka ett tidigare ja laddas sidan om, så att redan startade skript stängs av.
+      if(old&&((old.statistics&&!c.statistics)||(old.marketing&&!c.marketing))){location.reload();return;}
+      apply(c);
+    }
+  };
+  apply(read());
+})();
+</script>
+<!-- SLUT NY KOD -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -290,8 +341,10 @@ footer .bot{border-top:1px solid rgba(255,255,255,.14);padding:14px 20px;display
 <script defer src="/__l5e/events.b979ee024b15adfd.js" data-artifact-kind="dwl_content_hash" data-artifact-id="11268f566d5da8472522ad6bcb18c255b29a72210a5c2aa9292f2215d6f737cd" data-commit-sha="d9a34df33a1f7ef0c6b262eb21c597fe48423c34" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MmpleTI4bXduOHp2dHE5cnYzZTJ4NnRndiIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiIxMTI2OGY1NjZkNWRhODQ3MjUyMmFkNmJjYjE4YzI1NWIyOWE3MjIxMGE1YzJhYTkyOTJmMjIxNWQ2ZjczN2NkIiwiY29tbWl0X3NoYSI6ImQ5YTM0ZGYzM2ExZjdlZjBjNmIyNjJlYjIxYzU5N2ZlNDg0MjNjMzQiLCJleHAiOjE3OTc3NzAxNTh9.f16sds15HsIyjWIZI_-uGCNzmngWS5jwPc7oJrt3fvI" data-autocapture="1" data-consent="1"></script></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
+<!-- BORTTAGEN KOD: GTM laddades utan samtycke (noscript-varianten tas bort helt)
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2QKDSGD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
 <!-- End Google Tag Manager (noscript) -->
 <header>
   <div class="wrap hbar">
@@ -323,7 +376,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Since 2014, Blue/Yellow has stood alongside those defending Ukraine's freedom. The organisation has delivered support equivalent to 1.3 billion Swedish kronor, in the form of drones, vehicles, protective equipment, medical aid, and other materiel that saves lives and strengthens Ukraine's resilience. Of every donated krona, 95% reaches the frontline and other critical recipients.</p>
         <div class="hbtns">
           <button class="ghost" onclick="go('vad')">What We Do</button>
+          <!-- BORTTAGEN KOD: knappen pekade på 'kamp', som inte finns
           <button class="ghost w" onclick="go('stod','kamp')">Current Campaigns</button>
+          -->
+          <!-- NY KOD: knappen rullar ner till avsnittet Current Campaigns längre ner på startsidan -->
+          <button class="ghost w" onclick="document.getElementById('current-campaigns').scrollIntoView({behavior:'smooth'})">Current Campaigns</button>
+          <!-- SLUT NY KOD -->
         </div>
       </div>
       <div id="dc1"></div>
@@ -353,7 +411,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="cap">Blue/Yellow does not procure or supply weapons or ammunition. All support is defensive in nature, fully traceable, and signed off by the receiving unit.</p>
   </div></section>
 
+  <!-- BORTTAGEN KOD: avsnittet saknade ett id som knappen kan hoppa till
   <section class="block bg-n"><div class="wrap">
+  -->
+  <!-- NY KOD: id för knappen Current Campaigns, och marginal så att den fasta menyn inte täcker rubriken -->
+  <section class="block bg-n" id="current-campaigns" style="scroll-margin-top:100px"><div class="wrap">
+  <!-- SLUT NY KOD -->
     <div class="kick y">Ongoing</div>
     <h2 class="sec w disp">Current Campaigns</h2>
     <div class="grid3" id="camp-home"></div>
@@ -364,7 +427,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="kick b">For Companies</div>
       <h2 class="sec disp">Strategic Support with Operational Effect</h2>
       <p class="lead">Partnerships at three levels, from tactical technical support to consortium membership. Full traceability, documented deliveries, and feedback directly from the field. Previous corporate partners include Spotify, Atea, Surfshark, and Nord Security.</p>
+      <!-- BORTTAGEN KOD: knappen pekade på 'ftg', som inte finns på engelska sidan
       <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('stod','ftg')">Read about partnerships</button></div>
+      -->
+      <!-- NY KOD: engelska sidan har ingen sida för företagsgåvor. Knappen leder till kontaktformuläret med ämnet Corporate Support förvalt -->
+      <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('kon');var t=document.getElementById('cf-topic');if(t)t.value='Corporate Support'">Read about partnerships</button></div>
+      <!-- SLUT NY KOD -->
     </div>
     <img src="/images/partnerskap.jpg" alt="Leverans av markrobotar" style="height:300px">
   </div></section>
@@ -537,7 +605,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="/images/dela.jpg" alt="Rally in support of Ukraine" style="height:300px">
         <div>
           <p class="lead">Spreading awareness costs nothing and means a great deal. Ready-made packages with images, texts, and posters are available for social media, the workplace, and community groups.</p>
+          <!-- BORTTAGEN KOD: knappen var inte kopplad till något
           <div class="hbtns" style="margin-top:16px"><button class="ghost" style="border-color:var(--blue);color:var(--blue)">Download the sharing kit</button></div>
+          -->
+          <!-- NY KOD: knappen leder till Om oss, Press & media, där bilder och logotyper kan laddas ned -->
+          <div class="hbtns" style="margin-top:16px"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('om','press')">Download images and logos</button></div>
+          <!-- SLUT NY KOD -->
         </div>
       </div>
     </div>
@@ -546,11 +619,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="empty">No public events are currently scheduled. The next opportunity will be published here and in the newsletter.</div>
     </div>
     </div>
+    <!-- BORTTAGEN KOD: formuläret skickade ingenting, det visade bara "Thank you"
     <aside class="donate-aside"><div class="fcard">
           <input placeholder="Name"><input placeholder="Email"><input placeholder="City">
           <textarea placeholder="What would you like to help with?" rows="3"></textarea>
           <button class="fbtn" onclick="this.outerHTML='<p class=dthanks><b>Thank you</b> We will be in touch within one week.'">Register Interest</button>
         </div></aside>
+    -->
+    <!-- NY KOD: riktigt volontärsformulär som skickar anmälan via samma funktion som kontaktformuläret -->
+    <aside class="donate-aside"><div class="fcard" id="vol-form">
+          <style>
+            .vol-l{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px}
+            .vol-invalid{border:2px solid #b00020 !important}
+            .vol-err{display:none;color:#b00020;font-size:13px;margin:-6px 0 8px;line-height:1.35}
+            .vol-err.on{display:block}
+          </style>
+          <h4 style="color:var(--navy);font-size:18px;margin:0 0 12px">Volunteer registration</h4>
+          <label class="vol-l" for="vol-name">Name *</label>
+          <input id="vol-name" autocomplete="name" required><span id="vol-name-err" class="vol-err"></span>
+          <label class="vol-l" for="vol-email">Email address *</label>
+          <input id="vol-email" type="email" autocomplete="email" placeholder="name@example.com" required><span id="vol-email-err" class="vol-err"></span>
+          <label class="vol-l" for="vol-ort">City</label>
+          <input id="vol-ort" autocomplete="address-level2">
+          <label class="vol-l" for="vol-msg">What would you like to help with? *</label>
+          <textarea id="vol-msg" rows="3" required></textarea><span id="vol-msg-err" class="vol-err"></span>
+          <button class="fbtn" id="vol-btn" type="button" onclick="sendVolunteer()">Register Interest</button>
+          <p id="vol-status" style="display:none;margin-top:10px;font-size:14px"></p>
+        </div></aside>
+    <script>
+    (function(){
+      var EMAIL_RE=/^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;
+      function el(id){return document.getElementById(id);}
+      function setErr(input,msg){
+        var e=el(input.id+'-err');
+        if(msg){input.classList.add('vol-invalid');e.textContent=msg;e.classList.add('on');return false;}
+        input.classList.remove('vol-invalid');e.textContent='';e.classList.remove('on');return true;
+      }
+      window.sendVolunteer=function(){
+        var n=el('vol-name'),e=el('vol-email'),o=el('vol-ort'),m=el('vol-msg'),b=el('vol-btn'),s=el('vol-status');
+        function show(msg,ok){s.style.display='block';s.style.color=ok?'#0B1F3A':'#b00020';s.textContent=msg;}
+        var okN=setErr(n,n.value.trim()?'':'Please enter your name');
+        var ev=e.value.trim();
+        var okE=setErr(e,!ev?'Please enter your email address':(EMAIL_RE.test(ev)?'':'Please enter a valid email address, e.g. name@example.com'));
+        var okM=setErr(m,m.value.trim()?'':'Briefly tell us what you would like to help with');
+        if(!(okN&&okE&&okM)){show('Please check the highlighted fields.',false);(!okN?n:!okE?e:m).focus();return;}
+        // Meddelandet märks tydligt så att det kan sorteras till en egen mapp i mejlen.
+        var text='[VOLONTÄRSANMÄLAN] Intresseanmälan från volontär via blue-yellow.se (engelska sidan)\n\n'+
+          'Namn: '+n.value.trim()+'\n'+
+          'E-post: '+ev+'\n'+
+          'Ort: '+(o.value.trim()||'(ej angiven)')+'\n\n'+
+          'Vad vill du hjälpa till med?\n'+m.value.trim();
+        b.disabled=true;show('Sending…',true);
+        fetch('/api/public/contact',{method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({name:n.value.trim(),email:ev,topic:'Volontär',message:text,language:'en'})})
+          .then(function(r){if(!r.ok)throw new Error('fail');
+            el('vol-form').innerHTML='<p class="dthanks"><b>Thank you for registering!</b> We will be in touch within one week.</p>';})
+          .catch(function(){b.disabled=false;show('Something went wrong. Please try again or email us at info@blue-yellow.se.',false);});
+      };
+    })();
+    </script>
+    <!-- SLUT NY KOD -->
     </div>
   </div></section>
 </main>
@@ -724,9 +852,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="/images/press.jpg" alt="Jonas Öhman and President Zelenskyy" style="height:300px;object-position:center 25%">
         <div>
           <p class="lead">Press images, logotypes, and press releases available for download. The press contact responds within four hours on working days.</p>
+          <!-- BORTTAGEN KOD: "Download" var bara text och gick inte att klicka på
           <div class="docrow"><span class="tag">Press image</span><b>Jonas Öhman and President Zelenskyy</b><span class="dl">Download</span></div>
           <div class="docrow"><span class="tag">Press image</span><b>The State Visit to Vilnius 2026</b><span class="dl">Download</span></div>
           <div class="docrow"><span class="tag">Logotype</span><b>Blue/Yellow Sweden, all formats</b><span class="dl">Download</span></div>
+          -->
+          <!-- NY KOD: riktiga gula "Download"-knappar, likadana som på svenska sidan. Logotyp-knappen laddar ned alla fyra varianter som separata filer. -->
+          <style>
+            .docrow .dlbtn{background:var(--yellow);color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.09em;text-transform:uppercase;padding:9px 16px;border-radius:8px;text-align:center;white-space:nowrap;cursor:pointer;border:0;text-decoration:underline;font-family:inherit}
+          </style>
+          <div class="docrow"><span class="tag">Press image</span><b>Jonas Öhman and President Zelenskyy</b><a class="dlbtn" href="/__l5e/assets-v1/7b9db9e3-2bbe-4789-8322-a11d1937f7d0/press-03-jonas-zelenskyj.jpg" download>Download</a></div>
+          <div class="docrow"><span class="tag">Press image</span><b>The State Visit to Vilnius 2026</b><a class="dlbtn" href="/images/dokument.jpg" download="state-visit-vilnius-2026.jpg">Download</a></div>
+          <div class="docrow"><span class="tag">Logotype</span><b>Blue/Yellow Sweden, all formats</b><button type="button" class="dlbtn" onclick="downloadAllLogos()">Download</button></div>
+          <script>
+          function downloadAllLogos(){
+            var files=[
+              "/__l5e/assets-v1/4e5ebf49-b17f-4481-8ac0-d1384582a93f/blueyellow-logo-blue-on-yellow.png",
+              "/__l5e/assets-v1/7f969b05-207f-4dec-bf00-eda072eafc7e/blueyellow-logo-yellow-on-blue.png",
+              "/__l5e/assets-v1/5353f464-9632-466c-8522-f19e2dd5b8bc/blueyellow-logo-bw-light.png",
+              "/__l5e/assets-v1/e5ef3a52-ef80-4f30-9371-71d7122a880f/blueyellow-logo-bw-dark.png"
+            ];
+            files.forEach(function(url,i){
+              setTimeout(function(){
+                var a=document.createElement("a");
+                a.href=url;a.download=url.split("/").pop();
+                document.body.appendChild(a);a.click();a.remove();
+              },i*400); // liten paus mellan filerna så att webbläsaren hinner med
+            });
+          }
+          </script>
+          <!-- SLUT NY KOD -->
           <p class="cap">Press contact, alexander@blue-yellow.lt</p>
         </div>
       </div>
@@ -932,6 +1087,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Org.nr 802552-3724<br>
         <a href="#" onclick="openInfo('integritet');return false">Privacy Policy</a><br>
         <a href="#" onclick="openInfo('cookies');return false">Cookies and Consent</a><br>
+        <!-- NY KOD: länk för att ändra eller återkalla cookie-samtycket -->
+        <a href="#" onclick="openCookieSettings();return false">Cookie settings</a><br>
+        <!-- SLUT NY KOD -->
         <a href="#" onclick="openInfo('gdpr');return false">GDPR, Data within the EU</a>
       </p>
     </div>
@@ -1183,7 +1341,10 @@ function routeFromPath(path){
  if(BASE){ if(p.indexOf(BASE+"/")!==0)return null; p=p.slice(BASE.length); }
  if(p==="")return{p:"hem"};
  var parts=p.split("/").filter(Boolean);
- if(parts[0]===CAMPAIGN_SEG)return{p:"stod",s:"kamp"};
+ // BORTTAGEN KOD: adressen /campaign pekade på 'kamp', som inte finns på engelska sidan
+ // if(parts[0]===CAMPAIGN_SEG)return{p:"stod",s:"kamp"};
+ // NY KOD: adressen /campaign visar startsidan och rullar ner till Current Campaigns
+ if(parts[0]===CAMPAIGN_SEG){setTimeout(function(){var x=document.getElementById("current-campaigns");if(x)x.scrollIntoView();},300);return{p:"hem"};}
  for(var k in ROUTES){
   if(ROUTES[k]!=="/"&&ROUTES[k]==="/"+parts[0]){
    return parts[1]?{p:k,s:subForSlug(k,parts[1])}:{p:k};
@@ -1345,5 +1506,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeInfo();
   });
 })();
 </script>
+<!-- NY KOD: Cookie-banner (engelsk text). Visas tills besökaren har gjort ett val. "Godkänn alla" och "Endast nödvändiga"
+     är lika stora och lika lätta att välja. Kan öppnas igen via länken "Cookie settings" i sidfoten. -->
+<style>
+#bycc{position:fixed;left:16px;right:16px;bottom:16px;z-index:10000;max-width:560px;margin:0 auto;background:#fff;color:#10203C;border-radius:16px;border-top:5px solid #FFD700;box-shadow:0 12px 40px rgba(0,12,40,.35);padding:22px 22px 18px;font-family:'Helvetica Neue',Arial,sans-serif;display:none}
+#bycc.open{display:block}
+#bycc h2{font-size:19px;color:#00185C;margin:0 0 8px;font-family:Georgia,'Times New Roman',serif}
+#bycc p{font-size:14px;line-height:1.55;margin:0 0 12px}
+#bycc a{color:#0057B7;font-weight:700}
+#bycc .bycc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+#bycc button{font:inherit;font-weight:800;font-size:13.5px;letter-spacing:.04em;padding:12px 10px;border-radius:10px;cursor:pointer;border:2px solid #00185C}
+#bycc .bycc-yes,#bycc .bycc-no{background:#00185C;color:#fff}
+#bycc .bycc-more{background:#fff;color:#00185C;grid-column:1/-1}
+#bycc .bycc-opts{display:none;margin:4px 0 10px;border-top:1px solid #E2E6EF}
+#bycc.custom .bycc-opts{display:block}
+#bycc label{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #E2E6EF;font-size:13.5px;line-height:1.45}
+#bycc label input{margin-top:3px;width:18px;height:18px;flex:none}
+#bycc label b{display:block;color:#00185C;font-size:14px}
+@media(max-width:480px){#bycc{left:8px;right:8px;bottom:8px;padding:18px 16px 14px}#bycc .bycc-btns{grid-template-columns:1fr}}
+</style>
+<div id="bycc" role="dialog" aria-modal="false" aria-labelledby="bycc-title">
+  <h2 id="bycc-title">We care about your privacy</h2>
+  <p>We use necessary cookies so that the website and Swish donations work. With your consent, we also use cookies for visitor statistics and to measure our ads on Meta (Facebook/Instagram) and Google. <a href="/en/" onclick="if(window.openInfo){openInfo('cookies');return false}">Read more about cookies</a></p>
+  <div class="bycc-opts">
+    <label><input type="checkbox" checked disabled><span><b>Necessary</b>Required for the site, Swish donations and your cookie choice to work. Cannot be switched off.</span></label>
+    <label><input type="checkbox" id="bycc-stats"><span><b>Statistics</b>Helps us understand how the website is used (Flock).</span></label>
+    <label><input type="checkbox" id="bycc-mkt"><span><b>Marketing</b>Measures how our ads on Meta and Google perform (Meta Pixel, Google Ads via Google Tag Manager). Information is then shared with Meta and Google.</span></label>
+  </div>
+  <div class="bycc-btns">
+    <button type="button" class="bycc-no" onclick="byCookieChoice('none')">Only necessary</button>
+    <button type="button" class="bycc-yes" onclick="byCookieChoice('all')">Accept all</button>
+    <button type="button" class="bycc-more" id="bycc-more" onclick="byCookieChoice('more')">Customise</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('bycc');
+  function close(){box.classList.remove('open','custom');document.getElementById('bycc-more').textContent='Customise';}
+  window.openCookieSettings=function(){
+    var c=window.byConsent.get();
+    document.getElementById('bycc-stats').checked=!!(c&&c.statistics);
+    document.getElementById('bycc-mkt').checked=!!(c&&c.marketing);
+    box.classList.add('open','custom');document.getElementById('bycc-more').textContent='Save my choices';
+  };
+  window.byCookieChoice=function(kind){
+    if(kind==='all'){window.byConsent.save(true,true);close();}
+    else if(kind==='none'){window.byConsent.save(false,false);close();}
+    else if(!box.classList.contains('custom')){box.classList.add('custom');document.getElementById('bycc-more').textContent='Save my choices';}
+    else{window.byConsent.save(document.getElementById('bycc-stats').checked,document.getElementById('bycc-mkt').checked);close();}
+  };
+  if(!window.byConsent.get())box.classList.add('open');
+})();
+</script>
+<!-- SLUT NY KOD -->
 </body>
 </html>

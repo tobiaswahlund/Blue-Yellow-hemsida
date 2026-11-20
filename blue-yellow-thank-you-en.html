@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <!-- Meta Pixel Code -->
+<!-- BORTTAGEN KOD: Meta Pixel laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,17 +18,67 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1458607096410441&ev=PageView&noscript=1"
 /></noscript>
+-->
 <!-- End Meta Pixel Code -->
 <!-- Google Tag Manager -->
+<!-- BORTTAGEN KOD: Google Tag Manager laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P2QKDSGD');</script>
+-->
 <!-- End Google Tag Manager -->
 <!-- Flock Analytics -->
+<!-- BORTTAGEN KOD: Flock laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script>
+-->
 <!-- End Flock Analytics -->
+<!-- NY KOD: Samtyckesstyrd laddning. Meta Pixel, Google Tag Manager (med Google Ads) och Flock laddas
+     FÖRST när besökaren har sagt ja i cookie-bannern. Valet sparas i webbläsaren (nödvändig lagring). -->
+<script>
+(function(){
+  var KEY='by_cookie_consent', VERSION=1;
+  function read(){try{var c=JSON.parse(localStorage.getItem(KEY));return (c&&c.v===VERSION)?c:null;}catch(e){return null;}}
+  function loadMarketing(){
+    if(window.__byMarketingLoaded)return;window.__byMarketingLoaded=true;
+    // Meta Pixel (samma kod som tidigare, nu bara efter samtycke)
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1458607096410441');
+    fbq('track','PageView');
+    if(window.__byExtraFbq){window.__byExtraFbq.forEach(function(a){fbq.apply(null,a);});}
+    // Google Tag Manager (laddar Google Ads), samma kod som tidigare, nu bara efter samtycke
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2QKDSGD');
+  }
+  function loadStatistics(){
+    if(window.__byStatsLoaded)return;window.__byStatsLoaded=true;
+    var s=document.createElement('script');s.defer=true;s.src='/~flock.js';
+    s.setAttribute('data-proxy-url','/~api/analytics');document.head.appendChild(s);
+  }
+  function apply(c){if(!c)return;if(c.statistics)loadStatistics();if(c.marketing)loadMarketing();}
+  window.byConsent={
+    get:read,
+    save:function(statistics,marketing){
+      var old=read();
+      var c={v:VERSION,statistics:!!statistics,marketing:!!marketing,date:new Date().toISOString()};
+      try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}
+      // Om besökaren drar tillbaka ett tidigare ja laddas sidan om, så att redan startade skript stängs av.
+      if(old&&((old.statistics&&!c.statistics)||(old.marketing&&!c.marketing))){location.reload();return;}
+      apply(c);
+    }
+  };
+  apply(read());
+})();
+</script>
+<!-- SLUT NY KOD -->
 
 
 
@@ -59,8 +110,10 @@ h1{color:var(--navy);font-size:28px;margin-bottom:14px;line-height:1.2}
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
+<!-- BORTTAGEN KOD: GTM laddades utan samtycke (noscript-varianten tas bort helt)
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2QKDSGD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
 <!-- End Google Tag Manager -->
 
 <div class="bar"><img src="data:image/png;base64,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" alt="Blue/Yellow" style="height:42px;width:auto"><div><b>BLUE / YELLOW</b><span>Sweden</span></div></div>
@@ -111,5 +164,58 @@ async function verify(attempt){
 }
 verify(0);
 </script>
+<!-- NY KOD: Cookie-banner (engelsk text). Visas tills besökaren har gjort ett val. "Godkänn alla" och "Endast nödvändiga"
+     är lika stora och lika lätta att välja. Kan öppnas igen via länken "Cookie settings" i sidfoten. -->
+<style>
+#bycc{position:fixed;left:16px;right:16px;bottom:16px;z-index:10000;max-width:560px;margin:0 auto;background:#fff;color:#10203C;border-radius:16px;border-top:5px solid #FFD700;box-shadow:0 12px 40px rgba(0,12,40,.35);padding:22px 22px 18px;font-family:'Helvetica Neue',Arial,sans-serif;display:none}
+#bycc.open{display:block}
+#bycc h2{font-size:19px;color:#00185C;margin:0 0 8px;font-family:Georgia,'Times New Roman',serif}
+#bycc p{font-size:14px;line-height:1.55;margin:0 0 12px}
+#bycc a{color:#0057B7;font-weight:700}
+#bycc .bycc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+#bycc button{font:inherit;font-weight:800;font-size:13.5px;letter-spacing:.04em;padding:12px 10px;border-radius:10px;cursor:pointer;border:2px solid #00185C}
+#bycc .bycc-yes,#bycc .bycc-no{background:#00185C;color:#fff}
+#bycc .bycc-more{background:#fff;color:#00185C;grid-column:1/-1}
+#bycc .bycc-opts{display:none;margin:4px 0 10px;border-top:1px solid #E2E6EF}
+#bycc.custom .bycc-opts{display:block}
+#bycc label{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #E2E6EF;font-size:13.5px;line-height:1.45}
+#bycc label input{margin-top:3px;width:18px;height:18px;flex:none}
+#bycc label b{display:block;color:#00185C;font-size:14px}
+@media(max-width:480px){#bycc{left:8px;right:8px;bottom:8px;padding:18px 16px 14px}#bycc .bycc-btns{grid-template-columns:1fr}}
+</style>
+<div id="bycc" role="dialog" aria-modal="false" aria-labelledby="bycc-title">
+  <h2 id="bycc-title">We care about your privacy</h2>
+  <p>We use necessary cookies so that the website and Swish donations work. With your consent, we also use cookies for visitor statistics and to measure our ads on Meta (Facebook/Instagram) and Google. <a href="/en/" onclick="if(window.openInfo){openInfo('cookies');return false}">Read more about cookies</a></p>
+  <div class="bycc-opts">
+    <label><input type="checkbox" checked disabled><span><b>Necessary</b>Required for the site, Swish donations and your cookie choice to work. Cannot be switched off.</span></label>
+    <label><input type="checkbox" id="bycc-stats"><span><b>Statistics</b>Helps us understand how the website is used (Flock).</span></label>
+    <label><input type="checkbox" id="bycc-mkt"><span><b>Marketing</b>Measures how our ads on Meta and Google perform (Meta Pixel, Google Ads via Google Tag Manager). Information is then shared with Meta and Google.</span></label>
+  </div>
+  <div class="bycc-btns">
+    <button type="button" class="bycc-no" onclick="byCookieChoice('none')">Only necessary</button>
+    <button type="button" class="bycc-yes" onclick="byCookieChoice('all')">Accept all</button>
+    <button type="button" class="bycc-more" id="bycc-more" onclick="byCookieChoice('more')">Customise</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('bycc');
+  function close(){box.classList.remove('open','custom');document.getElementById('bycc-more').textContent='Customise';}
+  window.openCookieSettings=function(){
+    var c=window.byConsent.get();
+    document.getElementById('bycc-stats').checked=!!(c&&c.statistics);
+    document.getElementById('bycc-mkt').checked=!!(c&&c.marketing);
+    box.classList.add('open','custom');document.getElementById('bycc-more').textContent='Save my choices';
+  };
+  window.byCookieChoice=function(kind){
+    if(kind==='all'){window.byConsent.save(true,true);close();}
+    else if(kind==='none'){window.byConsent.save(false,false);close();}
+    else if(!box.classList.contains('custom')){box.classList.add('custom');document.getElementById('bycc-more').textContent='Save my choices';}
+    else{window.byConsent.save(document.getElementById('bycc-stats').checked,document.getElementById('bycc-mkt').checked);close();}
+  };
+  if(!window.byConsent.get())box.classList.add('open');
+})();
+</script>
+<!-- SLUT NY KOD -->
 </body>
 </html>

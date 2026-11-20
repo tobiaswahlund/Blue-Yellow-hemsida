@@ -2,6 +2,7 @@
 <html lang="sv">
 <head>
 <!-- Meta Pixel Code -->
+<!-- BORTTAGEN KOD: Meta Pixel laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,17 +18,67 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1458607096410441&ev=PageView&noscript=1"
 /></noscript>
+-->
 <!-- End Meta Pixel Code -->
 <!-- Google Tag Manager -->
+<!-- BORTTAGEN KOD: Google Tag Manager laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P2QKDSGD');</script>
+-->
 <!-- End Google Tag Manager -->
 <!-- Flock Analytics -->
+<!-- BORTTAGEN KOD: Flock laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script>
+-->
 <!-- End Flock Analytics -->
+<!-- NY KOD: Samtyckesstyrd laddning. Meta Pixel, Google Tag Manager (med Google Ads) och Flock laddas
+     FÖRST när besökaren har sagt ja i cookie-bannern. Valet sparas i webbläsaren (nödvändig lagring). -->
+<script>
+(function(){
+  var KEY='by_cookie_consent', VERSION=1;
+  function read(){try{var c=JSON.parse(localStorage.getItem(KEY));return (c&&c.v===VERSION)?c:null;}catch(e){return null;}}
+  function loadMarketing(){
+    if(window.__byMarketingLoaded)return;window.__byMarketingLoaded=true;
+    // Meta Pixel (samma kod som tidigare, nu bara efter samtycke)
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1458607096410441');
+    fbq('track','PageView');
+    if(window.__byExtraFbq){window.__byExtraFbq.forEach(function(a){fbq.apply(null,a);});}
+    // Google Tag Manager (laddar Google Ads), samma kod som tidigare, nu bara efter samtycke
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2QKDSGD');
+  }
+  function loadStatistics(){
+    if(window.__byStatsLoaded)return;window.__byStatsLoaded=true;
+    var s=document.createElement('script');s.defer=true;s.src='/~flock.js';
+    s.setAttribute('data-proxy-url','/~api/analytics');document.head.appendChild(s);
+  }
+  function apply(c){if(!c)return;if(c.statistics)loadStatistics();if(c.marketing)loadMarketing();}
+  window.byConsent={
+    get:read,
+    save:function(statistics,marketing){
+      var old=read();
+      var c={v:VERSION,statistics:!!statistics,marketing:!!marketing,date:new Date().toISOString()};
+      try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}
+      // Om besökaren drar tillbaka ett tidigare ja laddas sidan om, så att redan startade skript stängs av.
+      if(old&&((old.statistics&&!c.statistics)||(old.marketing&&!c.marketing))){location.reload();return;}
+      apply(c);
+    }
+  };
+  apply(read());
+})();
+</script>
+<!-- SLUT NY KOD -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -346,8 +397,10 @@ footer .bot a:hover{color:var(--yellow)}
 <script defer src="/__l5e/events.b979ee024b15adfd.js" data-artifact-kind="dwl_content_hash" data-artifact-id="11268f566d5da8472522ad6bcb18c255b29a72210a5c2aa9292f2215d6f737cd" data-commit-sha="d9a34df33a1f7ef0c6b262eb21c597fe48423c34" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MmpleTI4bXduOHp2dHE5cnYzZTJ4NnRndiIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiIxMTI2OGY1NjZkNWRhODQ3MjUyMmFkNmJjYjE4YzI1NWIyOWE3MjIxMGE1YzJhYTkyOTJmMjIxNWQ2ZjczN2NkIiwiY29tbWl0X3NoYSI6ImQ5YTM0ZGYzM2ExZjdlZjBjNmIyNjJlYjIxYzU5N2ZlNDg0MjNjMzQiLCJleHAiOjE3OTc3NzAxNDl9.fqu8Keh4IQViUKUnlwN-3dm2MbJNddoILW_ivN1WKuk" data-autocapture="1" data-consent="1"></script></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
+<!-- BORTTAGEN KOD: GTM laddades utan samtycke (noscript-varianten tas bort helt)
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2QKDSGD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
 <!-- End Google Tag Manager (noscript) -->
 <header>
   <div class="wrap hbar">
@@ -379,7 +432,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Blue/Yellow har sedan 2014 stått sida vid sida med dem som försvarar Ukrainas frihet. Organisationen har levererat stöd till ett värde av 1,3 miljarder kronor i form av drönare, fordon, skyddsutrustning, sjukvård och annan hjälp som räddar liv och stärker Ukrainas motståndskraft. Av varje donerad krona når 95 öre fram till fronten och andra livsavgörande insatser och mottagare.</p>
         <div class="hbtns">
           <button class="ghost" onclick="go('vad')">Vad vi gör</button>
+          <!-- BORTTAGEN KOD: knappen pekade på 'kamp', som inte finns
           <button class="ghost w" onclick="go('stod','kamp')">Aktuella kampanjer</button>
+          -->
+          <!-- NY KOD: knappen rullar ner till avsnittet Aktuella kampanjer längre ner på startsidan -->
+          <button class="ghost w" onclick="document.getElementById('aktuella-kampanjer').scrollIntoView({behavior:'smooth'})">Aktuella kampanjer</button>
         </div>
       </div>
       <div id="dc1"></div>
@@ -409,7 +466,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="cap">Blue/Yellow förmedlar inte vapen eller ammunition. Stödet är defensivt, fullt spårbart och kvitteras alltid av mottagande förband.</p>
   </div></section>
 
+  <!-- BORTTAGEN KOD: avsnittet saknade ett id som knappen kan hoppa till
   <section class="block bg-n"><div class="wrap">
+  -->
+  <!-- NY KOD: id för knappen ovan, och marginal så att den fasta menyn inte täcker rubriken -->
+  <section class="block bg-n" id="aktuella-kampanjer" style="scroll-margin-top:100px"><div class="wrap">
     <div class="kick y">Pågår nu</div>
     <h2 class="sec w disp">Aktuella kampanjer</h2>
     <div class="grid3" id="camp-home"></div>
@@ -420,7 +481,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="kick b">För företag</div>
       <h2 class="sec disp">Strategiskt stöd med operativ effekt</h2>
       <p class="lead">Partnerskap i tre nivåer, från taktiskt teknikstöd till konsortium. Full spårbarhet, dokumenterade leveranser och återkoppling från fältet. Bland tidigare stödföretag finns Spotify, Atea, Surfshark och Nord Security.</p>
+      <!-- BORTTAGEN KOD: knappen pekade på 'ftg', som inte finns
       <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('stod','ftg')">Läs om partnerskap</button></div>
+      -->
+      <!-- NY KOD: knappen leder till sidan Företagsgåva & partnerskap (/donera/foretag) -->
+      <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('stod','foretag')">Läs om partnerskap</button></div>
     </div>
     <img src="/images/partnerskap.jpg" alt="Leverans av markrobotar" style="height:300px">
   </div></section>
@@ -781,7 +846,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="/images/dela.jpg" alt="Manifestation för Ukraina" style="height:300px">
         <div>
           <p class="lead">Spridning kostar inget och betyder mycket. Här finns färdiga paket med bilder, texter och affischer för sociala medier, arbetsplatsen och föreningen.</p>
+          <!-- BORTTAGEN KOD: knappen var inte kopplad till något
           <div class="hbtns" style="margin-top:16px"><button class="ghost" style="border-color:var(--blue);color:var(--blue)">Ladda ner delningspaket</button></div>
+          -->
+          <!-- NY KOD: knappen leder till Press-sidan där bilder och logotyper finns att ladda ned -->
+          <div class="hbtns" style="margin-top:16px"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('press')">Ladda ned bilder och logotyper</button></div>
         </div>
       </div>
     </div>
@@ -1023,9 +1092,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="/images/press.jpg" alt="Jonas Öhman och president Zelenskyj" style="height:300px;object-position:center 25%">
         <div>
           <p class="lead">Pressbilder, logotyper och pressmeddelanden för nedladdning. Presskontakt svarar inom fyra timmar på vardagar.</p>
+          <!-- BORTTAGEN KOD: "Ladda ner" var bara text och gick inte att klicka på
           <div class="docrow"><span class="tag">Pressbild</span><b>Jonas Öhman och president Zelenskyj</b><span class="dl">Ladda ner</span></div>
           <div class="docrow"><span class="tag">Pressbild</span><b>Statsbesöket i Vilnius 2026</b><span class="dl">Ladda ner</span></div>
           <div class="docrow"><span class="tag">Logotyp</span><b>Blue/Yellow Sweden, alla format</b><span class="dl">Ladda ner</span></div>
+          -->
+          <!-- NY KOD: riktiga gula "Ladda ned"-knappar, likadana som på Press-sidan. Logotyp-knappen laddar ned alla fyra varianter som separata filer. -->
+          <style>
+            .docrow .dlbtn{background:var(--yellow);color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.09em;text-transform:uppercase;padding:9px 16px;border-radius:8px;text-align:center;white-space:nowrap;cursor:pointer;border:0;text-decoration:underline;font-family:inherit}
+          </style>
+          <div class="docrow"><span class="tag">Pressbild</span><b>Jonas Öhman och president Zelenskyj</b><a class="dlbtn" href="/__l5e/assets-v1/7b9db9e3-2bbe-4789-8322-a11d1937f7d0/press-03-jonas-zelenskyj.jpg" download>Ladda ned</a></div>
+          <div class="docrow"><span class="tag">Pressbild</span><b>Statsbesöket i Vilnius 2026</b><a class="dlbtn" href="/images/dokument.jpg" download="statsbesoket-vilnius-2026.jpg">Ladda ned</a></div>
+          <div class="docrow"><span class="tag">Logotyp</span><b>Blue/Yellow Sweden, alla format</b><button type="button" class="dlbtn" onclick="downloadAllLogos()">Ladda ned</button></div>
+          <script>
+          // Laddar ned de fyra logotyp-varianterna (samma filer som på Press-sidan) som fyra separata filer.
+          function downloadAllLogos(){
+            var files=[
+              "/__l5e/assets-v1/4e5ebf49-b17f-4481-8ac0-d1384582a93f/blueyellow-logo-blue-on-yellow.png",
+              "/__l5e/assets-v1/7f969b05-207f-4dec-bf00-eda072eafc7e/blueyellow-logo-yellow-on-blue.png",
+              "/__l5e/assets-v1/5353f464-9632-466c-8522-f19e2dd5b8bc/blueyellow-logo-bw-light.png",
+              "/__l5e/assets-v1/e5ef3a52-ef80-4f30-9371-71d7122a880f/blueyellow-logo-bw-dark.png"
+            ];
+            files.forEach(function(url,i){
+              setTimeout(function(){
+                var a=document.createElement("a");
+                a.href=url;a.download=url.split("/").pop();
+                document.body.appendChild(a);a.click();a.remove();
+              },i*400); // liten paus mellan filerna så att webbläsaren hinner med
+            });
+          }
+          </script>
+          <!-- SLUT NY KOD -->
           <p class="cap">Presskontakt, alexander@blue-yellow.lt</p>
         </div>
       </div>
@@ -1291,6 +1388,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Org.nr 802552-3724<br>
         <a href="#" onclick="openInfo('integritet');return false">Integritetspolicy</a><br>
         <a href="#" onclick="openInfo('cookies');return false">Cookies och samtycke</a><br>
+        <!-- NY KOD: länk för att ändra eller återkalla cookie-samtycket -->
+        <a href="#" onclick="openCookieSettings();return false">Cookie-inställningar</a><br>
+        <!-- SLUT NY KOD -->
         <a href="#" onclick="openInfo('gdpr');return false">GDPR, data inom EU</a>
       </p>
     </div>
@@ -1553,7 +1653,10 @@ function routeFromPath(path){
  if(BASE){ if(p.indexOf(BASE+"/")!==0)return null; p=p.slice(BASE.length); }
  if(p==="")return{p:"hem"};
  var parts=p.split("/").filter(Boolean);
- if(parts[0]===CAMPAIGN_SEG)return{p:"stod",s:"kamp"};
+ // BORTTAGEN KOD: adressen /kampanj pekade på 'kamp', som inte finns
+ //  if(parts[0]===CAMPAIGN_SEG)return{p:"stod",s:"kamp"};
+ // NY KOD: adressen /kampanj leder till sidan Pågående insamlingar och kampanjer
+ if(parts[0]===CAMPAIGN_SEG)return{p:"stod",s:"kampanjer"};
  for(var k in ROUTES){
   if(ROUTES[k]!=="/"&&ROUTES[k]==="/"+parts[0]){
    return parts[1]?{p:k,s:subForSlug(k,parts.slice(1).join("/"))}:{p:k};
@@ -1818,9 +1921,66 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeInfo();
 })();
 
 </script>
+<!-- NY KOD: Cookie-banner. Visas tills besökaren har gjort ett val. "Godkänn alla" och "Endast nödvändiga"
+     är lika stora och lika lätta att välja. Kan öppnas igen via länken "Cookie-inställningar" i sidfoten. -->
+<style>
+#bycc{position:fixed;left:16px;right:16px;bottom:16px;z-index:10000;max-width:560px;margin:0 auto;background:#fff;color:#10203C;border-radius:16px;border-top:5px solid #FFD700;box-shadow:0 12px 40px rgba(0,12,40,.35);padding:22px 22px 18px;font-family:'Helvetica Neue',Arial,sans-serif;display:none}
+#bycc.open{display:block}
+#bycc h2{font-size:19px;color:#00185C;margin:0 0 8px;font-family:Georgia,'Times New Roman',serif}
+#bycc p{font-size:14px;line-height:1.55;margin:0 0 12px}
+#bycc a{color:#0057B7;font-weight:700}
+#bycc .bycc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+#bycc button{font:inherit;font-weight:800;font-size:13.5px;letter-spacing:.04em;padding:12px 10px;border-radius:10px;cursor:pointer;border:2px solid #00185C}
+#bycc .bycc-yes,#bycc .bycc-no{background:#00185C;color:#fff}
+#bycc .bycc-more{background:#fff;color:#00185C;grid-column:1/-1}
+#bycc .bycc-opts{display:none;margin:4px 0 10px;border-top:1px solid #E2E6EF}
+#bycc.custom .bycc-opts{display:block}
+#bycc label{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #E2E6EF;font-size:13.5px;line-height:1.45}
+#bycc label input{margin-top:3px;width:18px;height:18px;flex:none}
+#bycc label b{display:block;color:#00185C;font-size:14px}
+@media(max-width:480px){#bycc{left:8px;right:8px;bottom:8px;padding:18px 16px 14px}#bycc .bycc-btns{grid-template-columns:1fr}}
+</style>
+<div id="bycc" role="dialog" aria-modal="false" aria-labelledby="bycc-title">
+  <h2 id="bycc-title">Vi värnar om din integritet</h2>
+  <p>Vi använder nödvändiga cookies för att webbplatsen och Swish-gåvor ska fungera. Med ditt samtycke använder vi även cookies för besöksstatistik och för att mäta våra annonser hos Meta (Facebook/Instagram) och Google. <a href="/" onclick="if(window.openInfo){openInfo('cookies');return false}">Läs mer om cookies</a></p>
+  <div class="bycc-opts">
+    <label><input type="checkbox" checked disabled><span><b>Nödvändiga</b>Krävs för att sidan, Swish-gåvor och ditt cookie-val ska fungera. Kan inte stängas av.</span></label>
+    <label><input type="checkbox" id="bycc-stats"><span><b>Statistik</b>Hjälper oss förstå hur webbplatsen används (Flock).</span></label>
+    <label><input type="checkbox" id="bycc-mkt"><span><b>Marknadsföring</b>Mäter hur våra annonser hos Meta och Google fungerar (Meta Pixel, Google Ads via Google Tag Manager). Uppgifter delas då med Meta och Google.</span></label>
+  </div>
+  <div class="bycc-btns">
+    <button type="button" class="bycc-no" onclick="byCookieChoice('none')">Endast nödvändiga</button>
+    <button type="button" class="bycc-yes" onclick="byCookieChoice('all')">Godkänn alla</button>
+    <button type="button" class="bycc-more" id="bycc-more" onclick="byCookieChoice('more')">Anpassa</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('bycc');
+  function close(){box.classList.remove('open','custom');document.getElementById('bycc-more').textContent='Anpassa';}
+  window.openCookieSettings=function(){
+    var c=window.byConsent.get();
+    document.getElementById('bycc-stats').checked=!!(c&&c.statistics);
+    document.getElementById('bycc-mkt').checked=!!(c&&c.marketing);
+    box.classList.add('open','custom');document.getElementById('bycc-more').textContent='Spara mina val';
+  };
+  window.byCookieChoice=function(kind){
+    if(kind==='all'){window.byConsent.save(true,true);close();}
+    else if(kind==='none'){window.byConsent.save(false,false);close();}
+    else if(!box.classList.contains('custom')){box.classList.add('custom');document.getElementById('bycc-more').textContent='Spara mina val';}
+    else{window.byConsent.save(document.getElementById('bycc-stats').checked,document.getElementById('bycc-mkt').checked);close();}
+  };
+  if(!window.byConsent.get())box.classList.add('open');
+})();
+</script>
+<!-- SLUT NY KOD -->
 </body>
 
+<!-- BORTTAGEN KOD: trasig avslutning med kvarglömd kampanjdata (Spaningsdrönare och Bepansrad ambulans)
 </html,
  {n:"Spaningsdrönare till fronten",g:500000,r:342500,img:"/images/kampanj-spaningsdronare.jpg",d:"Spaningsdrönare och motmedel till tre förband i Donetsk."},
  {n:"Bepansrad ambulans",g:1000000,r:615000,img:"/images/kampanj-ambulans.jpg",d:"En ambulans som hämtar svårt skadade vid nollinjen, under beskjutning."}
 >
+-->
+<!-- NY KOD: korrekt avslutning av filen -->
+</html>
