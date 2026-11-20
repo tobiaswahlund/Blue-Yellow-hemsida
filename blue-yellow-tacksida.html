@@ -436,12 +436,20 @@ function certHTML(){
         <div style="position:absolute;top:23px;left:23px;right:23px;bottom:23px;border:2px solid #FFD700"></div>
       </div>
       <div style="position:absolute;top:0;left:0;right:0;bottom:50px;pointer-events:none;z-index:0;background-image:url('${m.watermark}');background-repeat:no-repeat;background-position:center center;background-size:contain;opacity:.11"></div>
+      <!-- BORTTAGEN KOD:
       <div style="position:relative;z-index:10;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px 60px;min-height:calc(100% - 50px);box-sizing:border-box">
+      -->
+      <!-- NY KOD: lämnar plats i botten för sidfoten som nu ligger innanför ramen -->
+      <div style="position:relative;z-index:10;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px 60px;min-height:calc(100% - 79px);box-sizing:border-box">
         <img src="${LOGO}" alt="Blue/Yellow" style="width:60px;height:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.15);margin-bottom:16px">
         <div style="font-family:${m.titleFont},serif;font-size:26px;font-weight:700;letter-spacing:6px;color:#0057B8;margin-bottom:26px">G Å V O B E V I S</div>
         <div style="width:100%;max-width:430px">${body}</div>
       </div>
+      <!-- BORTTAGEN KOD:
       <div style="position:absolute;bottom:0;left:0;right:0;height:50px;background:#0057B8;color:#fff;font-size:11px;line-height:1.4;display:flex;align-items:center;justify-content:center;text-align:center;z-index:10">${footerText}</div>
+      -->
+      <!-- NY KOD: sidfoten ligger innanför den gula ramen och ovanpå ramstrecken (z-index 30) så att all text syns -->
+      <div style="position:absolute;bottom:27px;left:27px;right:27px;height:52px;background:#0057B8;color:#fff;font-size:11px;line-height:1.5;display:flex;align-items:center;justify-content:center;text-align:center;z-index:30">${footerText}</div>
     </div>`;
   }
   // Fotomotiv: bildheader 220px med overlay, subtilt treudd-vattenmärke, centrerat innehåll, sidfot med logga förankrad i botten

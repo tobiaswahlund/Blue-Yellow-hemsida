@@ -790,11 +790,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="empty">Inga publika evenemang är planerade just nu. Nästa tillfälle publiceras här och i nyhetsbrevet.</div>
     </div>
     </div>
+    <!-- BORTTAGEN KOD: formuläret skickade ingenting, det visade bara "Tack"
     <aside class="donate-aside"><div class="fcard">
           <input placeholder="Namn"><input placeholder="Mejl"><input placeholder="Ort">
           <textarea placeholder="Vad vill du hjälpa till med?" rows="3"></textarea>
           <button class="fbtn" onclick="this.outerHTML='<p class=dthanks><b>Tack.</b> Vi hör av oss inom en vecka.'">Anmäl intresse</button>
         </div></aside>
+    -->
+    <!-- NY KOD: riktigt volontärsformulär som skickar anmälan via samma funktion som kontaktformuläret -->
+    <aside class="donate-aside"><div class="fcard" id="vol-form">
+          <style>
+            .vol-l{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px}
+            .vol-invalid{border:2px solid #b00020 !important}
+            .vol-err{display:none;color:#b00020;font-size:13px;margin:-6px 0 8px;line-height:1.35}
+            .vol-err.on{display:block}
+          </style>
+          <h4 style="color:var(--navy);font-size:18px;margin:0 0 12px">Intresseanmälan volontär</h4>
+          <label class="vol-l" for="vol-name">Namn *</label>
+          <input id="vol-name" autocomplete="name" required><span id="vol-name-err" class="vol-err"></span>
+          <label class="vol-l" for="vol-email">E-postadress *</label>
+          <input id="vol-email" type="email" autocomplete="email" placeholder="namn@exempel.se" required><span id="vol-email-err" class="vol-err"></span>
+          <label class="vol-l" for="vol-ort">Ort</label>
+          <input id="vol-ort" autocomplete="address-level2">
+          <label class="vol-l" for="vol-msg">Vad vill du hjälpa till med? *</label>
+          <textarea id="vol-msg" rows="3" required></textarea><span id="vol-msg-err" class="vol-err"></span>
+          <button class="fbtn" id="vol-btn" type="button" onclick="sendVolunteer()">Anmäl intresse</button>
+          <p id="vol-status" style="display:none;margin-top:10px;font-size:14px"></p>
+        </div></aside>
+    <script>
+    (function(){
+      var EMAIL_RE=/^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;
+      function el(id){return document.getElementById(id);}
+      function setErr(input,msg){
+        var e=el(input.id+'-err');
+        if(msg){input.classList.add('vol-invalid');e.textContent=msg;e.classList.add('on');return false;}
+        input.classList.remove('vol-invalid');e.textContent='';e.classList.remove('on');return true;
+      }
+      window.sendVolunteer=function(){
+        var n=el('vol-name'),e=el('vol-email'),o=el('vol-ort'),m=el('vol-msg'),b=el('vol-btn'),s=el('vol-status');
+        function show(msg,ok){s.style.display='block';s.style.color=ok?'#0B1F3A':'#b00020';s.textContent=msg;}
+        var okN=setErr(n,n.value.trim()?'':'Fyll i ditt namn');
+        var ev=e.value.trim();
+        var okE=setErr(e,!ev?'Fyll i din e-postadress':(EMAIL_RE.test(ev)?'':'Ange en giltig e-postadress, exempel: namn@exempel.se'));
+        var okM=setErr(m,m.value.trim()?'':'Berätta kort vad du vill hjälpa till med');
+        if(!(okN&&okE&&okM)){show('Kontrollera de markerade fälten.',false);(!okN?n:!okE?e:m).focus();return;}
+        // Meddelandet märks tydligt så att det kan sorteras till en egen mapp i mejlen.
+        var text='[VOLONTÄRSANMÄLAN] Intresseanmälan från volontär via blue-yellow.se\n\n'+
+          'Namn: '+n.value.trim()+'\n'+
+          'E-post: '+ev+'\n'+
+          'Ort: '+(o.value.trim()||'(ej angiven)')+'\n\n'+
+          'Vad vill du hjälpa till med?\n'+m.value.trim();
+        b.disabled=true;show('Skickar…',true);
+        fetch('/api/public/contact',{method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({name:n.value.trim(),email:ev,topic:'Volontär',message:text,language:'sv'})})
+          .then(function(r){if(!r.ok)throw new Error('fail');
+            el('vol-form').innerHTML='<p class="dthanks"><b>Tack för din anmälan!</b> Vi hör av oss inom en vecka.</p>';})
+          .catch(function(){b.disabled=false;show('Något gick fel. Försök igen eller mejla oss på info@blue-yellow.se.',false);});
+      };
+    })();
+    </script>
+    <!-- SLUT NY KOD -->
     </div>
   </div></section>
 </main>
