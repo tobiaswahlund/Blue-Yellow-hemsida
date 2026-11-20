@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1458607096410441');
+fbq('track', 'PageView');
+fbq('track', 'Donate');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1458607096410441&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2QKDSGD');</script>
+<!-- End Google Tag Manager -->
+<!-- Flock Analytics -->
+<script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script>
+<!-- End Flock Analytics -->
+<!-- Google Fonts (endast för gåvobevis-certifikat, sidans UI använder Larsseit) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>Tack — Blue/Yellow Sweden</title>
+<style>
+@font-face{font-family:'Larsseit';src:url('/fonts/Larsseit_Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Larsseit';src:url('/fonts/Larsseit_Regular_Italic.otf') format('opentype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Larsseit';src:url('/fonts/Larsseit_Bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Larsseit';src:url('/fonts/Larsseit_Bold_Italic.otf') format('opentype');font-weight:700;font-style:italic;font-display:swap}
+:root{--blue:#0057B7;--navy:#00185C;--yellow:#FFD500;--paper:#F6F5F1;--ink:#10203C;--mut:#5A6A85}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+.bar{background:var(--navy);padding:16px 24px;display:flex;align-items:center;gap:12px}
+.bar img{flex:none}.bar b{color:#fff;font-size:18px;font-weight:800;display:block}
+.bar span{color:var(--blue);font-weight:800;font-size:13px}
+.wrap{max-width:720px;margin:0 auto;padding:60px 24px;text-align:center;flex:1}
+.heart{font-size:56px;margin-top:14px;margin-bottom:16px}
+h1{color:var(--navy);font-size:28px;margin-bottom:14px;line-height:1.2}
+h2{color:var(--navy);font-size:20px;margin-bottom:10px;line-height:1.25}
+.share-title{margin-top:28px;margin-bottom:12px}
+.lead{color:var(--ink);font-size:16px;line-height:1.7;margin-bottom:24px}
+.share{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.share a{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:2px solid #d4dbe8;border-radius:11px;color:var(--navy);font-weight:700;font-size:14px;text-decoration:none}
+.share a:hover{border-color:var(--blue);background:#eef4ff}
+.back{display:inline-block;color:var(--blue);font-weight:700;font-size:14px;text-decoration:none}
+.foot{background:var(--navy);color:#9fb0d4;text-align:center;padding:16px;font-size:12px}
+.main{position:relative;flex:1}
+.main::before{content:'';position:absolute;inset:0;background:url('/__l5e/assets-v1/69fd126e-9795-4370-b574-04914903b5de/flagga-barn.jpg') center/cover no-repeat fixed;opacity:.20;z-index:0;pointer-events:none}
+.main .wrap{position:relative;z-index:1}
+/* Gåvobevis */
+.cert{max-width:720px;margin:34px auto 0;text-align:center;font-family:'Larsseit',sans-serif}
+.cert h2{color:var(--navy);font-size:20px;margin-bottom:8px}
+.cert .sub{color:var(--ink);font-size:14px;line-height:1.6;margin-bottom:6px}
+.cert .gift-amount{color:var(--navy);font-size:20px;font-weight:700;margin-bottom:20px}
+.cert .step-title{color:var(--navy);font-size:15px;font-weight:700;margin:24px 0 10px;text-align:left}
+.purpose-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:768px){.purpose-grid{grid-template-columns:1fr}}
+.purpose-card{position:relative;border:2px solid #d4dbe8;border-radius:11px;background:#fff;padding:16px 12px;cursor:pointer;text-align:center;transition:border-color .15s}
+.purpose-card:hover{border-color:var(--blue)}
+.purpose-card[aria-checked="true"]{border:3px solid #0057B8;padding:15px 11px}
+.purpose-card .picon{font-size:26px;line-height:1}
+.purpose-card .pname{font-size:14px;font-weight:700;color:var(--navy);margin-top:8px}
+.purpose-card .pdesc{font-size:12px;color:var(--mut);margin-top:4px;line-height:1.4}
+.purpose-card .pcheck{position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;background:#0057B8;color:#fff;font-size:13px;line-height:22px;display:none}
+.purpose-card[aria-checked="true"] .pcheck{display:block}
+.motif-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+@media(max-width:768px){.motif-grid{grid-template-columns:repeat(2,1fr)}}
+.motif-card{position:relative;border:2px solid #d4dbe8;border-radius:11px;background:#fff;padding:8px;cursor:pointer;text-align:center;transition:border-color .15s}
+.motif-card:hover{border-color:var(--blue)}
+.motif-card[aria-checked="true"]{border:3px solid #0057B8;padding:7px}
+.motif-card img{width:100%;height:80px;object-fit:cover;border-radius:7px;display:block;background:#eef2f8}
+.motif-card .mname{font-size:12px;font-weight:700;color:var(--navy);margin-top:6px;line-height:1.3}
+.motif-card .mdesc{font-size:11px;color:var(--mut);line-height:1.3}
+.motif-card .mcheck{position:absolute;top:12px;right:12px;width:22px;height:22px;border-radius:50%;background:#0057B8;color:#fff;font-size:13px;line-height:22px;display:none}
+.motif-card[aria-checked="true"] .mcheck{display:block}
+.cert label{display:block;text-align:left;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.cert input[type=text],.cert textarea{width:100%;padding:12px 14px;border:2px solid #d4dbe8;border-radius:11px;font-family:'Larsseit',sans-serif;font-size:15px;color:var(--ink);background:#fff;margin-bottom:12px;box-sizing:border-box}
+.cert input:focus,.cert textarea:focus{outline:none;border-color:var(--blue)}
+.cert textarea{resize:vertical;min-height:70px}
+.cert .counter{font-size:12px;color:var(--mut);text-align:right;margin:-8px 0 12px}
+.cert .dl{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 20px;border:none;border-radius:11px;background:var(--blue);color:#fff;font-family:'Larsseit',sans-serif;font-weight:700;font-size:15px;cursor:pointer;margin-top:14px}
+.cert .dl:hover{background:#004a9e}
+.cert .dl:disabled{background:#9db4d6;cursor:not-allowed}
+.cert .spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:certspin .7s linear infinite;display:none}
+.cert .dl.loading .spinner{display:inline-block}
+@keyframes certspin{to{transform:rotate(360deg)}}
+.cert .done-msg{color:var(--navy);font-size:14px;font-weight:700;margin-top:12px;display:none}
+.preview-wrap{margin:22px auto 0;max-width:595px;overflow:hidden}
+.preview-scale{transform-origin:top left;width:595px;box-shadow:0 4px 18px rgba(16,32,60,.15)}
+.cert-sheet{position:absolute;left:-9999px;top:-9999px;width:595px}
+</style>
+<script defer src="/__l5e/events.b979ee024b15adfd.js" data-artifact-kind="dwl_content_hash" data-artifact-id="11268f566d5da8472522ad6bcb18c255b29a72210a5c2aa9292f2215d6f737cd" data-commit-sha="d9a34df33a1f7ef0c6b262eb21c597fe48423c34" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MmpleTI4bXduOHp2dHE5cnYzZTJ4NnRndiIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiIxMTI2OGY1NjZkNWRhODQ3MjUyMmFkNmJjYjE4YzI1NWIyOWE3MjIxMGE1YzJhYTkyOTJmMjIxNWQ2ZjczN2NkIiwiY29tbWl0X3NoYSI6ImQ5YTM0ZGYzM2ExZjdlZjBjNmIyNjJlYjIxYzU5N2ZlNDg0MjNjMzQiLCJleHAiOjE3OTc3NzAzNjF9.wLLX3_pRIzVx2Nk-rRjWK64RO0FXvz_JDWd11FPKX5M" data-autocapture="1" data-consent="1"></script><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_62jey28mwn8zvtq9rv3e2x6tgv/118d70f422b0081722957a7cbedbb400_1794950615450.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_62jey28mwn8zvtq9rv3e2x6tgv/118d70f422b0081722957a7cbedbb400_1794950615450.png"></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2QKDSGD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<div class="bar"><img src="/images/certificates/logo_blue.png" alt="Blue/Yellow" style="height:42px;width:auto"><div><b>BLUE / YELLOW</b><span>Sweden</span></div></div>
+<main class="main">
+<div class="wrap" id="checking"><p class="lead">Kontrollerar din betalning …</p></div>
+<div class="wrap" id="failed" style="display:none">
+  <h1>Betalningen är inte bekräftad</h1>
+  <p class="lead">Vi kan inte bekräfta någon genomförd donation. Om du avbröt betalningen har inget dragits. Du är varmt välkommen att försöka igen.</p>
+  <a class="back" href="/donera">← Tillbaka till donation</a>
+</div>
+<div class="wrap" id="thanks" style="display:none">
+  <div class="heart">💛</div>
+  <h1 id="heading">Tack för din gåva. Din hjälp är på väg till Ukraina.</h1>
+  <p class="lead" id="amountLine">Vi har tagit emot din donation.</p>
+  <p class="lead">Ditt stöd gör det möjligt för Blue/Yellow att fortsätta leverera livsviktigt stöd direkt till fronten och till de mest utsatta områdena i Ukraina. Tack för att du står med Ukraina. Tillsammans försvarar vi ett fritt Europa.</p>
+
+  <div class="cert" id="cert" style="display:none">
+    <h2>Skapa ditt gåvobevis</h2>
+    <p class="sub">Välj syfte och motiv, fyll i dina uppgifter och ladda ner som PDF.</p>
+    <p class="gift-amount" id="giftAmount"></p>
+
+    <div class="step-title">1. Välj syfte</div>
+    <div class="purpose-grid" id="purposeGrid" role="radiogroup" aria-label="Välj syfte"></div>
+
+    <div id="motifStep" style="display:none">
+      <div class="step-title">2. Välj motiv</div>
+      <div class="motif-grid" id="motifGrid" role="radiogroup" aria-label="Välj motiv"></div>
+    </div>
+
+    <div id="certRest" style="display:none">
+      <div class="step-title">3. Fyll i uppgifter</div>
+      <div id="certFields"></div>
+
+      <div class="step-title">4. Förhandsvisning</div>
+      <div class="preview-wrap" id="previewWrap"><div class="preview-scale" id="previewScale"></div></div>
+      <button class="dl" id="certDownload" disabled aria-label="Ladda ner gåvobevis som PDF"><span class="spinner"></span><span id="certDlLabel">Ladda ner som PDF</span></button>
+      <p class="done-msg" id="doneMsg">Tack! Du skickas nu tillbaka till blue-yellow.se …</p>
+    </div>
+  </div>
+
+  <h2 class="share-title">Dela ditt stöd</h2>
+  <div class="share">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://blue-yellow.se" target="_blank" rel="noopener">Dela på Facebook</a>
+    <a href="https://twitter.com/intent/tweet?text=Jag%20st%C3%B6djer%20Ukraina%20genom%20Blue%2FYellow%20Sweden&url=https://blue-yellow.se" target="_blank" rel="noopener">Dela på X</a>
+  </div>
+
+  <a class="back" href="/">← Tillbaka till blue-yellow.se</a>
+</div>
+
+<!-- Dold gåvobevismall (renderas endast för PDF-generering) -->
+<div class="cert-sheet" id="certSheet" aria-hidden="true"></div>
+</main>
+<div class="foot">Blue/Yellow Sweden · 95 öre av varje krona når fram</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+// Tacksidans innehåll visas ENDAST när betalningen är verifierad som genomförd
+// hos betaltjänsten OCH donationen finns i databasen. Beloppet kommer alltid
+// från betalsystemet (databasen), aldrig från formulär eller URL.
+const PROXY_URL = "https://successful-tenderness-production-681d.up.railway.app";
+const HOME_URL = "https://blue-yellow.se";
+const params = new URLSearchParams(window.location.search);
+const pid = params.get("id");
+const $ = (id) => document.getElementById(id);
+function showFailed(){ $("checking").style.display="none"; $("thanks").style.display="none"; $("failed").style.display="block"; }
+function goHome(){ window.location.href = HOME_URL; }
+let verifiedAmount = null;
+
+function showThanks(amount){
+  $("checking").style.display="none"; $("failed").style.display="none"; $("thanks").style.display="block";
+  verifiedAmount = Number(amount);
+  $("amountLine").textContent = `Vi har tagit emot din donation på ${verifiedAmount.toLocaleString("sv-SE")} kr.`;
+  $("giftAmount").textContent = `Din gåva: ${verifiedAmount.toLocaleString("sv-SE")} kr`;
+  $("cert").style.display = "block";
+  // Konvertering triggas bara vid verifierad betalning
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: "donation_complete", payment_method: "swish",
+    value: verifiedAmount, currency: "SEK", transaction_id: pid });
+  // Facebook Pixel Purchase-event
+  if (typeof fbq === "function") {
+    fbq('track', 'Purchase', { value: verifiedAmount, currency: 'SEK' }, { eventID: pid });
+  }
+}
+
+// Steg 1: verifiera betalningen hos Swish-proxyn.
+// Steg 2: hämta donationen från databasen (skapas där med belopp från betalsystemet).
+// Ogiltig token eller redan nedladdat bevis → redirect till blue-yellow.se.
+async function verify(attempt){
+  if (!pid) { showFailed(); return; }
+  try {
+    const r = await fetch(`${PROXY_URL}/api/swish/status/${encodeURIComponent(pid)}`);
+    const data = r.ok ? await r.json() : null;
+    if (data && data.status === "PAID") {
+      try {
+        const dr = await fetch(`/api/public/donation?id=${encodeURIComponent(pid)}`);
+        if (dr.ok) {
+          const donation = await dr.json();
+          if (donation.certificate_downloaded) { goHome(); return; }
+          showThanks(donation.amount);
+          return;
+        }
+      } catch (e) {}
+      showFailed();
+      return;
+    }
+    if (data && ["DECLINED","CANCELLED","ERROR","FAILED"].includes(data.status)) { showFailed(); return; }
+  } catch (e) {}
+  if (attempt < 10) { setTimeout(() => verify(attempt + 1), 2000); } else { showFailed(); }
+}
+verify(0);
+
+// ===== Gåvobevis-systemet v4 (PDF genereras i webbläsaren; belopp och
+// engångsnedladdning säkras av databasen) =====
+const CERT_IMG = "/images/certificates/";
+const LOGO = CERT_IMG + "logo_blue.png";
+
+const PURPOSES = [
+  { id:"gift", icon:"🎁", title:"Gåva i annans namn", desc:"Ge en gåva till någon du bryr dig om" },
+  { id:"memorial", icon:"🕯️", title:"Minnesgåva", desc:"Hedra en person med en gåva" },
+  { id:"self", icon:"📄", title:"Eget gåvobevis", desc:"Bekräftelse på din egen gåva" },
+];
+
+const MOTIFS = [
+  { id:"christmas", name:"Julkort", desc:"Värme och solidaritet", thumb:CERT_IMG+"christmas_kyiv.jpg", bg:CERT_IMG+"christmas_kyiv.jpg", titleFont:"Playfair Display", titleItalic:true, bodyFont:"Playfair Display", primary:"#1a5c2a", accent:"#FFD700", footerBg:"#1a5c2a", overlay:"linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,40,0,0.5))", availableFor:["gift"] },
+  { id:"formal", name:"Formellt", desc:"Ceremoniell och värdig", thumb:CERT_IMG+"trident_watermark.png", watermark:CERT_IMG+"trident_watermark.png", titleFont:"Cinzel", bodyFont:"Cinzel", primary:"#0057B8", accent:"#FFD700", footerBg:"#0057B8", availableFor:["gift","memorial","self"] },
+  { id:"church", name:"Andrijivskakyrkany", desc:"Medmänsklighet och hopp", thumb:CERT_IMG+"church_kyiv.jpg", bg:CERT_IMG+"church_kyiv.jpg", titleFont:"EB Garamond", bodyFont:"EB Garamond", primary:"#5c3a1e", accent:"#FFD700", footerBg:"#5c3a1e", overlay:"linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(40,20,0,0.5))", availableFor:["gift","memorial"] },
+  { id:"children", name:"Barnen under flaggan", desc:"Skydd och framtidstro", thumb:CERT_IMG+"children_flag.jpg", bg:CERT_IMG+"children_flag.jpg", titleFont:"Nunito", bodyFont:"Nunito", primary:"#0057B8", accent:"#FFD700", footerBg:"#0057B8", overlay:"linear-gradient(to bottom, rgba(0,50,150,0.2), rgba(0,40,100,0.45))", availableFor:["gift","self"] },
+];
+
+let certPurpose = null;
+let certMotif = null;
+const certData = { giver:"", recipient:"", greeting:"" };
+
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+// Steg 1: syfteskort
+const purposeGrid = $("purposeGrid");
+PURPOSES.forEach((p) => {
+  const card = document.createElement("div");
+  card.className = "purpose-card";
+  card.setAttribute("role", "radio");
+  card.setAttribute("aria-checked", "false");
+  card.tabIndex = 0;
+  card.innerHTML = `<span class="pcheck">✓</span><div class="picon">${p.icon}</div><div class="pname">${p.title}</div><div class="pdesc">${p.desc}</div>`;
+  const pick = () => selectPurpose(p.id);
+  card.addEventListener("click", pick);
+  card.addEventListener("keydown", (e) => { if (e.key === " " || e.key === "Enter") { e.preventDefault(); pick(); } });
+  purposeGrid.appendChild(card);
+});
+
+function selectPurpose(id){
+  certPurpose = id;
+  [...purposeGrid.children].forEach((c, i) => c.setAttribute("aria-checked", String(PURPOSES[i].id === id)));
+  // Byte av syfte → nollställ valt motiv och formulär
+  certMotif = null;
+  certData.giver = ""; certData.recipient = ""; certData.greeting = "";
+  buildMotifGrid();
+  $("motifStep").style.display = "block";
+  $("certRest").style.display = "none";
+  $("previewScale").innerHTML = ""; $("certSheet").innerHTML = "";
+  $("certDownload").disabled = true;
+}
+
+// Steg 2: motivkort, filtrerade per syfte
+function buildMotifGrid(){
+  const grid = $("motifGrid");
+  grid.innerHTML = "";
+  visibleMotifs().forEach((m) => {
+    const card = document.createElement("div");
+    card.className = "motif-card";
+    card.setAttribute("role", "radio");
+    card.setAttribute("aria-checked", "false");
+    card.tabIndex = 0;
+    card.innerHTML = `<span class="mcheck">✓</span><img src="${m.thumb}" alt="" loading="lazy"><div class="mname">${m.name}</div><div class="mdesc">${m.desc}</div>`;
+    const pick = () => selectMotif(m.id);
+    card.addEventListener("click", pick);
+    card.addEventListener("keydown", (e) => { if (e.key === " " || e.key === "Enter") { e.preventDefault(); pick(); } });
+    grid.appendChild(card);
+  });
+}
+
+function visibleMotifs(){ return MOTIFS.filter((m) => m.availableFor.includes(certPurpose)); }
+
+function selectMotif(id){
+  certMotif = MOTIFS.find((m) => m.id === id);
+  const visible = visibleMotifs();
+  [...$("motifGrid").children].forEach((c, i) => c.setAttribute("aria-checked", String(visible[i].id === id)));
+  // Byte av motiv → behåll formulärdata
+  buildFields();
+  $("certRest").style.display = "block";
+  renderCert();
+}
+
+// Steg 3: dynamiska formulärfält per syfte
+function buildFields(){
+  const wrap = $("certFields");
+  wrap.innerHTML = "";
+  const mkText = (id, label, placeholder, value, oninput) => {
+    const l = document.createElement("label");
+    l.htmlFor = id; l.textContent = label;
+    const i = document.createElement("input");
+    i.type = "text"; i.id = id; i.maxLength = 80; i.placeholder = placeholder; i.value = value;
+    i.addEventListener("input", oninput);
+    wrap.appendChild(l); wrap.appendChild(i);
+  };
+  mkText("cf_giver", "Ditt namn", "Givarens namn", certData.giver,
+    (e) => { certData.giver = e.target.value; scheduleRender(); });
+  if (certPurpose === "gift") {
+    mkText("cf_recipient", "Mottagarens namn", "Vem certifikatet utfärdas till", certData.recipient,
+      (e) => { certData.recipient = e.target.value; scheduleRender(); });
+  } else if (certPurpose === "memorial") {
+    mkText("cf_recipient", "Den hedrades namn", "Personen som hedras", certData.recipient,
+      (e) => { certData.recipient = e.target.value; scheduleRender(); });
+  }
+  const gl = document.createElement("label");
+  gl.htmlFor = "cf_greeting"; gl.textContent = "Personlig hälsning (valfritt)";
+  const gt = document.createElement("textarea");
+  gt.id = "cf_greeting"; gt.maxLength = 100; gt.placeholder = "Kort personlig text"; gt.value = certData.greeting;
+  const counter = document.createElement("div");
+  counter.className = "counter"; counter.textContent = `(${gt.value.length}/100 tecken)`;
+  gt.addEventListener("input", (e) => {
+    certData.greeting = e.target.value;
+    counter.textContent = `(${e.target.value.length}/100 tecken)`;
+    scheduleRender();
+  });
+  wrap.appendChild(gl); wrap.appendChild(gt); wrap.appendChild(counter);
+}
+
+function certValid(){
+  if (!certMotif || !certPurpose || !(verifiedAmount > 0)) return false;
+  if (!certData.giver.trim()) return false;
+  if (certPurpose !== "self" && !certData.recipient.trim()) return false;
+  return true;
+}
+
+// Certifikattexter — unika per motiv × syfte
+function certBodyHTML(m){
+  const amt = `${Number(verifiedAmount || 0).toLocaleString("sv-SE")} kr`;
+  const dateStr = new Date().toLocaleDateString("sv-SE", { day:"numeric", month:"long", year:"numeric" });
+  const giver = esc(certData.giver.trim());
+  const recip = esc(certData.recipient.trim());
+  const name = `font-family:${m.bodyFont},serif;color:${m.primary}`;
+  const greeting = certData.greeting.trim()
+    ? `<p style="font-style:italic;font-size:15px;color:#555;margin-top:16px">”${esc(certData.greeting.trim())}”</p>`
+    : "";
+  switch (m.id + "_" + certPurpose) {
+    case "christmas_gift":
+      return `<div style="${name};font-size:20px;font-weight:700;font-style:italic;margin-bottom:18px">En julgåva till dig, ${recip}</div>
+      <p style="font-size:15px;color:#333;line-height:1.7">I år har ${giver} valt att ge en julgåva i ditt namn till Blue/Yellow.</p>
+      <p style="${name};font-size:26px;font-weight:700;margin:14px 0">${amt}</p>
+      <p style="font-size:14.5px;color:#333;line-height:1.7">Gåvan bidrar direkt till att leverera livsviktig utrustning, skydd och värme där behoven är som störst i vinterkylan.</p>
+      ${greeting}
+      <p style="font-size:15px;color:#333;margin-top:22px;line-height:1.6">En riktigt God Jul &amp; ett Gott Nytt År<br>önskar ${giver}</p>`;
+    case "formal_gift":
+      return `<div style="font-size:15px;letter-spacing:3px;color:#666;text-transform:uppercase;margin-bottom:20px">Tillägnat ${recip}</div>
+      <p style="font-size:15px;color:#333;line-height:1.7">${giver} har överlämnat ett bidrag på <b style="color:${m.primary}">${amt}</b> till Blue/Yellow Sweden i ditt namn.</p>
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-top:16px">Gåvan stärker vårt arbete med att leverera nödvändig, direkt utrustning och logistiskt stöd till frontlinjen.</p>
+      ${greeting}
+      <p style="font-size:14.5px;color:#333;margin-top:22px">Med varma hälsningar från ${giver}</p>
+      <p style="font-size:13px;color:#555;margin-top:14px">Stockholm, ${dateStr}</p>`;
+    case "formal_memorial":
+      return `<div style="font-size:15px;letter-spacing:3px;color:#666;text-transform:uppercase;margin-bottom:20px">Till minne av ${recip}</div>
+      <p style="font-size:15px;color:#333;line-height:1.7">${giver} har överlämnat ett bidrag på <b style="color:${m.primary}">${amt}</b> till Blue/Yellow Sweden till minne av ${recip}.</p>
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-top:16px">Genom denna gåva hedras ${recip}s minne och stärks det arbete som levererar livsviktig utrustning, medicinsk materiel och civil nödhjälp till de hårdast drabbade områdena i Ukraina.</p>
+      ${greeting}
+      <p style="font-size:14.5px;color:#333;margin-top:22px">Med varm omtanke,<br>${giver}</p>
+      <p style="font-size:13px;color:#555;margin-top:14px">Stockholm, ${dateStr}</p>`;
+    case "formal_self":
+      return `<div style="font-size:13px;letter-spacing:3px;color:#666;text-transform:uppercase;margin-bottom:18px">Gåvocertifikat</div>
+      <p style="font-size:15px;color:#333">Härmed intygas att</p>
+      <p style="${name};font-size:24px;font-weight:700;margin:10px 0">${giver}</p>
+      <p style="font-size:15px;color:#333">har bidragit med en gåva på</p>
+      <p style="${name};font-size:26px;font-weight:700;margin:10px 0">${amt}</p>
+      <p style="font-size:15px;color:#333">till stöd för Blue/Yellow.</p>
+      <p style="font-size:13.5px;color:#444;line-height:1.7;margin-top:18px">Genom detta bidrag möjliggör du direkt anskaffning och distribution av livsviktig skyddsutrustning, medicinsk materiel och civil nödhjälp till de hårdast drabbade områdena i Ukraina.</p>
+      <p style="font-size:13.5px;color:#444;margin-top:14px">Tack för din solidaritet och för att du står upp för liv och frihet.</p>
+      ${greeting}
+      <p style="font-size:14px;color:#333;margin-top:26px">Stockholm, ${dateStr}</p>`;
+    case "church_gift":
+      return `<div style="${name};font-size:20px;font-weight:700;margin-bottom:18px">Med tacksamhet och omtanke</div>
+      <p style="font-size:15px;color:#333;line-height:1.7">Till dig, ${recip}.<br>${giver} har skänkt en gåva på <b style="color:${m.primary}">${amt}</b> i ditt namn till Blue/Yellows arbete.</p>
+      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">I en mörk och prövande tid blir denna handling av solidaritet till ett konkret skydd och ett tecken på att de drabbade inte är glömda.</p>
+      <p style="font-style:italic;font-size:15px;color:#444;margin-top:16px">”Så länge det behövs.”</p>
+      ${greeting}
+      <p style="font-size:14.5px;color:#333;margin-top:22px">Varma hälsningar från ${giver}</p>`;
+    case "church_memorial":
+      return `<div style="${name};font-size:20px;font-weight:700;margin-bottom:18px">Till minne och med vördnad</div>
+      <p style="font-size:15px;color:#333;line-height:1.7">${giver} har skänkt en gåva på <b style="color:${m.primary}">${amt}</b> till Blue/Yellow till minne av ${recip}.</p>
+      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">I en tid av prövning och sorg kan medmänsklighet bli det ljus som bär oss. Denna gåva hedrar ${recip}s minne genom att skydda liv och ge hopp åt människor i nöd.</p>
+      <p style="font-style:italic;font-size:15px;color:#444;margin-top:16px">”Så länge det behövs.”</p>
+      ${greeting}
+      <p style="font-size:14.5px;color:#333;margin-top:22px">Med varm omtanke,<br>${giver}</p>`;
+    case "children_gift":
+      return `<div style="${name};font-size:19px;font-weight:700;margin-bottom:18px">En gåva för skydd, värme och framtidstro</div>
+      <p style="font-size:15px;color:#333;line-height:1.7">Bästa ${recip}!<br>${giver} har gett en gåva på <b style="color:${m.primary}">${amt}</b> i ditt namn till Blue/Yellow.</p>
+      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">Stödet bidrar till livräddande förnödenheter och materiell hjälp som skyddar liv och ger människor förutsättningar att hålla ut i en hård vardag.</p>
+      ${greeting}
+      <p style="font-size:14.5px;color:#333;margin-top:22px">Med varma hälsningar från ${giver}</p>`;
+    case "children_self":
+      return `<div style="${name};font-size:19px;font-weight:700;margin-bottom:18px">Tack för ditt stöd</div>
+      <p style="font-size:15px;color:#333;line-height:1.7">${giver}, du har bidragit med <b style="color:${m.primary}">${amt}</b> till Blue/Yellow.</p>
+      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">Ditt stöd bidrar till livräddande förnödenheter och materiell hjälp som skyddar liv — generatorer, värme och skyddsutrustning som ger barn och familjer förutsättningar att hålla ut i en hård vardag.</p>
+      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">Det är tack vare människor som dig som arbetet på plats är möjligt.</p>
+      ${greeting}
+      <p style="font-size:14.5px;color:#333;margin-top:22px">Med varm hälsning,<br>Blue/Yellow Sweden<br><span style="font-size:13px;color:#555">Stockholm, ${dateStr}</span></p>`;
+  }
+  return "";
+}
+
+function certHTML(){
+  const m = certMotif;
+  const body = certBodyHTML(m);
+  const footerText = `Blue/Yellow · Nackagatan 4 · 116 49 Stockholm<br>802552-3724 · info@blue-yellow.se · Swish 123 696 42 41`;
+  if (m.id === "formal") {
+    // Treudden: dubbel ram, vertikalt centrerat innehåll, stort vattenmärke, sidfot förankrad i botten
+    return `<div style="position:relative;width:595px;height:842px;background:#fff;box-sizing:border-box;font-family:${m.bodyFont},serif">
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:20">
+        <div style="position:absolute;top:15px;left:15px;right:15px;bottom:15px;border:4px solid #0057B8"></div>
+        <div style="position:absolute;top:23px;left:23px;right:23px;bottom:23px;border:2px solid #FFD700"></div>
+      </div>
+      <div style="position:absolute;top:0;left:0;right:0;bottom:50px;pointer-events:none;z-index:0;background-image:url('${m.watermark}');background-repeat:no-repeat;background-position:center center;background-size:contain;opacity:.11"></div>
+      <div style="position:relative;z-index:10;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px 60px;min-height:calc(100% - 50px);box-sizing:border-box">
+        <img src="${LOGO}" alt="Blue/Yellow" style="width:60px;height:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.15);margin-bottom:16px">
+        <div style="font-family:${m.titleFont},serif;font-size:26px;font-weight:700;letter-spacing:6px;color:#0057B8;margin-bottom:26px">G Å V O B E V I S</div>
+        <div style="width:100%;max-width:430px">${body}</div>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:50px;background:#0057B8;color:#fff;font-size:11px;line-height:1.4;display:flex;align-items:center;justify-content:center;text-align:center;z-index:10">${footerText}</div>
+    </div>`;
+  }
+  // Fotomotiv: bildheader 220px med overlay, subtilt treudd-vattenmärke, centrerat innehåll, sidfot med logga förankrad i botten
+  return `<div style="position:relative;width:595px;height:842px;background:#fff;box-sizing:border-box;font-family:${m.bodyFont},serif">
+    <div style="position:relative;height:220px;background-image:url('${m.bg}');background-position:center;background-size:cover;background-repeat:no-repeat">
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:${m.overlay}"></div>
+      <div style="position:absolute;bottom:16px;left:0;width:100%;text-align:center;font-family:${m.titleFont},serif;${m.titleItalic ? "font-style:italic;" : ""}font-size:26px;font-weight:700;letter-spacing:6px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)">G Å V O B E V I S</div>
+    </div>
+    <div style="position:absolute;top:220px;left:0;right:0;bottom:50px;pointer-events:none;z-index:0;background-image:url('${CERT_IMG}trident_watermark.png');background-repeat:no-repeat;background-position:center center;background-size:40%;opacity:.06"></div>
+    <div style="position:relative;z-index:10;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px 44px;min-height:calc(100% - 220px - 50px);box-sizing:border-box">
+      <div style="width:100%;max-width:430px">${body}</div>
+    </div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:50px;background:${m.footerBg};color:#fff;font-size:11px;line-height:1.4;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 16px;text-align:left;z-index:10">
+      <img src="${LOGO}" alt="Blue/Yellow" style="width:30px;height:auto;border-radius:3px;flex:none">
+      <div>${footerText}</div>
+    </div>
+  </div>`;
+}
+
+let renderTimer = null;
+function scheduleRender(){ clearTimeout(renderTimer); renderTimer = setTimeout(renderCert, 200); }
+function renderCert(){
+  if (!certMotif) return;
+  const html = certHTML();
+  $("previewScale").innerHTML = html;
+  $("certSheet").innerHTML = html;
+  fitPreview();
+  $("certDownload").disabled = !certValid();
+}
+function fitPreview(){
+  const wrap = $("previewWrap"), inner = $("previewScale");
+  const scale = Math.min(1, wrap.clientWidth / 595);
+  inner.style.transform = `scale(${scale})`;
+  wrap.style.height = (inner.offsetHeight * scale) + "px";
+}
+window.addEventListener("resize", fitPreview);
+
+let downloaded = false;
+async function generateCertPDF(){
+  if (downloaded) return;
+  const sheet = $("certSheet"), btn = $("certDownload");
+  btn.classList.add("loading");
+  btn.disabled = true;
+  $("certDlLabel").textContent = "Skapar PDF …";
+  try {
+    // FÖRST: markera beviset som nedladdat i databasen (atomiskt, en gång).
+    const mark = await fetch("/api/public/donation-downloaded", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: pid }),
+    });
+    if (!mark.ok) {
+      alert("Gåvobeviset har redan laddats ner.");
+      goHome();
+      return;
+    }
+    downloaded = true;
+
+    await document.fonts.ready;
+    sheet.style.position = "fixed";
+    sheet.style.left = "0";
+    sheet.style.top = "0";
+    sheet.style.zIndex = "-1";
+    const canvas = await html2canvas(sheet, { scale: 2, useCORS: true, backgroundColor: "#FFFFFF", logging: false });
+    sheet.style.position = "absolute";
+    sheet.style.left = "-9999px";
+    sheet.style.top = "-9999px";
+    sheet.style.zIndex = "";
+    const imgData = canvas.toDataURL("image/jpeg", 0.95);
+    const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+    const h = (canvas.height * 210) / canvas.width;
+    pdf.addImage(imgData, "JPEG", 0, 0, 210, h);
+    const fileBase = (certPurpose === "self" ? certData.giver : certData.recipient).trim() || certData.giver.trim();
+    pdf.save(`gavobevis_${fileBase.replace(/\s+/g, "_")}.pdf`);
+
+    // Efter nedladdning: grå knapp, meddelande och redirect till startsidan.
+    $("certDlLabel").textContent = "Gåvobeviset har laddats ner";
+    $("doneMsg").style.display = "block";
+    setTimeout(goHome, 2000);
+  } catch (err) {
+    console.error("PDF generation failed:", err);
+    sheet.style.position = "absolute";
+    sheet.style.left = "-9999px";
+    sheet.style.top = "-9999px";
+    sheet.style.zIndex = "";
+    btn.classList.remove("loading");
+    $("certDlLabel").textContent = "Ladda ner som PDF";
+    btn.disabled = !certValid();
+  }
+}
+$("certDownload").addEventListener("click", generateCertPDF);
+</script>
+</body>
+</html>
