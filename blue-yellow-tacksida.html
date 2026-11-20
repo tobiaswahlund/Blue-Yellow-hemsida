@@ -41,15 +41,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- NY KOD: Donate-händelsen som tacksidans pixel skickade, skickas nu bara efter samtycke -->
 <script>window.__byExtraFbq=[['track','Donate']];</script>
 <!-- SLUT NY KOD -->
-<!-- NY KOD: Samtyckesstyrd laddning. Meta Pixel, Google Tag Manager (med Google Ads) och Flock laddas
-     FÖRST när besökaren har sagt ja i cookie-bannern. Valet sparas i webbläsaren (nödvändig lagring). -->
+<!-- NY KOD: Cookiebot sköter samtycket (punkt 8). Cookiebot finns redan på sajten och laddas via Google Tag Manager, därför laddas Tag Manager som i originalet.
+     Meta Pixel startar först efter ja till marknadsföring i Cookiebot, Flock först efter ja till statistik. Vår tidigare samtyckeskod ligger bortkommenterad sist i filen. -->
 <script>
 (function(){
-  var KEY='by_cookie_consent', VERSION=1;
-  function read(){try{var c=JSON.parse(localStorage.getItem(KEY));return (c&&c.v===VERSION)?c:null;}catch(e){return null;}}
   function loadMarketing(){
     if(window.__byMarketingLoaded)return;window.__byMarketingLoaded=true;
-    // Meta Pixel (samma kod som tidigare, nu bara efter samtycke)
+    // Meta Pixel (samma kod som i originalet, nu bara efter samtycke)
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -59,32 +57,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     fbq('init','1458607096410441');
     fbq('track','PageView');
     if(window.__byExtraFbq){window.__byExtraFbq.forEach(function(a){fbq.apply(null,a);});}
-    // Google Tag Manager (laddar Google Ads), samma kod som tidigare, nu bara efter samtycke
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P2QKDSGD');
   }
   function loadStatistics(){
     if(window.__byStatsLoaded)return;window.__byStatsLoaded=true;
     var s=document.createElement('script');s.defer=true;s.src='/~flock.js';
     s.setAttribute('data-proxy-url','/~api/analytics');document.head.appendChild(s);
   }
-  function apply(c){if(!c)return;if(c.statistics)loadStatistics();if(c.marketing)loadMarketing();}
-  window.byConsent={
-    get:read,
-    save:function(statistics,marketing){
-      var old=read();
-      var c={v:VERSION,statistics:!!statistics,marketing:!!marketing,date:new Date().toISOString()};
-      try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}
-      // Om besökaren drar tillbaka ett tidigare ja laddas sidan om, så att redan startade skript stängs av.
-      if(old&&((old.statistics&&!c.statistics)||(old.marketing&&!c.marketing))){location.reload();return;}
-      apply(c);
-    }
-  };
-  apply(read());
+  function apply(){
+    var c=window.Cookiebot&&window.Cookiebot.consent;if(!c)return;
+    if(c.statistics)loadStatistics();
+    if(c.marketing)loadMarketing();
+  }
+  window.addEventListener('CookiebotOnConsentReady',apply);
+  window.addEventListener('CookiebotOnAccept',apply);
+  // Om besökaren drar tillbaka ett tidigare ja laddas sidan om, så att redan startade skript stängs av.
+  window.addEventListener('CookiebotOnDecline',function(){
+    var c=window.Cookiebot&&window.Cookiebot.consent;if(!c)return;
+    if((window.__byMarketingLoaded&&!c.marketing)||(window.__byStatsLoaded&&!c.statistics))location.reload();
+  });
+  // Länken Cookie-inställningar i sidfoten öppnar Cookiebots inställningar
+  window.openCookieSettings=function(){if(window.Cookiebot&&window.Cookiebot.renew)window.Cookiebot.renew();};
 })();
 </script>
+<!-- Google Tag Manager, samma kod som i originalet (Tag Manager laddar Cookiebot och Google Ads) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2QKDSGD');</script>
 <!-- SLUT NY KOD -->
 <!-- Google Fonts (endast för gåvobevis-certifikat, sidans UI använder Larsseit) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -681,7 +681,10 @@ async function generateCertPDF(){
       body: JSON.stringify({ id: pid }),
     });
     if (!mark.ok) {
-      alert("Gåvobeviset har redan laddats ner.");
+      // BORTTAGEN KOD: Konsekvent stavningsändring: "laddats ner" → "laddats ned"
+      //alert("Gåvobeviset har redan laddats ner.");
+      // NY KOD: Konsekvent stavningsändring: "laddats ner" → "laddats ned"
+      alert("Gåvobeviset har redan laddats ned.");
       goHome();
       return;
     }
@@ -698,15 +701,18 @@ async function generateCertPDF(){
 
   // Efter nedladdning: grå knapp, meddelande och redirect till startsidan.
   btn.classList.remove("loading");
-  $("certDlLabel").textContent = "Gåvobeviset har laddats ner";
+  // BORTTAGEN KOD: Konsekvent stavningsändring: "laddats ner" → "laddats ned"
+  //$("certDlLabel").textContent = "Gåvobeviset har laddats ner";
+  // NY KOD: Konsekvent stavningsändring: "laddats ner" → "laddats ned"
+  $("certDlLabel").textContent = "Gåvobeviset har laddats ned";
   $("doneMsg").style.display = "block";
   setTimeout(goHome, 2000);
 }
 // SLUT NY KOD
 $("certDownload").addEventListener("click", generateCertPDF);
 </script>
-<!-- NY KOD: Cookie-banner. Visas tills besökaren har gjort ett val. "Godkänn alla" och "Endast nödvändiga"
-     är lika stora och lika lätta att välja. Kan öppnas igen via länken "Cookie-inställningar" i sidfoten. -->
+<!-- BORTTAGEN KOD: egen cookie-banner (punkt 8). Ersatt av Cookiebot, som redan finns på sajten och visas via Google Tag Manager.
+     Länken Cookie-inställningar i sidfoten öppnar nu Cookiebots inställningar (se samtyckeskoden i head).
 <style>
 #bycc{position:fixed;left:16px;right:16px;bottom:16px;z-index:10000;max-width:560px;margin:0 auto;background:#fff;color:#10203C;border-radius:16px;border-top:5px solid #FFD700;box-shadow:0 12px 40px rgba(0,12,40,.35);padding:22px 22px 18px;font-family:'Helvetica Neue',Arial,sans-serif;display:none}
 #bycc.open{display:block}
@@ -757,6 +763,52 @@ $("certDownload").addEventListener("click", generateCertPDF);
   if(!window.byConsent.get())box.classList.add('open');
 })();
 </script>
-<!-- SLUT NY KOD -->
+-->
 </body>
 </html>
+
+<!-- BORTTAGEN KOD: vår tidigare samtyckeskod från head, som hörde ihop med vår egen cookie-banner (punkt 8).
+     Ersatt av Cookiebot. Flyttad hit längst ner så att radnumren i resten av filen inte ändras.
+<script>
+(function(){
+  var KEY='by_cookie_consent', VERSION=1;
+  function read(){try{var c=JSON.parse(localStorage.getItem(KEY));return (c&&c.v===VERSION)?c:null;}catch(e){return null;}}
+  function loadMarketing(){
+    if(window.__byMarketingLoaded)return;window.__byMarketingLoaded=true;
+    // Meta Pixel (samma kod som tidigare, nu bara efter samtycke)
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1458607096410441');
+    fbq('track','PageView');
+    if(window.__byExtraFbq){window.__byExtraFbq.forEach(function(a){fbq.apply(null,a);});}
+    // Google Tag Manager (laddar Google Ads), samma kod som tidigare, nu bara efter samtycke
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2QKDSGD');
+  }
+  function loadStatistics(){
+    if(window.__byStatsLoaded)return;window.__byStatsLoaded=true;
+    var s=document.createElement('script');s.defer=true;s.src='/~flock.js';
+    s.setAttribute('data-proxy-url','/~api/analytics');document.head.appendChild(s);
+  }
+  function apply(c){if(!c)return;if(c.statistics)loadStatistics();if(c.marketing)loadMarketing();}
+  window.byConsent={
+    get:read,
+    save:function(statistics,marketing){
+      var old=read();
+      var c={v:VERSION,statistics:!!statistics,marketing:!!marketing,date:new Date().toISOString()};
+      try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}
+      // Om besökaren drar tillbaka ett tidigare ja laddas sidan om, så att redan startade skript stängs av.
+      if(old&&((old.statistics&&!c.statistics)||(old.marketing&&!c.marketing))){location.reload();return;}
+      apply(c);
+    }
+  };
+  apply(read());
+})();
+</script>
+-->
