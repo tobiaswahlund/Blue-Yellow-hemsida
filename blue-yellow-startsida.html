@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="sv">
 <head>
+<!-- NY KOD: teckenkodningen först i head, så att å, ä och ö alltid visas rätt (punkt 26) -->
+<meta charset="utf-8">
+<!-- SLUT NY KOD -->
 <!-- Meta Pixel Code -->
 <!-- BORTTAGEN KOD: Meta Pixel laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>
@@ -79,7 +82,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })();
 </script>
 <!-- SLUT NY KOD -->
+<!-- BORTTAGEN KOD: raden låg för långt ner (efter spårningskoden), webbläsaren letar bara i början av filen (punkt 26)
 <meta charset="utf-8">
+-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -405,17 +410,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
   <div class="wrap hbar">
     <button class="logo" onclick="go('hem')">
+      <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
       <img src="/images/logo.png" alt="Blue/Yellow">
+-->
+      <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+      <img width="220" height="220" src="/images/logo.png" alt="Blue/Yellow">
+      <!-- SLUT NY KOD -->
       <b>BLUE/YELLOW <em>SWEDEN</em></b>
     </button>
     <button class="burger" aria-label="Öppna meny" onclick="document.getElementById('mnav').classList.toggle('open')">☰</button>
     <nav class="main" id="mnav">
+      <!-- BORTTAGEN KOD: menyn var knappar utan adress, gick inte att öppna i ny flik (punkt 22)
       <button data-nav="vad" onclick="go('vad')">Vad vi gör</button>
       <button data-nav="eng" onclick="go('eng')">Engagera dig</button>
       <button data-nav="om" onclick="go('om')">Om oss</button>
       <button data-nav="nyh" onclick="go('nyh')">Aktuellt</button>
       <button data-nav="res" onclick="go('res')">Resultat</button>
       <button data-nav="press" onclick="go('press')">Press</button>
+-->
+      <!-- NY KOD: menyn är riktiga länkar med adress (punkt 22) -->
+      <a data-nav="vad" href="/vad-vi-gor" onclick="return navClick(event,'vad')">Vad vi gör</a>
+      <a data-nav="eng" href="/engagera-dig" onclick="return navClick(event,'eng')">Engagera dig</a>
+      <a data-nav="om" href="/om-oss" onclick="return navClick(event,'om')">Om oss</a>
+      <a data-nav="nyh" href="/nyheter-och-berattelser" onclick="return navClick(event,'nyh')">Aktuellt</a>
+      <a data-nav="res" href="/resultat" onclick="return navClick(event,'res')">Resultat</a>
+      <a data-nav="press" href="/press" onclick="return navClick(event,'press')">Press</a>
+      <!-- SLUT NY KOD -->
     </nav>
     <button class="donate-btn" onclick="go('stod','gava')">Donera</button>
     <a class="eng-btn" href="/en" hreflang="en" aria-label="Switch to English" style="text-decoration:none;display:inline-block">EN</a>
@@ -487,7 +507,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- NY KOD: knappen leder till sidan Företagsgåva & partnerskap (/donera/foretag) -->
       <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('stod','foretag')">Läs om partnerskap</button></div>
     </div>
+    <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
     <img src="/images/partnerskap.jpg" alt="Leverans av markrobotar" style="height:300px">
+-->
+    <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+    <img width="820" height="948" loading="lazy" src="/images/partnerskap.jpg" alt="Leverans av markrobotar" style="height:300px">
+    <!-- SLUT NY KOD -->
   </div></section>
 
   <section class="block bg-w"><div class="wrap">
@@ -519,16 +544,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="split">
         <div>
           <h3 class="disp" style="font-size:24px;color:var(--navy);margin-bottom:10px">Drönarkriget avgör</h3>
+          <!-- BORTTAGEN KOD: Felstavning: "Mellan 70 till 80 procent" → "Mellan 70 och 80 procent"
           <p class="lead">Mellan 70 till 80 procent av det vi förmedlar är drönare, motmedel och elektroniska system. Merparten flyger, men antalet drönare för mark och vatten ökar stadigt. Resten är optik, fordon, samband och skydd.</p>
+-->
+          <!-- NY KOD: Felstavning: "Mellan 70 till 80 procent" → "Mellan 70 och 80 procent" -->
+          <p class="lead">Mellan 70 och 80 procent av det vi förmedlar är drönare, motmedel och elektroniska system. Merparten flyger, men antalet drönare för mark och vatten ökar stadigt. Resten är optik, fordon, samband och skydd.</p>
+          <!-- SLUT NY KOD -->
           <p class="lead" style="margin-top:12px">Elektronisk krigföring stör navigering och bryter radiolänken mellan operatör och drönare. En modell som fungerar en vecka kan vara oanvändbar nästa. Vi arbetar direkt med innovatörer som tar fram frekvenshoppande radio och navigering helt utan GPS.</p>
         </div>
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/samband.jpg" alt="Spaningsdrönare över markrobot" style="height:340px">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="900" height="845" loading="lazy" src="/images/samband.jpg" alt="Spaningsdrönare över markrobot" style="height:340px">
+        <!-- SLUT NY KOD -->
       </div>
     </div>
 
     <div data-pane="medical" class="pane" style="display:none">
       <div class="split">
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/medical.jpg" alt="Vård i mobil klinik" style="height:340px;object-position:center 22%">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="811" height="1100" loading="lazy" src="/images/medical.jpg" alt="Vård i mobil klinik" style="height:340px;object-position:center 22%">
+        <!-- SLUT NY KOD -->
         <div>
           <h3 class="disp" style="font-size:24px;color:var(--navy);margin-bottom:10px">Två spår, ett uppdrag</h3>
           <p class="lead">Vid nollinjen deltar stridskirurger och narkosläkare i traumavården, med bepansrade ambulanser som hämtar svårt skadade under pågående beskjutning. I befriade samhällen upprättas mobila kliniker där äldre, sjuka och barn lämnats utan vård, el och vatten.</p>
@@ -560,7 +600,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('om','dok')">Dokument och rapporter</button></div>
         </div>
         <div>
+          <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
           <img src="/images/dokument.jpg" alt="Statsbesöket i Vilnius 2026" style="height:215px;object-position:center 35%">
+-->
+          <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+          <img width="1000" height="721" loading="lazy" src="/images/dokument.jpg" alt="Statsbesöket i Vilnius 2026" style="height:215px;object-position:center 35%">
+          <!-- SLUT NY KOD -->
           <p class="cap">Statsbesöket i Vilnius 2026.</p>
         </div>
       </div>
@@ -598,18 +643,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="givealt">
         <div class="altcard">
           <h4>Alternativ 1: Ge direkt via QR-koden</h4>
+          <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned"
           <p class="desk-only">Skanna QR-koden med Swish-appen. Direkt efter din gåva kan du ladda ner ett gåvobevis till dig själv eller att ge bort.</p>
+-->
+          <!-- NY KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned" -->
+          <p class="desk-only">Skanna QR-koden med Swish-appen. Direkt efter din gåva kan du ladda ned ett gåvobevis till dig själv eller att ge bort.</p>
+          <!-- SLUT NY KOD -->
+          <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned"
           <p class="mob-only">Tryck på Öppna Swish eller skanna koden. Direkt efter din gåva kan du ladda ner ett gåvobevis till dig själv eller att ge bort.</p>
+-->
+          <!-- NY KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned" -->
+          <p class="mob-only">Tryck på Öppna Swish eller skanna koden. Direkt efter din gåva kan du ladda ned ett gåvobevis till dig själv eller att ge bort.</p>
+          <!-- SLUT NY KOD -->
           <button class="donate-btn" style="margin-top:12px" onclick="go('stod','gava')">Ge via Swish</button>
         </div>
         <div class="altcard">
           <h4>Alternativ 2: Ge via banköverföring eller Swish direkt</h4>
           <p>Swisha till <b>123 696 42 41</b> eller för över till bankkonto <b>8169-5844 167 393-9</b>.</p>
+          <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Skicka sedan ett mail till" → "Skicka sedan ett mejl till"
           <p>Skicka sedan ett mail till <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a> med:</p>
+-->
+          <!-- NY KOD: Konsekvent stavningsändring: "Skicka sedan ett mail till" → "Skicka sedan ett mejl till" -->
+          <p>Skicka sedan ett mejl till <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a> med:</p>
+          <!-- SLUT NY KOD -->
           <ul style="margin:0 0 10px;padding-left:20px">
             <li>Belopp och datum för gåvan</li>
             <li>Namn på mottagare (till dig själv eller som gåva till annan person)</li>
+            <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Mailadress" → "Mejladress"
             <li>Mailadress att skicka gåvobeviset till</li>
+-->
+            <!-- NY KOD: Konsekvent stavningsändring: "Mailadress" → "Mejladress" -->
+            <li>Mejladress att skicka gåvobeviset till</li>
+            <!-- SLUT NY KOD -->
             <li>Önskat motiv (se nedan)</li>
           </ul>
           <p>Vi skickar ditt gåvobevis inom 24 timmar.</p>
@@ -617,10 +682,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Välj motiv till gåvobeviset</h3>
       <div class="motifgrid">
+        <!-- BORTTAGEN KOD: stavfel i kyrkans namn
         <figure class="rec"><img src="/images/certificates/church_kyiv.jpg" alt="Andrijivskakyrkan i Kyiv"><figcaption>Andrijivskakyrkany<span class="rec-tag">Rekommenderas för minnesgåva</span></figcaption></figure>
+        -->
+        <!-- NY KOD: "Andrijivskakyrkany" rättat till "Andrijivskakyrkan" -->
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+        <figure class="rec"><img src="/images/certificates/church_kyiv.jpg" alt="Andrijivskakyrkan i Kyiv"><figcaption>Andrijivskakyrkan<span class="rec-tag">Rekommenderas för minnesgåva</span></figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure class="rec"><img width="1920" height="1280" loading="lazy" src="/images/certificates/church_kyiv.jpg" alt="Andrijivskakyrkan i Kyiv"><figcaption>Andrijivskakyrkan<span class="rec-tag">Rekommenderas för minnesgåva</span></figcaption></figure>
+        <!-- SLUT NY KOD -->
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <figure class="rec"><img src="/images/certificates/trident_watermark.png" alt="Formellt motiv med ukrainskt riksvapen" style="object-fit:contain"><figcaption>Formellt (Treudden)<span class="rec-tag">Rekommenderas för minnesgåva</span></figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure class="rec"><img width="1024" height="1024" loading="lazy" src="/images/certificates/trident_watermark.png" alt="Formellt motiv med ukrainskt riksvapen" style="object-fit:contain"><figcaption>Formellt (Treudden)<span class="rec-tag">Rekommenderas för minnesgåva</span></figcaption></figure>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <figure><img src="/images/certificates/christmas_kyiv.jpg" alt="Julstämning i Kyiv"><figcaption>Julkort</figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure><img width="1280" height="1920" loading="lazy" src="/images/certificates/christmas_kyiv.jpg" alt="Julstämning i Kyiv"><figcaption>Julkort</figcaption></figure>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <figure><img src="/images/certificates/children_flag.jpg" alt="Barn under ukrainsk flagga"><figcaption>Barnen under flaggan</figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure><img width="1920" height="1280" loading="lazy" src="/images/certificates/children_flag.jpg" alt="Barn under ukrainsk flagga"><figcaption>Barnen under flaggan</figcaption></figure>
+        <!-- SLUT NY KOD -->
       </div>
     </div>
 
@@ -637,18 +727,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="givealt">
         <div class="altcard">
           <h4>Alternativ 1: Ge direkt via QR-koden</h4>
+          <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned"
           <p class="desk-only">Skanna QR-koden med Swish-appen. Direkt efter din gåva kan du ladda ner ett gåvobevis till dig själv eller att ge bort.</p>
+-->
+          <!-- NY KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned" -->
+          <p class="desk-only">Skanna QR-koden med Swish-appen. Direkt efter din gåva kan du ladda ned ett gåvobevis till dig själv eller att ge bort.</p>
+          <!-- SLUT NY KOD -->
+          <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned"
           <p class="mob-only">Tryck på Öppna Swish eller skanna koden. Direkt efter din gåva kan du ladda ner ett gåvobevis till dig själv eller att ge bort.</p>
+-->
+          <!-- NY KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned" -->
+          <p class="mob-only">Tryck på Öppna Swish eller skanna koden. Direkt efter din gåva kan du ladda ned ett gåvobevis till dig själv eller att ge bort.</p>
+          <!-- SLUT NY KOD -->
           <button class="donate-btn" style="margin-top:12px" onclick="go('stod','gava')">Ge via Swish</button>
         </div>
         <div class="altcard">
           <h4>Alternativ 2: Ge via banköverföring eller Swish direkt</h4>
           <p>Swisha till <b>123 696 42 41</b> eller för över till bankkonto <b>8169-5844 167 393-9</b>.</p>
+          <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Skicka sedan ett mail till" → "Skicka sedan ett mejl till"
           <p>Skicka sedan ett mail till <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a> med:</p>
+-->
+          <!-- NY KOD: Konsekvent stavningsändring: "Skicka sedan ett mail till" → "Skicka sedan ett mejl till" -->
+          <p>Skicka sedan ett mejl till <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a> med:</p>
+          <!-- SLUT NY KOD -->
           <ul style="margin:0 0 10px;padding-left:20px">
             <li>Belopp och datum för gåvan</li>
             <li>Namn på mottagare (till dig själv eller som gåva till annan person)</li>
+            <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Mailadress" → "Mejladress"
             <li>Mailadress att skicka gåvobeviset till</li>
+-->
+            <!-- NY KOD: Konsekvent stavningsändring: "Mailadress" → "Mejladress" -->
+            <li>Mejladress att skicka gåvobeviset till</li>
+            <!-- SLUT NY KOD -->
             <li>Önskat motiv (se nedan)</li>
           </ul>
           <p>Vi skickar ditt gåvobevis inom 24 timmar.</p>
@@ -656,10 +766,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Välj motiv till gåvobeviset</h3>
       <div class="motifgrid">
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <figure><img src="/images/certificates/trident_watermark.png" alt="Formellt motiv med ukrainskt riksvapen" style="object-fit:contain"><figcaption>Formellt (Treudden)</figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure><img width="1024" height="1024" loading="lazy" src="/images/certificates/trident_watermark.png" alt="Formellt motiv med ukrainskt riksvapen" style="object-fit:contain"><figcaption>Formellt (Treudden)</figcaption></figure>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <figure><img src="/images/certificates/christmas_kyiv.jpg" alt="Julstämning i Kyiv"><figcaption>Julkort</figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure><img width="1280" height="1920" loading="lazy" src="/images/certificates/christmas_kyiv.jpg" alt="Julstämning i Kyiv"><figcaption>Julkort</figcaption></figure>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: stavfel i kyrkans namn
         <figure><img src="/images/certificates/church_kyiv.jpg" alt="Andrijivskakyrkan i Kyiv"><figcaption>Andrijivskakyrkany</figcaption></figure>
+        -->
+        <!-- NY KOD: "Andrijivskakyrkany" rättat till "Andrijivskakyrkan" -->
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+        <figure><img src="/images/certificates/church_kyiv.jpg" alt="Andrijivskakyrkan i Kyiv"><figcaption>Andrijivskakyrkan</figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure><img width="1920" height="1280" loading="lazy" src="/images/certificates/church_kyiv.jpg" alt="Andrijivskakyrkan i Kyiv"><figcaption>Andrijivskakyrkan</figcaption></figure>
+        <!-- SLUT NY KOD -->
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <figure><img src="/images/certificates/children_flag.jpg" alt="Barn under ukrainsk flagga"><figcaption>Barnen under flaggan</figcaption></figure>
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <figure><img width="1920" height="1280" loading="lazy" src="/images/certificates/children_flag.jpg" alt="Barn under ukrainsk flagga"><figcaption>Barnen under flaggan</figcaption></figure>
+        <!-- SLUT NY KOD -->
       </div>
     </div>
 
@@ -697,7 +832,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="disp" style="font-size:26px;color:var(--navy);margin:0 0 12px">Företagsgåva &amp; partnerskap</h2>
       <h3 class="disp" style="font-size:19px;color:var(--blue);margin:0 0 10px">Ett partnerskap för Ukrainas frihet och Europas framtid</h3>
       <p>Ett företag är mycket mer än ett bokslut. Bakom varje beslut finns människor med samvete, känslor och en förståelse för det lidande som det brutala kriget i vår närhet för med sig. Det handlar om rätten att leva, om att skydda de oskyldiga och om att våga ta ställning när historien tvingar oss att välja sida.</p>
+      <!-- BORTTAGEN KOD: stavfel "längst fronten"
       <p>Blue/Yellow är ingen traditionell insamlingsorganisation. Vi är en professionell operativ kraft som agerar i krigets absoluta kärna. Vi har varit på plats sedan år 2014, långt innan omvärldens blickar vändes dit. Under mer än ett decennium har vi byggt relationer med förband och sjukvårdare på marken. Detta är band som står stadiga på ömsesidig respekt, omtanke och gemensamma prövningar. Vårt team av logistiker och specialister vet exakt vilka behoven är och hur tung utrustning når fram hela vägen till de djupaste skyttegravarna och de mest utsatta positionerna längst fronten.</p>
+      -->
+      <!-- NY KOD: stavfel "längst fronten" rättat till "längs fronten" -->
+      <p>Blue/Yellow är ingen traditionell insamlingsorganisation. Vi är en professionell operativ kraft som agerar i krigets absoluta kärna. Vi har varit på plats sedan år 2014, långt innan omvärldens blickar vändes dit. Under mer än ett decennium har vi byggt relationer med förband och sjukvårdare på marken. Detta är band som står stadiga på ömsesidig respekt, omtanke och gemensamma prövningar. Vårt team av logistiker och specialister vet exakt vilka behoven är och hur tung utrustning når fram hela vägen till de djupaste skyttegravarna och de mest utsatta positionerna längs fronten.</p>
+      <!-- SLUT NY KOD -->
       <p>När ert bolag samarbetar med oss går stödet raka vägen till dem som försvarar demokrati med sina egna liv som insats. Vi arbetar med strikta säkerhetsprotokoll och helt utan byråkratiska omvägar. Vi överlämnar utrustningen personligen i händerna på mottagande enheter. Varje investerad krona omvandlas omedelbart till konkret makt att stå emot i form av drönarsystem, taktisk sjukvårdsmateriel, fordon och livräddande skyddsutrustning.</p>
       <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Därför är ett samarbete med oss rätt väg</h3>
       <div class="whygrid">
@@ -843,7 +983,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div data-pane="dela" class="pane" style="display:none">
       <div class="split">
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/dela.jpg" alt="Manifestation för Ukraina" style="height:300px">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="1000" height="667" loading="lazy" src="/images/dela.jpg" alt="Manifestation för Ukraina" style="height:300px">
+        <!-- SLUT NY KOD -->
         <div>
           <p class="lead">Spridning kostar inget och betyder mycket. Här finns färdiga paket med bilder, texter och affischer för sociala medier, arbetsplatsen och föreningen.</p>
           <!-- BORTTAGEN KOD: knappen var inte kopplad till något
@@ -950,7 +1095,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <h4>2015 — Beskjutning vid Debaltseve och de första drönarna</h4>
         <p>Under 2015 fördjupades verksamheten och metoderna blev mer systematiska. Kriget eskalerade i intensitet och hjälparbetarna verkade under ständig livsfara. Under slaget om järnvägsknuten Debaltseve hamnade ett av organisationens fordon under direkt fientlig granatkastareld. Splitter rev upp marken kring bilen, men övertygelsen om uppdragets nödvändighet fördjupades snarare än avskräcktes, och leveranserna fortsatte utan avbrott.</p>
+        <!-- BORTTAGEN KOD: Felstavning: "tyngdpunkt vid optik" → "tyngdpunkt på optik"
         <p>Organisationen förstod tidigt att den militära verkligheten höll på att förändras i grunden. Redan i början av 2015 levererade Blue/Yellow en civil Phantom 3 quadrocopter till frivilligbataljonen Skhidnyi Korpus i Charkiv, ett av de första stegen mot vad som snart skulle bli en helt ny era av luftburen fältspaning. Jonas Öhman var öppen med verksamhetens unika natur, organisationen sysslade inte med passiv nödhjälp på säkert avstånd, utan deltog funktionellt i försvaret av Ukraina genom att utrusta specifika frontförband. I Sverige uppmärksammades insatserna i rikstäckande medier när leveranserna passerade två miljoner kronor i värde, med tyngdpunkt vid optik, nattseende, splitterskydd och fältspaning.</p>
+-->
+        <!-- NY KOD: Felstavning: "tyngdpunkt vid optik" → "tyngdpunkt på optik" -->
+        <p>Organisationen förstod tidigt att den militära verkligheten höll på att förändras i grunden. Redan i början av 2015 levererade Blue/Yellow en civil Phantom 3 quadrocopter till frivilligbataljonen Skhidnyi Korpus i Charkiv, ett av de första stegen mot vad som snart skulle bli en helt ny era av luftburen fältspaning. Jonas Öhman var öppen med verksamhetens unika natur, organisationen sysslade inte med passiv nödhjälp på säkert avstånd, utan deltog funktionellt i försvaret av Ukraina genom att utrusta specifika frontförband. I Sverige uppmärksammades insatserna i rikstäckande medier när leveranserna passerade två miljoner kronor i värde, med tyngdpunkt på optik, nattseende, splitterskydd och fältspaning.</p>
+        <!-- SLUT NY KOD -->
 
         <h4>2016 till 2019 — Teknikskifte och personliga relationer i skuggan av omvärldens tystnad</h4>
         <p>Mellan 2016 och 2019 sjönk Ukraina undan från de internationella tidningsrubrikerna. Konflikten beskrevs felaktigt som frusen, medan soldater och civila fortsatte att dö i skyttegravarna varje vecka. Medan internationella hjälporganisationer packade ihop stannade Blue/Yellow kvar vid nollinjen. Med en årlig insamlingsvolym mellan etthundratusen och trehundratusen euro utvecklades verksamheten till en teknisk pionjär.</p>
@@ -962,7 +1112,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>När ryska styrkor under hösten 2021 började samlas längs Ukrainas gränser fanns ingen tvekan inom organisationen. Sju till åtta års oavbruten närvaro vid fronten hade gett fältteamen unik insikt i motståndarens avsikter, och medan världen hoppades på diplomatiska lösningar förberedde Blue/Yellow sina nätverk för maximal belastning.</p>
 
         <h4>24 februari 2022 — Omedelbar respons vid den fullskaliga invasionen</h4>
+        <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Kiev" → "Kyiv"
         <p>När ryska styrkor rullade över gränsen mot Kiev, Charkiv och Cherson den 24 februari 2022 lamslogs omvärlden av chock. Många internationella organisationer tvingades evakuera sin personal och avbryta transporter. Blue/Yellow var i detta skede den enda litauiska stödorganisationen som redan hade etablerade transportleder och verifierade kontaktpersoner på plats i Ukraina, och de långsiktiga relationerna från åtta tysta krigsår blev den direkta förutsättningen för att rädda oräkneliga liv under invasionens första kritiska timmar.</p>
+-->
+        <!-- NY KOD: Konsekvent stavningsändring: "Kiev" → "Kyiv" -->
+        <p>När ryska styrkor rullade över gränsen mot Kyiv, Charkiv och Cherson den 24 februari 2022 lamslogs omvärlden av chock. Många internationella organisationer tvingades evakuera sin personal och avbryta transporter. Blue/Yellow var i detta skede den enda litauiska stödorganisationen som redan hade etablerade transportleder och verifierade kontaktpersoner på plats i Ukraina, och de långsiktiga relationerna från åtta tysta krigsår blev den direkta förutsättningen för att rädda oräkneliga liv under invasionens första kritiska timmar.</p>
+        <!-- SLUT NY KOD -->
         <p>Under det första dygnet donerade allmänheten en miljon euro. Inom loppet av timmar lastades fordon med skyddsutrustning, generatorer och optik för vidare transport mot stridszonerna. Under året växte verksamheten exponentiellt, organisationen samlade in över 40,7 miljoner euro under 2022 enligt egen finansiell redovisning, och den amerikanska tidskriften Forbes rankade Blue/Yellow bland världens tio mest effektiva organisationer för civilt stöd till Ukraina. Huvudfokus låg orubbligt fast vid ickedödlig utrustning som skyddade liv, räddade civila och gav försvararna tekniska förutsättningar att hålla stånd.</p>
 
         <h4>Dokumenterad fältkapacitet och styrka</h4>
@@ -973,12 +1128,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Genomsnittlig leveranstid från verifierat behov vid nollinjen till fullbordad överlämning på mellan 1 och 10 dygn</li>
           <li>Över 11 500 drönare levererade sammanlagt mellan 2022 och 2025, med en ökning från 692 enheter 2022 till över 5 000 enheter 2025</li>
           <li>Blue/Yellow Medical har behandlat 3 644 patienter och utbildat 68 litauiska läkare och sjukvårdare sedan starten 2023</li>
+          <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "icke dödlig" → "ickedödlig"
           <li>Fullständigt fokus på icke dödlig, livräddande och teknisk utrustning</li>
+-->
+          <!-- NY KOD: Konsekvent stavningsändring: "icke dödlig" → "ickedödlig" -->
+          <li>Fullständigt fokus på ickedödlig, livräddande och teknisk utrustning</li>
+          <!-- SLUT NY KOD -->
           <li>Etablerad nordisk förgrening genom Blue/Yellow Sweden, grundad 2025</li>
         </ul>
 
         <h4>2023 — Traumavård i befriade zoner och taktisk utbildning</h4>
+        <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Kievs" → "Kyivs"
         <p>Krigets förlopp ställde nya krav på specialiserad fältmedicin. Efter att ryska trupper drivits tillbaka från Kievs förorter reste medicinska team in i svårt sargade områden som Butja för att bistå invånare vars sjukhus plundrats och förstörts. Dessa erfarenheter lade grunden för den officiella starten av Blue/Yellow Medical under andra halvan av 2023.</p>
+-->
+        <!-- NY KOD: Konsekvent stavningsändring: "Kievs" → "Kyivs" -->
+        <p>Krigets förlopp ställde nya krav på specialiserad fältmedicin. Efter att ryska trupper drivits tillbaka från Kyivs förorter reste medicinska team in i svårt sargade områden som Butja för att bistå invånare vars sjukhus plundrats och förstörts. Dessa erfarenheter lade grunden för den officiella starten av Blue/Yellow Medical under andra halvan av 2023.</p>
+        <!-- SLUT NY KOD -->
         <p>Litauiska läkare, käkkirurger, tandläkare och fältsjuksköterskor började genomföra regelbundna uppdrag i direkt anslutning till frontzonen. Parallellt etablerades avancerade utbildningsprogram för ukrainska soldater, där instruktörer med bakgrund inom internationella försvarsallianser tränade förband i taktisk traumavård under pågående strid. Redan under 2023 behandlade organisationens medicinska team 786 patienter, en siffra som steg till 1 485 under 2024.</p>
 
         <h4>2024 — Det teknologiska skiftet och tio år av motstånd</h4>
@@ -1001,7 +1166,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Vår strävan är en omvärld där civilsamhällets oberoende kraft förmår stå emot tyranniet och där handling alltid trumfar tvekan. Vi vägrar acceptera en verklighet där utmattning leder till glömska, en risk vi sett realiseras förut, mellan 2015 och 2021, då internationella medier till stor del vände blicken bort från Donbas medan striderna fortsatte varje dag. Blue/Yellow stannade kvar då, och den erfarenheten formar vår övertygelse idag, stöd som upphör när uppmärksamheten sjunker är inte stöd som räddar liv på lång sikt. Genom oböjlig uthållighet håller vi löftet levande om att de som står vid demokratins yttersta gräns aldrig lämnas ensamma, oavsett hur länge kriget varar eller hur konjunkturen för global solidaritet svänger.</p>
 
         <h5>Vår mission</h5>
+        <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "icke dödligt" → "ickedödligt"
         <p>Att rädda människoliv, lindra lidande och stärka försvarsförmågan vid frontlinjen genom att omedelbart leverera verifierat icke dödligt materiellt understöd och avancerad fältmedicin direkt till de individer och förband som behöver det mest.</p>
+-->
+        <!-- NY KOD: Konsekvent stavningsändring: "icke dödligt" → "ickedödligt" -->
+        <p>Att rädda människoliv, lindra lidande och stärka försvarsförmågan vid frontlinjen genom att omedelbart leverera verifierat ickedödligt materiellt understöd och avancerad fältmedicin direkt till de individer och förband som behöver det mest.</p>
+        <!-- SLUT NY KOD -->
         <p>Vårt uppdrag vilar i den akuta verkligheten. Vi finns till för att täppa till de kritiska glapp där sekunder och millimeter avgör skillnaden mellan liv och död. Genom att avlägsna byråkratiska hinder omsätter vi medmänsklighet till konkreta verktyg i händerna på dem som riskerar allt. Vårt syfte förverkligas när en sårad soldat överlever transporten från skottlinjen, när ett fältförband upptäcker ett fientligt anfall i tid tack vare rätt spaningsutrustning, och när civilbefolkningen i befriade områden får akut vård genom Blue/Yellow Medicals fältuppdrag, som sedan starten 2023 nått över 3 600 patienter.</p>
         <p>Missionen är inte statisk. Den anpassas kontinuerligt efter frontens verklighet. När kriget 2014 krävde kängor, jackor och ballistiska västar levererade vi det. När kriget 2024 och 2025 kom att domineras av drönare och elektronisk krigföring, en utveckling som återspeglas i att våra drönarleveranser ökade från 692 enheter 2022 till över 5 000 enheter 2025, ställde vi om resurserna i samma takt. Detta är kärnan i vårt uppdrag, att aldrig vara efter kurvan när hotbilden förändras.</p>
 
@@ -1015,7 +1185,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Vi levererar uteslutande vad mottagarna uttryckligen efterfrågar och behöver i stunden. När hotbilden i luften förändras ställer vi om. Vår verksamhet omfattar spaningsdrönare, elektroniska motmedel, mobila kommunikationslösningar, fältfordon och fullständiga traumakit anpassade efter verklighetens stridssituationer. Under det första halvåret 2026 innebar detta konkret leverans av allt från avancerade markrobotar (UGV) av typen TerMIT och VOLIA E för logistik och evakuering, till telekrigssystem och spektrumanalysatorer för att skydda ukrainska positioner mot fientlig drönarupptäckt. Det är en ständigt föränderlig materiellista, styrd inte av vad som är enkelt att samla in utan av vad förbanden själva efterfrågar.</p>
 
         <h5>Medicinsk räckvidd och utbildning</h5>
+        <!-- BORTTAGEN KOD: Felstavning: "MARCH algoritmen" → "MARCH-algoritmen"
         <p>Genom Blue/Yellow Medical för vi specialiserad vård och utbildning till områden där den civila sjukvården kollapsat. Läkare och medicinsk personal genomför uppdrag på plats för att behandla civila och militära skador, samtidigt som soldater tränas i avancerat omhändertagande under fientlig eld för att sänka dödstalen i fält. Under 2025 utbildade vi formellt 68 litauiska läkare och sjukvårdare, varav 33 i krigskirurgi och fältpraktik och 35 i den internationellt erkända MARCH algoritmen för traumavård i stridsmiljö, en investering på sammanlagt över 900 000 utbildningstimmar. Detta är inte engångsinsatser utan en utveckling av varaktig kompetens som fortsätter rädda liv långt efter att själva utbildningstillfället avslutats.</p>
+-->
+        <!-- NY KOD: Felstavning: "MARCH algoritmen" → "MARCH-algoritmen" -->
+        <p>Genom Blue/Yellow Medical för vi specialiserad vård och utbildning till områden där den civila sjukvården kollapsat. Läkare och medicinsk personal genomför uppdrag på plats för att behandla civila och militära skador, samtidigt som soldater tränas i avancerat omhändertagande under fientlig eld för att sänka dödstalen i fält. Under 2025 utbildade vi formellt 68 litauiska läkare och sjukvårdare, varav 33 i krigskirurgi och fältpraktik och 35 i den internationellt erkända MARCH-algoritmen för traumavård i stridsmiljö, en investering på sammanlagt över 900 000 utbildningstimmar. Detta är inte engångsinsatser utan en utveckling av varaktig kompetens som fortsätter rädda liv långt efter att själva utbildningstillfället avslutats.</p>
+        <!-- SLUT NY KOD -->
 
         <h5>Transparens och precision</h5>
         <p>Varje donerad resurs registreras, varje transport kontrolleras och varje överlämning dokumenteras med bild och mottagningsbevis. Vi redovisar hur resurserna förvaltas och säkerställer att mellan nittiofem och nittiosju procent av medlen går oavkortat till fältmateriel, ett genomsnitt på 96,6 procent under perioden 2022 till 2025, granskat år för år och redovisat öppet. Denna nivå av transparens är inte ett marknadsföringslöfte utan en administrativ princip som genomsyrar hela organisationen, från insamlingsapparaten i Litauen till den svenska grenen som etablerades 2025.</p>
@@ -1048,7 +1223,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div data-pane="hist" class="pane">
       <p class="lead" style="max-width:none">Kriget mot Ukraina började inte 2022. Det började 2014 med Rysslands annektering av Krim och kriget i östra Ukraina. Blue/Yellow stod sida vid sida med dem som försvarade landet då och fortsätter att göra det idag. Sedan dess har stödet fortsatt genom varje fas av kriget och fortsätter hela vägen till seger.</p>
       <div class="timeline">
+        <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Donbass" → "Donbas"
         <details class="xcard tcardx"><summary><b class="disp">2014</b><p>Grundas i Vilnius av svensken Jonas Öhman, samma vinter som Krim annekteras och kriget i Donbass tar sin början.</p><span class="more">Vill du veta mer →</span></summary><div class="xbody"><h5>Gnistan i Vilnius</h5><p>När rökridåerna lade sig över Krim och de första skotten föll i Donbass stod det klart att Europa hade förändrats för alltid. Samma vinter insåg svensken Jonas Öhman och litauern Paulius Kijauskas att traditionell diplomati och storskalig hjälpbyråkrati skulle vara för långsam för den verklighet som soldaterna mötte i skyttegravarna. Svaret blev att grunda Blue/Yellow i Vilnius, inte som en passiv insamlingsstiftelse utan som en snabbrörlig taktisk logistikmaskin.</p><p>Snabbt hamnade konflikten i medial skugga. Under åren fram till den fullskaliga invasionen förpassades Ukrainafrågan till omvärldens absoluta periferi. Det glömda skyttekriget i öst pågick i tystnad. Politiska ledare tittade bort och internationella hjälporganisationer höll sig undan på grund av konfliktens politiska känslighet. Mitt under denna globala apati vägrade Blue/Yellow att vända blicken bort.</p><p>I början fanns inga stora resurser eller officiella anslag. Medgrundarna och de andra drivande personerna tog det de redan ägde. De tömde sina egna förråd, packade kängor, jackor och personligen inhandlad utrustning i vanliga privatbilar och körde direkt mot frontlinjen genom osäkra områden och svåra vägspärrar. Genom att fysiskt vara på plats under de tystaste åren och leverera utrustning direkt i de leriga skyttegravarna skapades ett djupt förtroende.</p><p>De ukrainska försvararna såg att Blue/Yellow riskerade allt när resten av världen hade glömt dem. Ur dessa tidiga livsfarliga resor föddes den ömsesidiga relation som består än i dag. Allt eftersom leveranserna nådde fram började donationerna öka. Det var här, mitt under det glömda kriget i östra Ukraina, som grunden lades till det nätverk och den transparenta leveransmodell som i dag definierar hela verksamheten.</p></div></details>
+-->
+        <!-- NY KOD: Konsekvent stavningsändring: "Donbass" → "Donbas" -->
+        <details class="xcard tcardx"><summary><b class="disp">2014</b><p>Grundas i Vilnius av svensken Jonas Öhman, samma vinter som Krim annekteras och kriget i Donbas tar sin början.</p><span class="more">Vill du veta mer →</span></summary><div class="xbody"><h5>Gnistan i Vilnius</h5><p>När rökridåerna lade sig över Krim och de första skotten föll i Donbas stod det klart att Europa hade förändrats för alltid. Samma vinter insåg svensken Jonas Öhman och litauern Paulius Kijauskas att traditionell diplomati och storskalig hjälpbyråkrati skulle vara för långsam för den verklighet som soldaterna mötte i skyttegravarna. Svaret blev att grunda Blue/Yellow i Vilnius, inte som en passiv insamlingsstiftelse utan som en snabbrörlig taktisk logistikmaskin.</p><p>Snabbt hamnade konflikten i medial skugga. Under åren fram till den fullskaliga invasionen förpassades Ukrainafrågan till omvärldens absoluta periferi. Det glömda skyttekriget i öst pågick i tystnad. Politiska ledare tittade bort och internationella hjälporganisationer höll sig undan på grund av konfliktens politiska känslighet. Mitt under denna globala apati vägrade Blue/Yellow att vända blicken bort.</p><p>I början fanns inga stora resurser eller officiella anslag. Medgrundarna och de andra drivande personerna tog det de redan ägde. De tömde sina egna förråd, packade kängor, jackor och personligen inhandlad utrustning i vanliga privatbilar och körde direkt mot frontlinjen genom osäkra områden och svåra vägspärrar. Genom att fysiskt vara på plats under de tystaste åren och leverera utrustning direkt i de leriga skyttegravarna skapades ett djupt förtroende.</p><p>De ukrainska försvararna såg att Blue/Yellow riskerade allt när resten av världen hade glömt dem. Ur dessa tidiga livsfarliga resor föddes den ömsesidiga relation som består än i dag. Allt eftersom leveranserna nådde fram började donationerna öka. Det var här, mitt under det glömda kriget i östra Ukraina, som grunden lades till det nätverk och den transparenta leveransmodell som i dag definierar hela verksamheten.</p></div></details>
+        <!-- SLUT NY KOD -->
         <details class="xcard tcardx"><summary><b class="disp">2022</b><p>Den fullskaliga invasionen. Åtta års erfarenhet omsätts i full skala från dag ett.</p><span class="more">Vill du veta mer →</span></summary><div class="xbody"><h5>Eldprovet och uppskalningen</h5><p>När den fullskaliga invasionen inleddes den 24 februari 2022 vaknade världen upp till en ny mardröm. För Blue/Yellow var det inte en ny situation, utan kulmen på åtta års oavbrutet arbete. När andra organisationer desperat försökte hitta vägar in hade Blue/Yellow redan varit på plats i leriga skyttegravar under kanoneld i åtta år, åtta år av total radioskugga om konflikten.</p><p>När den plötsliga rusningen att stötta Ukraina tog fart över hela världen var Blue/Yellow det självklara valet för givarna. Organisationen hade förtjänat ett djupt förtroende och en unik auktoritet på marken som ingen annan utländsk aktör ägde. Det unika nätverket, de lokala kontakterna och den djupa lokalkännedomen fanns på plats. Etablerade kanaler med frontförband, utslagna samhällen och logistiska knutpunkter fungerade från dag ett.</p><p>Kriget blev snabbt ett högteknologiskt slagfält där framgång handlade om att se först, förstå först och reagera snabbast. Under denna kritiska tidiga fas blev den långräckviddiga drönaren Bayraktar TB2 en global symbol för det ukrainska försvaret. Blue/Yellow klev mitt in i den internationella insamlingsrörelsen och organiserade en omfattande kampanj för att finansiera systemet. Genom direkt dialog möjliggjordes kontakten med tillverkaren Baykar.</p><p>Efter det framgångsrika samarbetet valde tillverkaren det ovanliga steget att donera systemen i stället för att ta emot betalningen. De insamlade medlen kunde i stället styras om till annat akut tekniskt stöd. Det som började med kängor och jackor hade nu utvecklats till storskaliga leveranser av tunga drönare, dieselgeneratorer och markrobotar. Året blev beviset på att modellen fungerar. Snabbhet och precision räddar liv.</p></div></details>
         <details class="xcard tcardx"><summary><b class="disp">2025</b><p>Blue/Yellow Sweden etableras i slutet av året, första delen utanför Litauen.</p><span class="more">Vill du veta mer →</span></summary><div class="xbody"><h5>Den svenska expansionen</h5><p>Efter år av intensivt stöd direkt från Litauen nådde organisationen en ny milstolpe i slutet av 2025. För att möta det långsiktiga behovet och säkra en ännu starkare uthållighet etablerades Blue/Yellow Sweden, den allra första officiella grenen utanför Litauens gränser. Steget till Sverige var djupt strategiskt och handlade om att skapa en bro mellan det svenska folkets vilja att hjälpa och den unika kunskapen om frontens omedelbara behov.</p><p>Verksamheten växte snabbt ur de ursprungliga ramarna. Kraven på absolut transparens och professionell logistik krävde en stabil och permanent närvaro på den skandinaviska marknaden. Med robusta ekonomiska system och ett dedikerat ledarskap på plats skapades en ny plattform för att driva tunga strategiska insamlingskampanjer. Varje insamlad krona ska snabbt omvandlas till livräddande teknik.</p><p>Sverige blir därmed en ny central nod i stödnätverket. Etableringen är ett löfte till framtiden. Vi har stått sida vid sida med Ukrainas försvarare sedan starten och fortsätter att göra det med full kraft hela vägen till seger. Det här är ett nytt kapitel i Blue/Yellows historia, och den fortsätter skrivas.</p></div></details>
       </div>
@@ -1089,7 +1269,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div data-pane="press" class="pane" style="display:none">
       <div class="split">
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/press.jpg" alt="Jonas Öhman och president Zelenskyj" style="height:300px;object-position:center 25%">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="1000" height="667" loading="lazy" src="/images/press.jpg" alt="Jonas Öhman och president Zelenskyj" style="height:300px;object-position:center 25%">
+        <!-- SLUT NY KOD -->
         <div>
           <p class="lead">Pressbilder, logotyper och pressmeddelanden för nedladdning. Presskontakt svarar inom fyra timmar på vardagar.</p>
           <!-- BORTTAGEN KOD: "Ladda ner" var bara text och gick inte att klicka på
@@ -1150,14 +1335,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="mrbtn" href="https://blue-yellow.lt/en/monthly-reports/" target="_blank" rel="noopener">Månadsrapporter</a>
     </div>
     <div class="split storyflow" id="storyfeature">
+      <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
       <img src="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" alt="Blue/Yellows första drönare, en Phantom 3, Charkiv 2015" style="object-position:center 50%">
+-->
+      <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+      <img width="1600" height="1066" loading="lazy" src="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" alt="Blue/Yellows första drönare, en Phantom 3, Charkiv 2015" style="object-position:center 50%">
+      <!-- SLUT NY KOD -->
       <div>
         <span class="ntag b">Berättelse</span>
         <h3 class="disp" style="font-size:24px;color:var(--navy);margin:10px 0">Allt började med en drönare</h3>
+        <!-- BORTTAGEN KOD: "Blue/Yellow:s" ändrat till "Blue/Yellows"
         <p class="lead">Charkiv, i början av 2015. I en kylig lokal inte långt från fronten räcks en liten låda över till en frivilligenhet. Inuti ligger en Phantom 3, en enkel kameradrönare. Det är Blue/Yellow:s allra första drönare. Ingen högtidlig ceremoni, inga fanfarer, inga nyhetskanaler som dokumenterar ögonblicket. Bara en överlämning av ett nytt verktyg till människor som behöver det. Ett verktyg som ger dem ögon i luften, hjälper dem att upptäcka faror i tid och som kanske kommer att rädda liv genom att se först.</p>
+        -->
+        <!-- NY KOD: "Blue/Yellow:s" ändrat till "Blue/Yellows", samma form som resten av sajten -->
+        <p class="lead">Charkiv, i början av 2015. I en kylig lokal inte långt från fronten räcks en liten låda över till en frivilligenhet. Inuti ligger en Phantom 3, en enkel kameradrönare. Det är Blue/Yellows allra första drönare. Ingen högtidlig ceremoni, inga fanfarer, inga nyhetskanaler som dokumenterar ögonblicket. Bara en överlämning av ett nytt verktyg till människor som behöver det. Ett verktyg som ger dem ögon i luften, hjälper dem att upptäcka faror i tid och som kanske kommer att rädda liv genom att se först.</p>
+        <!-- SLUT NY KOD -->
         <p class="lead" style="margin-top:12px">För en förbandschef förändrar den allt. Plötsligt finns ögon i luften. Ett bakhåll kan upptäckas innan soldater går in i ett område. En säkrare väg kan hittas i mörkret. Minuter vinns, och minuter är liv.</p>
         <p class="lead" style="margin-top:12px">Bakom överlämningen låg redan månader av arbete. Blue/Yellow hade grundats i Vilnius året innan av svensken Jonas Öhman tillsammans med Jūratė Sližytė och Paulius Kijauskas. De första åren var kaotiska. Förfrågningar strömmade in från alla håll och det svåra var att veta vem som gick att lita på. Steg för steg växte ett nätverk av pålitliga människor fram. Utrustning packades i vanliga bilar och kördes de långa vägarna österut, ända fram till dem som behövde den.</p>
+        <!-- BORTTAGEN KOD: Felstavning: "föra människor hem levande" → "för människor hem levande"
         <p class="lead" style="margin-top:12px">Den där första drönaren blev en början. Det som inleddes med en enda Phantom har vuxit till över 12 000 drönare. Spaningsplattformar, tunga transportdrönare och system som skyddar mot fientlig teknik. Samma tanke bär alltjämt allt. Se först, agera snabbast, föra människor hem levande.</p>
+-->
+        <!-- NY KOD: Felstavning: "föra människor hem levande" → "för människor hem levande" -->
+        <p class="lead" style="margin-top:12px">Den där första drönaren blev en början. Det som inleddes med en enda Phantom har vuxit till över 12 000 drönare. Spaningsplattformar, tunga transportdrönare och system som skyddar mot fientlig teknik. Samma tanke bär alltjämt allt. Se först, agera snabbast, för människor hem levande.</p>
+        <!-- SLUT NY KOD -->
         <p class="lead" style="margin-top:12px">Tolv år senare fortsätter arbetet varje dag. Från en låda i Charkiv till en av Västeuropas största stödrörelser för Ukraina. Vägen har varit lång och den fortsätter hela vägen till seger.</p>
       </div>
     </div>
@@ -1184,10 +1384,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .cf-err{display:none;color:#b00020;font-size:13px;margin:-6px 0 8px;line-height:1.35}
         .cf-err.on{display:block}
       </style>
+      <!-- BORTTAGEN KOD: kontaktformuläret hade bara platshållartext och inga etiketter (punkt 21)
       <input id="cf-name" placeholder="Namn" required><span id="cf-name-err" class="cf-err"></span>
       <input id="cf-email" type="email" placeholder="Mejl" required><span id="cf-email-err" class="cf-err"></span>
       <select id="cf-topic"><option>Allmän fråga</option><option>Företagsstöd</option><option>Press</option><option>Volontär</option></select>
       <textarea id="cf-msg" placeholder="Meddelande" rows="4" required></textarea><span id="cf-msg-err" class="cf-err"></span>
+-->
+      <!-- NY KOD: etiketter ovanför varje fält, samma stil som volontärformuläret (punkt 21) -->
+      <label class="vol-l" for="cf-name">Namn *</label>
+      <input id="cf-name" autocomplete="name" required><span id="cf-name-err" class="cf-err"></span>
+      <label class="vol-l" for="cf-email">E-postadress *</label>
+      <input id="cf-email" type="email" autocomplete="email" placeholder="namn@exempel.se" required><span id="cf-email-err" class="cf-err"></span>
+      <label class="vol-l" for="cf-topic">Ämne</label>
+      <select id="cf-topic"><option>Allmän fråga</option><option>Företagsstöd</option><option>Press</option><option>Volontär</option></select>
+      <label class="vol-l" for="cf-msg">Meddelande *</label>
+      <textarea id="cf-msg" rows="4" required></textarea><span id="cf-msg-err" class="cf-err"></span>
+      <!-- SLUT NY KOD -->
       <button class="fbtn" id="cf-btn" onclick="sendContact()">Skicka meddelande</button>
       <p id="cf-status" style="display:none;margin-top:10px;font-size:14px"></p>
     </div>
@@ -1257,22 +1469,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h4>Logotyper</h4>
           <div class="logo-row">
             <div class="logo-thumb">
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="thumb-box has-img"><img src="/__l5e/assets-v1/4e5ebf49-b17f-4481-8ac0-d1384582a93f/blueyellow-logo-blue-on-yellow.png" alt="Blue/Yellow logotyp, blå ikon på gul botten" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/4e5ebf49-b17f-4481-8ac0-d1384582a93f/blueyellow-logo-blue-on-yellow.png" alt="Blue/Yellow logotyp, blå ikon på gul botten" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <div class="thumb-cap">Logotyp, blå ikon på gul botten</div>
               <a class="dlbtn" href="/__l5e/assets-v1/4e5ebf49-b17f-4481-8ac0-d1384582a93f/blueyellow-logo-blue-on-yellow.png" download>Ladda ned PNG</a>
             </div>
             <div class="logo-thumb">
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="thumb-box has-img"><img src="/__l5e/assets-v1/7f969b05-207f-4dec-bf00-eda072eafc7e/blueyellow-logo-yellow-on-blue.png" alt="Blue/Yellow logotyp, gul ikon på blå botten" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/7f969b05-207f-4dec-bf00-eda072eafc7e/blueyellow-logo-yellow-on-blue.png" alt="Blue/Yellow logotyp, gul ikon på blå botten" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <div class="thumb-cap">Logotyp, gul ikon på blå botten</div>
               <a class="dlbtn" href="/__l5e/assets-v1/7f969b05-207f-4dec-bf00-eda072eafc7e/blueyellow-logo-yellow-on-blue.png" download>Ladda ned PNG</a>
             </div>
             <div class="logo-thumb">
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="thumb-box has-img"><img src="/__l5e/assets-v1/5353f464-9632-466c-8522-f19e2dd5b8bc/blueyellow-logo-bw-light.png" alt="Blue/Yellow logotyp, svartvit för ljus botten" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/5353f464-9632-466c-8522-f19e2dd5b8bc/blueyellow-logo-bw-light.png" alt="Blue/Yellow logotyp, svartvit för ljus botten" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <div class="thumb-cap">Logotyp, svartvit för ljus botten</div>
               <a class="dlbtn" href="/__l5e/assets-v1/5353f464-9632-466c-8522-f19e2dd5b8bc/blueyellow-logo-bw-light.png" download>Ladda ned PNG</a>
             </div>
             <div class="logo-thumb">
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="thumb-box has-img"><img src="/__l5e/assets-v1/e5ef3a52-ef80-4f30-9371-71d7122a880f/blueyellow-logo-bw-dark.png" alt="Blue/Yellow logotyp, svartvit för mörk botten" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/e5ef3a52-ef80-4f30-9371-71d7122a880f/blueyellow-logo-bw-dark.png" alt="Blue/Yellow logotyp, svartvit för mörk botten" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <div class="thumb-cap">Logotyp, svartvit för mörk botten</div>
               <a class="dlbtn" href="/__l5e/assets-v1/e5ef3a52-ef80-4f30-9371-71d7122a880f/blueyellow-logo-bw-dark.png" download>Ladda ned PNG</a>
             </div>
@@ -1283,52 +1515,122 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h4>Pressfoton</h4>
           <div class="photo-grid">
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" alt="Blue/Yellow överlämnar sin första drönare, en DJI Phantom 3, till ukrainska förband, januari 2015" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" alt="Blue/Yellow överlämnar sin första drönare, en DJI Phantom 3, till ukrainska förband, januari 2015" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Blue/Yellow överlämnar sin första drönare, en DJI Phantom 3, till ukrainska förband, januari 2015</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/17019ac8-0fa7-49e7-9060-6cc95d2a4f2c/press-02-jonas-pervomaisk-2015.jpg" alt="Jonas Öhman med förnödenheter till 28:e brigaden, vid Pervomaisk, den sista byn innan bron mot Donetsk flygplats, oktober 2015" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="720" height="960" src="/__l5e/assets-v1/17019ac8-0fa7-49e7-9060-6cc95d2a4f2c/press-02-jonas-pervomaisk-2015.jpg" alt="Jonas Öhman med förnödenheter till 28:e brigaden, vid Pervomaisk, den sista byn innan bron mot Donetsk flygplats, oktober 2015" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Jonas Öhman med förnödenheter till 28:e brigaden, vid Pervomaisk, den sista byn innan bron mot Donetsk flygplats, oktober 2015</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/17019ac8-0fa7-49e7-9060-6cc95d2a4f2c/press-02-jonas-pervomaisk-2015.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/7b9db9e3-2bbe-4789-8322-a11d1937f7d0/press-03-jonas-zelenskyj.jpg" alt="Jonas Öhman möter president Zelenskyj" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1920" height="1281" src="/__l5e/assets-v1/7b9db9e3-2bbe-4789-8322-a11d1937f7d0/press-03-jonas-zelenskyj.jpg" alt="Jonas Öhman möter president Zelenskyj" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Jonas Öhman möter president Zelenskyj</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/7b9db9e3-2bbe-4789-8322-a11d1937f7d0/press-03-jonas-zelenskyj.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf"
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/0ad0518b-0f1e-4733-92c2-59f56f3b81a0/press-04-jonas-kungen.jpg" alt="Jonas Öhman möter Kung Carl XVI Gustaf" loading="lazy"></div>
+-->
+              <!-- NY KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf" -->
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+              <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/0ad0518b-0f1e-4733-92c2-59f56f3b81a0/press-04-jonas-kungen.jpg" alt="Jonas Öhman möter kung Carl XVI Gustaf" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1920" height="1080" src="/__l5e/assets-v1/0ad0518b-0f1e-4733-92c2-59f56f3b81a0/press-04-jonas-kungen.jpg" alt="Jonas Öhman möter kung Carl XVI Gustaf" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
+              <!-- SLUT NY KOD -->
+              <!-- BORTTAGEN KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf"
               <figcaption>Jonas Öhman möter Kung Carl XVI Gustaf</figcaption>
+-->
+              <!-- NY KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf" -->
+              <figcaption>Jonas Öhman möter kung Carl XVI Gustaf</figcaption>
+              <!-- SLUT NY KOD -->
               <a class="dlbtn" href="/__l5e/assets-v1/0ad0518b-0f1e-4733-92c2-59f56f3b81a0/press-04-jonas-kungen.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf"
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/7f48de71-ee6a-4579-ba14-7bcfedb913f0/press-05-jonas-kungen-dronare.png" alt="Jonas Öhman visar Kung Carl XVI Gustaf en tillfångatagen rysk drönare" loading="lazy"></div>
+-->
+              <!-- NY KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf" -->
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+              <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/7f48de71-ee6a-4579-ba14-7bcfedb913f0/press-05-jonas-kungen-dronare.png" alt="Jonas Öhman visar kung Carl XVI Gustaf en tillfångatagen rysk drönare" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1920" height="1080" src="/__l5e/assets-v1/7f48de71-ee6a-4579-ba14-7bcfedb913f0/press-05-jonas-kungen-dronare.png" alt="Jonas Öhman visar kung Carl XVI Gustaf en tillfångatagen rysk drönare" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
+              <!-- SLUT NY KOD -->
+              <!-- BORTTAGEN KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf"
               <figcaption>Jonas Öhman visar Kung Carl XVI Gustaf en tillfångatagen rysk drönare</figcaption>
+-->
+              <!-- NY KOD: Felstavning: "Kung Carl XVI Gustaf" → "kung Carl XVI Gustaf" -->
+              <figcaption>Jonas Öhman visar kung Carl XVI Gustaf en tillfångatagen rysk drönare</figcaption>
+              <!-- SLUT NY KOD -->
               <a class="dlbtn" href="/__l5e/assets-v1/7f48de71-ee6a-4579-ba14-7bcfedb913f0/press-05-jonas-kungen-dronare.png" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/e28295fa-4ab8-4d4f-87d7-23bc83a78798/press-06-jonas-karlivka-2015.jpg" alt="Jonas Öhman vid Karlivka, infarten mot Donetsk flygplats, februari 2015" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/e28295fa-4ab8-4d4f-87d7-23bc83a78798/press-06-jonas-karlivka-2015.jpg" alt="Jonas Öhman vid Karlivka, infarten mot Donetsk flygplats, februari 2015" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Jonas Öhman vid Karlivka, infarten mot Donetsk flygplats, februari 2015</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/e28295fa-4ab8-4d4f-87d7-23bc83a78798/press-06-jonas-karlivka-2015.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/82dd3a35-08de-4085-96e3-13e22fb4048e/press-07-marinkarssoldater-mariupol-2014.jpg" alt="Marinkårssoldater med förnödenheter från Blue/Yellow, Mariupol, oktober 2014" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/82dd3a35-08de-4085-96e3-13e22fb4048e/press-07-marinkarssoldater-mariupol-2014.jpg" alt="Marinkårssoldater med förnödenheter från Blue/Yellow, Mariupol, oktober 2014" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Marinkårssoldater med förnödenheter från Blue/Yellow, Mariupol, oktober 2014</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/82dd3a35-08de-4085-96e3-13e22fb4048e/press-07-marinkarssoldater-mariupol-2014.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/03e94f3f-7b9e-4707-8b0a-415b36f99af0/press-08-reservister-kramatorsk-2014.jpg" alt="Reservister från 8:e specialregementet tittar på kängor från Blue/Yellow, Kramatorsk flygplats, oktober 2014" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/03e94f3f-7b9e-4707-8b0a-415b36f99af0/press-08-reservister-kramatorsk-2014.jpg" alt="Reservister från 8:e specialregementet tittar på kängor från Blue/Yellow, Kramatorsk flygplats, oktober 2014" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Reservister från 8:e specialregementet tittar på kängor från Blue/Yellow, Kramatorsk flygplats, oktober 2014</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/03e94f3f-7b9e-4707-8b0a-415b36f99af0/press-08-reservister-kramatorsk-2014.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/8384e51f-b788-440e-981b-2744f09b180a/press-09-soldater-pervomaisk-2014.jpg" alt="Soldater ur 28:e mekaniserade regementet med skyddsvästar och hjälmar från Blue/Yellow, oktober 2014, vid bron vid Pervomaisk som soldaterna kallade Brorepubliken" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1066" height="1600" src="/__l5e/assets-v1/8384e51f-b788-440e-981b-2744f09b180a/press-09-soldater-pervomaisk-2014.jpg" alt="Soldater ur 28:e mekaniserade regementet med skyddsvästar och hjälmar från Blue/Yellow, oktober 2014, vid bron vid Pervomaisk som soldaterna kallade Brorepubliken" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Soldater ur 28:e mekaniserade regementet med skyddsvästar och hjälmar från Blue/Yellow, oktober 2014, vid bron vid Pervomaisk som soldaterna kallade Brorepubliken</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/8384e51f-b788-440e-981b-2744f09b180a/press-09-soldater-pervomaisk-2014.jpg" download>Ladda ned</a>
             </figure>
             <figure>
+              <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
               <div class="photo-thumb has-img"><img src="/__l5e/assets-v1/f4baf7df-4fb1-4811-a55a-46186fb4476d/press-10-stridsvagnsmodell-2015.jpg" alt="Pappersmodell använd för stabsplanering i 3:e separata stridsvagnsbataljonen Zvirobej, april 2015" loading="lazy"></div>
+-->
+              <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/f4baf7df-4fb1-4811-a55a-46186fb4476d/press-10-stridsvagnsmodell-2015.jpg" alt="Pappersmodell använd för stabsplanering i 3:e separata stridsvagnsbataljonen Zvirobej, april 2015" loading="lazy"></div>
+              <!-- SLUT NY KOD -->
               <figcaption>Pappersmodell använd för stabsplanering i 3:e separata stridsvagnsbataljonen Zvirobej, april 2015</figcaption>
               <a class="dlbtn" href="/__l5e/assets-v1/f4baf7df-4fb1-4811-a55a-46186fb4476d/press-10-stridsvagnsmodell-2015.jpg" download>Ladda ned</a>
             </figure>
@@ -1363,18 +1665,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="wrap cols">
     <div>
+      <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
       <div class="ft-brand"><img src="/images/logo.png" alt="Blue/Yellow"><b>BLUE/YELLOW <em>SWEDEN</em></b></div>
+-->
+      <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+      <div class="ft-brand"><img width="220" height="220" loading="lazy" src="/images/logo.png" alt="Blue/Yellow"><b>BLUE/YELLOW <em>SWEDEN</em></b></div>
+      <!-- SLUT NY KOD -->
       <p class="small">För och i Ukraina sedan 2014<br>Sluta aldrig stötta Ukraina<br>För ett fritt Europa</p>
     </div>
     <div>
       <h5>Utforska</h5>
       <p class="small">
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('vad');return false">Vad vi gör</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/vad-vi-gor" onclick="return navClick(event,'vad')">Vad vi gör</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('nyh');return false">Aktuellt</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/nyheter-och-berattelser" onclick="return navClick(event,'nyh')">Aktuellt</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('res');return false">Resultat</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/resultat" onclick="return navClick(event,'res')">Resultat</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('eng');return false">Engagera dig</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/engagera-dig" onclick="return navClick(event,'eng')">Engagera dig</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('press');return false">Press</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/press" onclick="return navClick(event,'press')">Press</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('om','dok');return false">Dokument och rapporter</a>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/om-oss/dokument-och-rapporter" onclick="return navClick(event,'om','dok')">Dokument och rapporter</a>
+        <!-- SLUT NY KOD -->
       </p>
     </div>
     <div>
@@ -1395,7 +1732,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
     </div>
   </div>
+  <!-- BORTTAGEN KOD: årtalet var fast och blev inaktuellt
   <div class="bot" style="justify-content:center"><span>© 2025 Blue/Yellow Sweden · Nackagatan 4, 116 49 Stockholm · Org.nr 802552-3724</span></div>
+  -->
+  <!-- NY KOD: årtalet sätts automatiskt till aktuellt år (2026 visas om skriptet inte körs) -->
+  <div class="bot" style="justify-content:center"><span>© <span id="by-year">2026</span> Blue/Yellow Sweden · Nackagatan 4, 116 49 Stockholm · Org.nr 802552-3724</span></div>
+  <script>document.getElementById("by-year").textContent=new Date().getFullYear();</script>
+  <!-- SLUT NY KOD -->
 </footer>
 
 
@@ -1473,7 +1816,8 @@ async function swishDynQR(imgEl,amount,thank,statusEl,silent){
   var data=await res.json();
   if(seq!==imgEl.__swseq)return;
   var paymentId=data.paymentId,token=data.token;
-  console.log('[Swish] QR created:',paymentId,silent?'(silent renewal)':'');
+  // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+  //console.log('[Swish] QR created:',paymentId,silent?'(silent renewal)':'');
   imgEl.src='/api/public/swish-qr?token='+encodeURIComponent(token)+'&size=300';
   imgEl.style.visibility='visible';
   swishWatchAdd(paymentId,thank);
@@ -1491,7 +1835,8 @@ async function swishDynQR(imgEl,amount,thank,statusEl,silent){
     // FALL 2: användaren skannade/öppnade Swish och avbröt, eller betalningen nekades.
     // Ingen automatisk förnyelse – visa meddelande + knapp som skapar ny QR först vid klick.
     if(userCancel){
-     console.log('[Swish] user cancelled/declined:',d&&d.status);
+     // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+     //console.log('[Swish] user cancelled/declined:',d&&d.status);
      // Visa meddelande och skapa direkt en ny QR-kod (meddelandet ligger kvar).
      var cmsg=EN?'Cancelled, please try again.':'Avbruten, vänligen försök igen.';
      if(statusEl)statusEl.textContent=cmsg;
@@ -1504,7 +1849,8 @@ async function swishDynQR(imgEl,amount,thank,statusEl,silent){
      if(statusEl)statusEl.textContent=(EN?'The request timed out. Please try again.':'Tidsgränsen nåddes. Försök gärna igen.');
      return;
     }
-    console.log('[Swish] silent renewal, ignored callback:',d&&d.status);
+    // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+    //console.log('[Swish] silent renewal, ignored callback:',d&&d.status);
     swishDynQR(imgEl,amt,thank,statusEl,true);
   },2000);
  }catch(e){console.error('[Swish] QR error',e);
@@ -1540,14 +1886,17 @@ function swishMobile(host,lang){
    try{const res=await fetch(`${SWISH_PROXY}/api/swish/create`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({amount:sel,message:'Gåva Blue/Yellow'})});
     if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e.error||'err');}
     const data=await res.json();
-    console.log('[Swish] /api/swish/create response:',data);
-    console.log('[Swish] deepLink:',data.deepLink);
+    // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+    //console.log('[Swish] /api/swish/create response:',data);
+    // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+    //console.log('[Swish] deepLink:',data.deepLink);
     const {paymentId,token,deepLink}=data;
     const cb=encodeURIComponent(window.location.origin+window.location.pathname+window.location.search);
     let swishUrl=deepLink||`swish://paymentrequest?token=${token}&callbackurl=`;
     swishUrl=/callbackurl=/.test(swishUrl)?swishUrl.replace(/callbackurl=[^&]*/,'callbackurl='+cb):(swishUrl+(swishUrl.indexOf('?')>-1?'&':'?')+'callbackurl='+cb);
     swishSavePending(paymentId,T.thank);
-    console.log('[Swish] Navigating to:',swishUrl);
+    // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+    //console.log('[Swish] Navigating to:',swishUrl);
     stat.innerHTML=T.opening;window.location.href=swishUrl;
    setTimeout(()=>{stat.innerHTML=T.waiting;let n=0;const iv=setInterval(async()=>{n++;try{const s=await fetch(`${SWISH_PROXY}/api/swish/status/${paymentId}`);const d=await s.json();
     if(d.status==='PAID'){clearInterval(iv);swishClearPending();stat.innerHTML=T.ok;setTimeout(()=>{window.location.href=`${T.thank}?id=${paymentId}`},1200);return;}
@@ -1577,8 +1926,18 @@ function donate(el,compact){
     </div>
    </div>
    <p class="dnote">Säkra donationer · 95 öre av varje krona når fram</p>
+   <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned"
    <p class="dsub dsub-d">Skanna QR-koden med Swish-appen. Direkt efter din gåva kan du ladda ner ett gåvobevis till dig själv eller att ge bort.</p>
-   <p class="dsub dsub-m">Tryck på Öppna Swish eller skanna koden. Direkt efter din gåva kan du ladda ner ett gåvobevis till dig själv eller att ge bort.</p></div>`;
+-->
+   <!-- NY KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned" -->
+   <p class="dsub dsub-d">Skanna QR-koden med Swish-appen. Direkt efter din gåva kan du ladda ned ett gåvobevis till dig själv eller att ge bort.</p>
+   <!-- SLUT NY KOD -->
+   <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned"
+   <p class="dsub dsub-m">Tryck på Öppna Swish eller skanna koden. Direkt efter din gåva kan du ladda ner ett gåvobevis till dig själv eller att ge bort.</p></div>\`;
+-->
+   <!-- NY KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned" -->
+   <p class="dsub dsub-m">Tryck på Öppna Swish eller skanna koden. Direkt efter din gåva kan du ladda ned ett gåvobevis till dig själv eller att ge bort.</p></div>`;
+   <!-- SLUT NY KOD -->
   const amts=el.querySelector('.amts'),dam=el.querySelector('.damount');
   const setAmt=v=>{amt=v;custom='';dam.value='';amts.querySelectorAll('button').forEach(b=>{b.classList.toggle('on',+b.dataset.a===v);});};
   const qim=el.querySelector('.dqrimg');if(qim)qim.onclick=swishMarkAttempted;
@@ -1604,7 +1963,10 @@ var rszT;window.addEventListener('resize',function(){clearTimeout(rszT);rszT=set
 
 // ---------- campaigns ----------
 function camp(c){const p=Math.min(100,Math.round(c.r/c.g*100));
- return `<div class="ccard"><img src="${c.img}" alt="" style="border-radius:9px;height:130px;width:100%;object-fit:cover;margin-bottom:12px">
+ // BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+ //return `<div class="ccard"><img src="${c.img}" alt="" style="border-radius:9px;height:130px;width:100%;object-fit:cover;margin-bottom:12px">
+ // NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+ return `<div class="ccard"><img loading="lazy" src="${c.img}" alt="" style="border-radius:9px;height:130px;width:100%;object-fit:cover;margin-bottom:12px">
  <h4 class="disp">${c.n}</h4><p>${c.d}</p>
  <div class="prog"><div class="pl"><b>${c.r.toLocaleString("sv-SE")} kr</b><span>${p} % av ${c.g.toLocaleString("sv-SE")} kr</span></div>
  <div class="bar"><div class="fill" style="width:${p}%"></div></div></div>
@@ -1622,7 +1984,10 @@ function news(t,btn){
 }
 
 // ---------- docs ----------
-function docRow(d){return `<div class="docrow" data-t="${d.t}"><span class="tag">${d.t}</span><b>${d.h}</b>${d.u?`<a class="dl" href="${d.u}" target="_blank" rel="noopener">Ladda ner</a>`:`<span class="dl" style="color:#9FB0D6">Kommer</span>`}</div>`}
+// BORTTAGEN KOD: Konsekvent stavningsändring: "Ladda ner" → "Ladda ned"
+//function docRow(d){return `<div class="docrow" data-t="${d.t}"><span class="tag">${d.t}</span><b>${d.h}</b>${d.u?`<a class="dl" href="${d.u}" target="_blank" rel="noopener">Ladda ner</a>`:`<span class="dl" style="color:#9FB0D6">Kommer</span>`}</div>`}
+// NY KOD: Konsekvent stavningsändring: "Ladda ner" → "Ladda ned"
+function docRow(d){return `<div class="docrow" data-t="${d.t}"><span class="tag">${d.t}</span><b>${d.h}</b>${d.u?`<a class="dl" href="${d.u}" target="_blank" rel="noopener">Ladda ned</a>`:`<span class="dl" style="color:#9FB0D6">Kommer</span>`}</div>`}
 document.getElementById("doclist").innerHTML=DOCS.map(docRow).join("");
 function docs(t,btn){
  btn.parentElement.querySelectorAll("button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");
@@ -1691,7 +2056,10 @@ function trackPageView(){
 }
 function render(p,s){
  document.querySelectorAll("main.page").forEach(function(m){m.classList.toggle("on",m.id===p);});
- document.querySelectorAll("nav.main button").forEach(function(b){b.classList.toggle("on",b.dataset.nav===p);});
+ // BORTTAGEN KOD: markeringen letade bara efter knappar i menyn (punkt 22)
+ //document.querySelectorAll("nav.main button").forEach(function(b){b.classList.toggle("on",b.dataset.nav===p);});
+ // NY KOD: markerar aktuell sida i menyn, nu när menyn består av länkar (punkt 22)
+ document.querySelectorAll("nav.main [data-nav]").forEach(function(b){b.classList.toggle("on",b.dataset.nav===p);});
  var mn=document.getElementById("mnav");if(mn)mn.classList.remove("open");
  window.scrollTo(0,0);
  if(p==="stod"&&!s)s="gava";
@@ -1766,9 +2134,15 @@ const INFO={
  fordon:{t:"Fordon",b:`<p>Transport, evakuering och logistik. Fordon flyttar materiel fram och skadade tillbaka, ofta på vägar där vanliga bilar inte tar sig fram. De är skillnaden mellan en evakuering som hinner i tid och en som inte gör det.</p><p>Pickuper, lastbilar, bepansrade ambulanser och personbilar köps in nära fronten och levereras direkt till förbanden.</p><p class="ex"><b>Exempel:</b> Toyota Hilux och Nissan Navara hör till de vanligaste och mest pålitliga plattformarna.</p>`},
  optik:{t:"Optik",b:`<p>Mörkerseende och termisk teknik. När striden inte tar paus i mörkret avgör optiken vem som ser först. Värmesikten och nattkikare ger förbanden förmåga att verka dygnet runt och under svåra förhållanden.</p><p class="ex"><b>Exempel:</b> Pulsar och Infiray värmeoptik och PVS-31 mörkerseende.</p>`},
  samband:{t:"Samband",b:`<p>Radio och uppkoppling som håller även under störning. Robust kommunikation binder samman förband, ledning och sjukvård. Utan säkert samband stannar allt annat.</p><p>Starlinkterminaler och krypterad radio ger förbindelse i utsatta miljöer där näten slagits ut.</p><p class="ex"><b>Exempel:</b> Motorola DP4801E är ett återkommande system.</p>`},
- skydd:{t:"Skydd",b:`<p>Personlig skyddsutrustning och akutmateriel. Hjälmar, skyddsvästar och personlig medicinsk utrustning avgör vem som kommer hem. Enkelt, livsavgörande och alltid efterfrågat.</p><p class="ex"><b>Exempel:</b> Skyddsväst med keramiska plattor, ballistisk hjälm och individuell traumakit.</p>`},
+ // BORTTAGEN KOD: Felstavning: "individuell traumakit" → "individuellt traumakit"
+ //skydd:{t:"Skydd",b:`<p>Personlig skyddsutrustning och akutmateriel. Hjälmar, skyddsvästar och personlig medicinsk utrustning avgör vem som kommer hem. Enkelt, livsavgörande och alltid efterfrågat.</p><p class="ex"><b>Exempel:</b> Skyddsväst med keramiska plattor, ballistisk hjälm och individuell traumakit.</p>`},
+ // NY KOD: Felstavning: "individuell traumakit" → "individuellt traumakit"
+ skydd:{t:"Skydd",b:`<p>Personlig skyddsutrustning och akutmateriel. Hjälmar, skyddsvästar och personlig medicinsk utrustning avgör vem som kommer hem. Enkelt, livsavgörande och alltid efterfrågat.</p><p class="ex"><b>Exempel:</b> Skyddsväst med keramiska plattor, ballistisk hjälm och individuellt traumakit.</p>`},
   medical:{t:"Medicinsk vård",b:`<p>Traumavård och akut sjukvård vid nollinjen. Vård under de första minuterna räddar liv. Stödet når både fältet och kliniker i återtagna områden.</p><p>Akutkirurgi, traumautrustning och förbrukningsmateriel levereras dit behoven är som störst.</p><p class="ex"><b>Exempel:</b> Blodstillande förband, fältburna traumakit och utrustning för akut kirurgi.</p>`},
- integritet:{t:"Integritetspolicy",b:`<p><b>Blue / Yellow Sweden</b><br>Org.nr: 802552-3724<br>Adress: Nackagatan 4, 116 49 Stockholm<br>Kontakt: info@blue-yellow.se</p><h4 aria-level="3">1. Personuppgiftsansvarig</h4><p>Blue / Yellow Sweden är personuppgiftsansvarig för behandlingen av personuppgifter som sker på denna webbplats (.se). Den engelska sidan omfattas av samma ansvar, eftersom den drivs av samma juridiska person. Vår .lt-domän har en egen, separat personuppgiftsansvarig och omfattas inte av denna policy.</p><h4 aria-level="3">2. Vilka personuppgifter vi samlar in</h4><p>Vi samlar endast in de personuppgifter som är nödvändiga för vår verksamhet:</p><ul><li>E-postadress, vid frivillig registrering för information eller bekräftelse.</li><li>E-postadress och samtycke, vid anmälan till nyhetsbrev.</li></ul><p>Vi samlar inte in namn, telefonnummer, adress, betalningsuppgifter eller donationsbelopp via webbplatsen. Vi har ingen inloggning, inget konto, inget kontaktformulär och ingen chattfunktion.</p><h4 aria-level="3">3. Betalningar</h4><p>Betalning för donationer sker utanför webbplatsen, via Swish eller banköverföring. Vi tar inte emot eller lagrar kortuppgifter, transaktionsdata eller betalningsbekräftelser på webbplatsen.</p><h4 aria-level="3">4. Varför vi behandlar personuppgifter</h4><ul><li>Skicka nyhetsbrev till dig som har anmält dig och gett samtycke.</li><li>Skicka bekräftelse eller information till dig som frivilligt registrerat din e-postadress.</li><li>Se till att webbplatsen fungerar tekniskt som den ska.</li></ul><h4 aria-level="3">5. Rättslig grund</h4><p>Behandling av e-postadress för nyhetsbrev sker med stöd av ditt samtycke. Behandling av e-postadress vid frivillig registrering för information sker också med stöd av samtycke, eftersom uppgiften är helt frivillig och inte krävs för att använda webbplatsen.</p><h4 aria-level="3">6. Hur länge vi sparar uppgifter</h4><p>Vi sparar din e-postadress så länge du är anmäld till nyhetsbrevet eller så länge det är relevant för den information du registrerat dig för. Om du avregistrerar dig eller återkallar ditt samtycke raderar vi uppgiften utan onödigt dröjsmål.</p><h4 aria-level="3">7. Vilka som kan ta del av uppgifterna</h4><p>Vi delar inte personuppgifter med tredje part i marknadsföringssyfte. Uppgifter kan behandlas av våra tekniska leverantörer som hjälper oss driva webbplatsen och skicka e-post:</p><ul><li>Lovable – webbhotell/plattform för webbplatsen.</li><li>Resend – leverantör för utskick av e-post.</li></ul><p>Dessa leverantörer får endast behandla uppgifter enligt våra instruktioner och för de syften som anges i denna policy.</p><h4 aria-level="3">8. Var uppgifter behandlas</h4><p>Vår utgångspunkt är att personuppgifter i första hand behandlas inom EU/EES. Om någon av våra leverantörer behandlar uppgifter utanför EU/EES sker det endast om det finns godkända skyddsåtgärder enligt gällande dataskyddsregler.</p><h4 aria-level="3">9. Google Analytics och framtida verktyg</h4><p>Vi använder i dagsläget ingen analystjänst som Google Analytics och ingen marknadsföringspixel. Om sådana verktyg aktiveras i framtiden kommer de endast att laddas efter att du gett ditt samtycke via vår cookie-lösning.</p><h4 aria-level="3">10. Dina rättigheter</h4><ul><li>Få information om vilka personuppgifter vi behandlar om dig.</li><li>Begära rättelse av felaktiga uppgifter.</li><li>Begära radering av dina uppgifter.</li><li>Återkalla ditt samtycke när som helst.</li><li>Invända mot behandling som grundar sig på samtycke.</li><li>Lämna klagomål till Integritetsskyddsmyndigheten.</li></ul><h4 aria-level="3">11. Kontakt</h4><p>Har du frågor om denna policy eller vill utöva dina rättigheter, kontakta oss på info@blue-yellow.se.</p>`},
+ // BORTTAGEN KOD: Konsekvent stavningsändring: "Blue / Yellow" → "Blue/Yellow"
+ //integritet:{t:"Integritetspolicy",b:`<p><b>Blue / Yellow Sweden</b><br>Org.nr: 802552-3724<br>Adress: Nackagatan 4, 116 49 Stockholm<br>Kontakt: info@blue-yellow.se</p><h4 aria-level="3">1. Personuppgiftsansvarig</h4><p>Blue / Yellow Sweden är personuppgiftsansvarig för behandlingen av personuppgifter som sker på denna webbplats (.se). Den engelska sidan omfattas av samma ansvar, eftersom den drivs av samma juridiska person. Vår .lt-domän har en egen, separat personuppgiftsansvarig och omfattas inte av denna policy.</p><h4 aria-level="3">2. Vilka personuppgifter vi samlar in</h4><p>Vi samlar endast in de personuppgifter som är nödvändiga för vår verksamhet:</p><ul><li>E-postadress, vid frivillig registrering för information eller bekräftelse.</li><li>E-postadress och samtycke, vid anmälan till nyhetsbrev.</li></ul><p>Vi samlar inte in namn, telefonnummer, adress, betalningsuppgifter eller donationsbelopp via webbplatsen. Vi har ingen inloggning, inget konto, inget kontaktformulär och ingen chattfunktion.</p><h4 aria-level="3">3. Betalningar</h4><p>Betalning för donationer sker utanför webbplatsen, via Swish eller banköverföring. Vi tar inte emot eller lagrar kortuppgifter, transaktionsdata eller betalningsbekräftelser på webbplatsen.</p><h4 aria-level="3">4. Varför vi behandlar personuppgifter</h4><ul><li>Skicka nyhetsbrev till dig som har anmält dig och gett samtycke.</li><li>Skicka bekräftelse eller information till dig som frivilligt registrerat din e-postadress.</li><li>Se till att webbplatsen fungerar tekniskt som den ska.</li></ul><h4 aria-level="3">5. Rättslig grund</h4><p>Behandling av e-postadress för nyhetsbrev sker med stöd av ditt samtycke. Behandling av e-postadress vid frivillig registrering för information sker också med stöd av samtycke, eftersom uppgiften är helt frivillig och inte krävs för att använda webbplatsen.</p><h4 aria-level="3">6. Hur länge vi sparar uppgifter</h4><p>Vi sparar din e-postadress så länge du är anmäld till nyhetsbrevet eller så länge det är relevant för den information du registrerat dig för. Om du avregistrerar dig eller återkallar ditt samtycke raderar vi uppgiften utan onödigt dröjsmål.</p><h4 aria-level="3">7. Vilka som kan ta del av uppgifterna</h4><p>Vi delar inte personuppgifter med tredje part i marknadsföringssyfte. Uppgifter kan behandlas av våra tekniska leverantörer som hjälper oss driva webbplatsen och skicka e-post:</p><ul><li>Lovable – webbhotell/plattform för webbplatsen.</li><li>Resend – leverantör för utskick av e-post.</li></ul><p>Dessa leverantörer får endast behandla uppgifter enligt våra instruktioner och för de syften som anges i denna policy.</p><h4 aria-level="3">8. Var uppgifter behandlas</h4><p>Vår utgångspunkt är att personuppgifter i första hand behandlas inom EU/EES. Om någon av våra leverantörer behandlar uppgifter utanför EU/EES sker det endast om det finns godkända skyddsåtgärder enligt gällande dataskyddsregler.</p><h4 aria-level="3">9. Google Analytics och framtida verktyg</h4><p>Vi använder i dagsläget ingen analystjänst som Google Analytics och ingen marknadsföringspixel. Om sådana verktyg aktiveras i framtiden kommer de endast att laddas efter att du gett ditt samtycke via vår cookie-lösning.</p><h4 aria-level="3">10. Dina rättigheter</h4><ul><li>Få information om vilka personuppgifter vi behandlar om dig.</li><li>Begära rättelse av felaktiga uppgifter.</li><li>Begära radering av dina uppgifter.</li><li>Återkalla ditt samtycke när som helst.</li><li>Invända mot behandling som grundar sig på samtycke.</li><li>Lämna klagomål till Integritetsskyddsmyndigheten.</li></ul><h4 aria-level="3">11. Kontakt</h4><p>Har du frågor om denna policy eller vill utöva dina rättigheter, kontakta oss på info@blue-yellow.se.</p>`},
+ // NY KOD: Konsekvent stavningsändring: "Blue / Yellow" → "Blue/Yellow"
+ integritet:{t:"Integritetspolicy",b:`<p><b>Blue/Yellow Sweden</b><br>Org.nr: 802552-3724<br>Adress: Nackagatan 4, 116 49 Stockholm<br>Kontakt: info@blue-yellow.se</p><h4 aria-level="3">1. Personuppgiftsansvarig</h4><p>Blue/Yellow Sweden är personuppgiftsansvarig för behandlingen av personuppgifter som sker på denna webbplats (.se). Den engelska sidan omfattas av samma ansvar, eftersom den drivs av samma juridiska person. Vår .lt-domän har en egen, separat personuppgiftsansvarig och omfattas inte av denna policy.</p><h4 aria-level="3">2. Vilka personuppgifter vi samlar in</h4><p>Vi samlar endast in de personuppgifter som är nödvändiga för vår verksamhet:</p><ul><li>E-postadress, vid frivillig registrering för information eller bekräftelse.</li><li>E-postadress och samtycke, vid anmälan till nyhetsbrev.</li></ul><p>Vi samlar inte in namn, telefonnummer, adress, betalningsuppgifter eller donationsbelopp via webbplatsen. Vi har ingen inloggning, inget konto, inget kontaktformulär och ingen chattfunktion.</p><h4 aria-level="3">3. Betalningar</h4><p>Betalning för donationer sker utanför webbplatsen, via Swish eller banköverföring. Vi tar inte emot eller lagrar kortuppgifter, transaktionsdata eller betalningsbekräftelser på webbplatsen.</p><h4 aria-level="3">4. Varför vi behandlar personuppgifter</h4><ul><li>Skicka nyhetsbrev till dig som har anmält dig och gett samtycke.</li><li>Skicka bekräftelse eller information till dig som frivilligt registrerat din e-postadress.</li><li>Se till att webbplatsen fungerar tekniskt som den ska.</li></ul><h4 aria-level="3">5. Rättslig grund</h4><p>Behandling av e-postadress för nyhetsbrev sker med stöd av ditt samtycke. Behandling av e-postadress vid frivillig registrering för information sker också med stöd av samtycke, eftersom uppgiften är helt frivillig och inte krävs för att använda webbplatsen.</p><h4 aria-level="3">6. Hur länge vi sparar uppgifter</h4><p>Vi sparar din e-postadress så länge du är anmäld till nyhetsbrevet eller så länge det är relevant för den information du registrerat dig för. Om du avregistrerar dig eller återkallar ditt samtycke raderar vi uppgiften utan onödigt dröjsmål.</p><h4 aria-level="3">7. Vilka som kan ta del av uppgifterna</h4><p>Vi delar inte personuppgifter med tredje part i marknadsföringssyfte. Uppgifter kan behandlas av våra tekniska leverantörer som hjälper oss driva webbplatsen och skicka e-post:</p><ul><li>Lovable – webbhotell/plattform för webbplatsen.</li><li>Resend – leverantör för utskick av e-post.</li></ul><p>Dessa leverantörer får endast behandla uppgifter enligt våra instruktioner och för de syften som anges i denna policy.</p><h4 aria-level="3">8. Var uppgifter behandlas</h4><p>Vår utgångspunkt är att personuppgifter i första hand behandlas inom EU/EES. Om någon av våra leverantörer behandlar uppgifter utanför EU/EES sker det endast om det finns godkända skyddsåtgärder enligt gällande dataskyddsregler.</p><h4 aria-level="3">9. Google Analytics och framtida verktyg</h4><p>Vi använder i dagsläget ingen analystjänst som Google Analytics och ingen marknadsföringspixel. Om sådana verktyg aktiveras i framtiden kommer de endast att laddas efter att du gett ditt samtycke via vår cookie-lösning.</p><h4 aria-level="3">10. Dina rättigheter</h4><ul><li>Få information om vilka personuppgifter vi behandlar om dig.</li><li>Begära rättelse av felaktiga uppgifter.</li><li>Begära radering av dina uppgifter.</li><li>Återkalla ditt samtycke när som helst.</li><li>Invända mot behandling som grundar sig på samtycke.</li><li>Lämna klagomål till Integritetsskyddsmyndigheten.</li></ul><h4 aria-level="3">11. Kontakt</h4><p>Har du frågor om denna policy eller vill utöva dina rättigheter, kontakta oss på info@blue-yellow.se.</p>`},
  cookies:{t:"Cookies och samtycke",b:`<h4 aria-level="3">1. Nuläge</h4><p>Webbplatsen använder i dagsläget inga cookies för analys, marknadsföring eller spårning. Endast tekniskt nödvändiga funktioner, om sådana krävs av plattformen, kan förekomma.</p><h4 aria-level="3">2. Kategorier av cookies</h4><p><b>Nödvändiga cookies</b><br>Krävs för att webbplatsen ska fungera tekniskt. Kan användas utan samtycke eftersom de är strikt nödvändiga.</p><p><b>Analyscookies</b><br>Används för att förstå hur besökare använder webbplatsen, till exempel via Google Analytics. Används inte i dagsläget. Kommer att kräva samtycke innan de aktiveras.</p><p><b>Marknadsföringscookies</b><br>Används för riktad kommunikation eller uppföljning av kampanjer. Används inte i dagsläget. Kommer att kräva samtycke innan de aktiveras.</p><h4 aria-level="3">3. Samtycke</h4><p>Om och när analys- eller marknadsföringscookies aktiveras kommer en samtyckesbanner att visas med tre tydliga val:</p><ul><li>Acceptera alla</li><li>Endast nödvändiga</li><li>Anpassa inställningar</li></ul><p>Inga kryssrutor för icke-nödvändiga cookies kommer att vara förvalda. Det ska vara lika enkelt att avvisa som att acceptera.</p><h4 aria-level="3">4. Ändra ditt val</h4><p>Du kommer att kunna ändra eller återkalla ditt samtycke när som helst via en cookie-inställningslänk på webbplatsen, så snart en sådan lösning är implementerad.</p><h4 aria-level="3">5. Cookies som ännu inte är aktiva</h4><p>Denna text uppdateras när nya verktyg som Google Analytics eller andra tredjepartslösningar tas i drift, så att cookie-listan alltid speglar vad som faktiskt används.</p>`},
  gdpr:{t:"GDPR och data inom EU",b:`<h4 aria-level="3">1. Regelverk</h4><p>Vi behandlar personuppgifter i enlighet med EU:s dataskyddsförordning (GDPR) och kompletterande svensk dataskyddslagstiftning.</p><h4 aria-level="3">2. Var data behandlas</h4><p>Vår utgångspunkt är att personuppgifter i första hand behandlas inom EU/EES genom våra leverantörer.</p><h4 aria-level="3">3. Överföring utanför EU/EES</h4><p>Om personuppgifter i något fall skulle behandlas utanför EU/EES sker det endast om det finns tillräckliga skyddsåtgärder, exempelvis standardavtalsklausuler godkända enligt EU-rätt.</p><h4 aria-level="3">4. Leverantörer och underbiträden</h4><ul><li>Lovable, för drift av webbplatsen.</li><li>Resend, för utskick av e-post.</li></ul><p>Dessa leverantörer behandlar uppgifter enligt våra instruktioner och endast för de syften som beskrivs i vår integritetspolicy.</p><h4 aria-level="3">5. Separata juridiska enheter</h4><p>Vår .se-domän och vår .lt-domän drivs av separata juridiska enheter med separat personuppgiftsansvar. Denna text gäller endast för .se-domänen och den engelska versionen av samma sajt.</p><h4 aria-level="3">6. Dina rättigheter enligt GDPR</h4><p>Du har samma rättigheter oavsett var i EU/EES dina uppgifter behandlas: rätt till information, rättelse, radering, begränsning, invändning och rätt att lämna klagomål till tillsynsmyndighet.</p>`}
 };
@@ -1973,6 +2347,83 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeInfo();
   if(!window.byConsent.get())box.classList.add('open');
 })();
 </script>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: liten kopiera-ikon efter varje mejladress. Ett klick kopierar adressen (som Ctrl+C).
+     Läggs till automatiskt, även i rutor och text som visas senare (till exempel Integritetspolicy). -->
+<style>
+.by-copy{display:inline-flex;align-items:center;justify-content:center;width:1.5em;height:1.5em;margin-left:.2em;padding:0;border:0;border-radius:4px;background:none;color:inherit;opacity:.5;cursor:pointer;vertical-align:-.3em;position:relative;font:inherit}
+.by-copy:hover,.by-copy:focus-visible{opacity:1;background:rgba(127,127,127,.15)}
+.by-copy svg{width:.95em;height:.95em}
+.by-copy.done{opacity:1}
+.by-copy.done::after{content:attr(data-done);position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#00185C;color:#fff;font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;white-space:nowrap;pointer-events:none}
+</style>
+<script>
+(function(){
+  var EN=(document.documentElement.lang||'').indexOf('en')===0;
+  var TXT_COPY=EN?'Copy email address':'Kopiera mejladressen', TXT_DONE=EN?'Copied!':'Kopierad!';
+  var RE=/[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/g;
+  var ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+  // Här läggs ingen ikon: formulärens felmeddelanden, cookie-rutan och sådant som inte är vanlig text.
+  var SKIP='script,style,textarea,input,select,button,svg,.by-copy,.vol-err,[id$="-status"],#bycc';
+  function copy(text,btn){
+    function ok(){btn.classList.add('done');clearTimeout(btn._t);btn._t=setTimeout(function(){btn.classList.remove('done');},1500);}
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback);}else{fallback();}
+    function fallback(){var t=document.createElement('textarea');t.value=text;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';
+      document.body.appendChild(t);t.select();try{document.execCommand('copy');ok();}catch(e){}t.remove();}
+  }
+  function makeBtn(email){
+    var b=document.createElement('button');b.type='button';b.className='by-copy';b.innerHTML=ICON;
+    b.title=TXT_COPY;b.setAttribute('aria-label',TXT_COPY+' '+email);b.setAttribute('data-done',TXT_DONE);
+    b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();copy(email,b);});
+    return b;
+  }
+  function hasBtn(node){var n=node.nextSibling;return n&&n.nodeType===1&&n.classList.contains('by-copy');}
+  function scan(root){
+    // 1) Länkar av typen mailto: ikonen hamnar efter länken.
+    root.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+      if(a.closest(SKIP)||hasBtn(a))return;
+      var email=decodeURIComponent(a.getAttribute('href').slice(7).split('?')[0]);
+      if(email)a.after(makeBtn(email));
+    });
+    // 2) Mejladresser som står som vanlig text.
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),list=[],n;
+    while((n=w.nextNode())){
+      RE.lastIndex=0;
+      if(!RE.test(n.nodeValue)||hasBtn(n))continue;
+      var p=n.parentElement;
+      if(!p||p.closest(SKIP)||p.closest('a[href^="mailto:"]'))continue;
+      list.push(n);
+    }
+    list.forEach(function(node){
+      var text=node.nodeValue,frag=document.createDocumentFragment(),last=0,m;RE.lastIndex=0;
+      while((m=RE.exec(text))){
+        frag.appendChild(document.createTextNode(text.slice(last,m.index+m[0].length)));
+        frag.appendChild(makeBtn(m[0]));last=m.index+m[0].length;
+      }
+      frag.appendChild(document.createTextNode(text.slice(last)));
+      node.replaceWith(frag);
+    });
+  }
+  var queued=false;
+  function run(){queued=false;scan(document.body);}
+  run();
+  // Text som visas senare (rutor, nyheter, dokumentlistor) får också ikonen.
+  new MutationObserver(function(){if(!queued){queued=true;requestAnimationFrame(run);}})
+    .observe(document.body,{childList:true,subtree:true});
+})();
+</script>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: menyns och sidfotens länkar (punkt 22). Vanligt klick byter sida som förut; Ctrl/Cmd/Skift-klick och mittenklick öppnar i ny flik. -->
+<style>
+nav.main a{padding:12px 10px;border-radius:8px;color:#fff;font-weight:600;font-size:15.4px;white-space:nowrap;text-decoration:none;text-align:center}
+nav.main a.on{background:var(--yellow);color:var(--navy)}
+</style>
+<script>
+function navClick(e,p,s){if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button)return true;go(p,s);return false;}
+</script>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: bilder med width/height behåller sin vanliga form (punkt 23) -->
+<style>:where(img[width][height]){height:auto}</style>
 <!-- SLUT NY KOD -->
 </body>
 

@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="sv">
 <head>
+<!-- NY KOD: teckenkodningen först i head, så att å, ä och ö alltid visas rätt (punkt 26) -->
+<meta charset="utf-8">
+<!-- SLUT NY KOD -->
 <!-- Meta Pixel Code -->
 <!-- BORTTAGEN KOD: Meta Pixel laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>
@@ -88,7 +91,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+<!-- BORTTAGEN KOD: raden låg för långt ner (efter spårningskoden), webbläsaren letar bara i början av filen (punkt 26)
 <meta charset="utf-8">
+-->
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -172,7 +177,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 -->
 <!-- End Google Tag Manager -->
 
+<!-- BORTTAGEN KOD: Konsekvent stavningsändring: "BLUE / YELLOW" → "BLUE/YELLOW"
 <div class="bar"><img src="/images/certificates/logo_blue.png" alt="Blue/Yellow" style="height:42px;width:auto"><div><b>BLUE / YELLOW</b><span>Sweden</span></div></div>
+-->
+<!-- NY KOD: Konsekvent stavningsändring: "BLUE / YELLOW" → "BLUE/YELLOW" -->
+<div class="bar"><img src="/images/certificates/logo_blue.png" alt="Blue/Yellow" style="height:42px;width:auto"><div><b>BLUE/YELLOW</b><span>Sweden</span></div></div>
+<!-- SLUT NY KOD -->
 <main class="main">
 <div class="wrap" id="checking"><p class="lead">Kontrollerar din betalning …</p></div>
 <div class="wrap" id="failed" style="display:none">
@@ -188,7 +198,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="cert" id="cert" style="display:none">
     <h2>Skapa ditt gåvobevis</h2>
+    <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned"
     <p class="sub">Välj syfte och motiv, fyll i dina uppgifter och ladda ner som PDF.</p>
+-->
+    <!-- NY KOD: Konsekvent stavningsändring: "ladda ner" → "ladda ned" -->
+    <p class="sub">Välj syfte och motiv, fyll i dina uppgifter och ladda ned som PDF.</p>
+    <!-- SLUT NY KOD -->
     <p class="gift-amount" id="giftAmount"></p>
 
     <div class="step-title">1. Välj syfte</div>
@@ -205,7 +220,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="step-title">4. Förhandsvisning</div>
       <div class="preview-wrap" id="previewWrap"><div class="preview-scale" id="previewScale"></div></div>
+      <!-- BORTTAGEN KOD: Konsekvent stavningsändring: "Ladda ner" → "Ladda ned"
       <button class="dl" id="certDownload" disabled aria-label="Ladda ner gåvobevis som PDF"><span class="spinner"></span><span id="certDlLabel">Ladda ner som PDF</span></button>
+-->
+      <!-- NY KOD: Konsekvent stavningsändring: "Ladda ner" → "Ladda ned" -->
+      <button class="dl" id="certDownload" disabled aria-label="Ladda ned gåvobevis som PDF"><span class="spinner"></span><span id="certDlLabel">Ladda ned som PDF</span></button>
+      <!-- SLUT NY KOD -->
       <p class="done-msg" id="doneMsg">Tack! Du skickas nu tillbaka till blue-yellow.se …</p>
     </div>
   </div>
@@ -296,7 +316,10 @@ const PURPOSES = [
 const MOTIFS = [
   { id:"christmas", name:"Julkort", desc:"Värme och solidaritet", thumb:CERT_IMG+"christmas_kyiv.jpg", bg:CERT_IMG+"christmas_kyiv.jpg", titleFont:"Playfair Display", titleItalic:true, bodyFont:"Playfair Display", primary:"#1a5c2a", accent:"#FFD700", footerBg:"#1a5c2a", overlay:"linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,40,0,0.5))", availableFor:["gift"] },
   { id:"formal", name:"Formellt", desc:"Ceremoniell och värdig", thumb:CERT_IMG+"trident_watermark.png", watermark:CERT_IMG+"trident_watermark.png", titleFont:"Cinzel", bodyFont:"Cinzel", primary:"#0057B8", accent:"#FFD700", footerBg:"#0057B8", availableFor:["gift","memorial","self"] },
-  { id:"church", name:"Andrijivskakyrkany", desc:"Medmänsklighet och hopp", thumb:CERT_IMG+"church_kyiv.jpg", bg:CERT_IMG+"church_kyiv.jpg", titleFont:"EB Garamond", bodyFont:"EB Garamond", primary:"#5c3a1e", accent:"#FFD700", footerBg:"#5c3a1e", overlay:"linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(40,20,0,0.5))", availableFor:["gift","memorial"] },
+  // BORTTAGEN KOD: stavfel i kyrkans namn
+//  { id:"church", name:"Andrijivskakyrkany", desc:"Medmänsklighet och hopp", thumb:CERT_IMG+"church_kyiv.jpg", bg:CERT_IMG+"church_kyiv.jpg", titleFont:"EB Garamond", bodyFont:"EB Garamond", primary:"#5c3a1e", accent:"#FFD700", footerBg:"#5c3a1e", overlay:"linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(40,20,0,0.5))", availableFor:["gift","memorial"] },
+  // NY KOD: "Andrijivskakyrkany" rättat till "Andrijivskakyrkan"
+  { id:"church", name:"Andrijivskakyrkan", desc:"Medmänsklighet och hopp", thumb:CERT_IMG+"church_kyiv.jpg", bg:CERT_IMG+"church_kyiv.jpg", titleFont:"EB Garamond", bodyFont:"EB Garamond", primary:"#5c3a1e", accent:"#FFD700", footerBg:"#5c3a1e", overlay:"linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(40,20,0,0.5))", availableFor:["gift","memorial"] },
   { id:"children", name:"Barnen under flaggan", desc:"Skydd och framtidstro", thumb:CERT_IMG+"children_flag.jpg", bg:CERT_IMG+"children_flag.jpg", titleFont:"Nunito", bodyFont:"Nunito", primary:"#0057B8", accent:"#FFD700", footerBg:"#0057B8", overlay:"linear-gradient(to bottom, rgba(0,50,150,0.2), rgba(0,40,100,0.45))", availableFor:["gift","self"] },
 ];
 
@@ -412,6 +435,8 @@ function certBodyHTML(m){
   const dateStr = new Date().toLocaleDateString("sv-SE", { day:"numeric", month:"long", year:"numeric" });
   const giver = esc(certData.giver.trim());
   const recip = esc(certData.recipient.trim());
+  // NY KOD: genitiv av mottagarens namn. Namn som slutar på s, x eller z får inget extra s ("Lars minne", "Annas minne").
+  const recipGen = /[sxz]$/i.test(certData.recipient.trim()) ? recip : recip + "s";
   const name = `font-family:${m.bodyFont},serif;color:${m.primary}`;
   const greeting = certData.greeting.trim()
     ? `<p style="font-style:italic;font-size:15px;color:#555;margin-top:16px">”${esc(certData.greeting.trim())}”</p>`
@@ -434,7 +459,12 @@ function certBodyHTML(m){
     case "formal_memorial":
       return `<div style="font-size:15px;letter-spacing:3px;color:#666;text-transform:uppercase;margin-bottom:20px">Till minne av ${recip}</div>
       <p style="font-size:15px;color:#333;line-height:1.7">${giver} har överlämnat ett bidrag på <b style="color:${m.primary}">${amt}</b> till Blue/Yellow Sweden till minne av ${recip}.</p>
-      <p style="font-size:14px;color:#444;line-height:1.7;margin-top:16px">Genom denna gåva hedras ${recip}s minne och stärks det arbete som levererar livsviktig utrustning, medicinsk materiel och civil nödhjälp till de hårdast drabbade områdena i Ukraina.</p>
+      <!-- BORTTAGEN KOD: "[namn]s minne" blev fel för namn som slutar på s, x eller z (t.ex. "Larss minne")
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-top:16px">Genom denna gåva hedras \${recip}s minne och stärks det arbete som levererar livsviktig utrustning, medicinsk materiel och civil nödhjälp till de hårdast drabbade områdena i Ukraina.</p>
+-->
+      <!-- NY KOD: rätt genitiv, "Lars minne" men "Annas minne" -->
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-top:16px">Genom denna gåva hedras ${recipGen} minne och stärks det arbete som levererar livsviktig utrustning, medicinsk materiel och civil nödhjälp till de hårdast drabbade områdena i Ukraina.</p>
+      <!-- SLUT NY KOD -->
       ${greeting}
       <p style="font-size:14.5px;color:#333;margin-top:22px">Med varm omtanke,<br>${giver}</p>
       <p style="font-size:13px;color:#555;margin-top:14px">Stockholm, ${dateStr}</p>`;
@@ -459,7 +489,12 @@ function certBodyHTML(m){
     case "church_memorial":
       return `<div style="${name};font-size:20px;font-weight:700;margin-bottom:18px">Till minne och med vördnad</div>
       <p style="font-size:15px;color:#333;line-height:1.7">${giver} har skänkt en gåva på <b style="color:${m.primary}">${amt}</b> till Blue/Yellow till minne av ${recip}.</p>
-      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">I en tid av prövning och sorg kan medmänsklighet bli det ljus som bär oss. Denna gåva hedrar ${recip}s minne genom att skydda liv och ge hopp åt människor i nöd.</p>
+      <!-- BORTTAGEN KOD: "[namn]s minne" blev fel för namn som slutar på s, x eller z (t.ex. "Larss minne")
+      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">I en tid av prövning och sorg kan medmänsklighet bli det ljus som bär oss. Denna gåva hedrar \${recip}s minne genom att skydda liv och ge hopp åt människor i nöd.</p>
+-->
+      <!-- NY KOD: rätt genitiv, "Lars minne" men "Annas minne" -->
+      <p style="font-size:14.5px;color:#333;line-height:1.7;margin-top:14px">I en tid av prövning och sorg kan medmänsklighet bli det ljus som bär oss. Denna gåva hedrar ${recipGen} minne genom att skydda liv och ge hopp åt människor i nöd.</p>
+      <!-- SLUT NY KOD -->
       <p style="font-style:italic;font-size:15px;color:#444;margin-top:16px">”Så länge det behövs.”</p>
       ${greeting}
       <p style="font-size:14.5px;color:#333;margin-top:22px">Med varm omtanke,<br>${giver}</p>`;

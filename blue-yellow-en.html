@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- NY KOD: teckenkodningen först i head, så att å, ä och ö alltid visas rätt (punkt 26) -->
+<meta charset="utf-8">
+<!-- SLUT NY KOD -->
 <!-- Meta Pixel Code -->
 <!-- BORTTAGEN KOD: Meta Pixel laddades direkt utan samtycke. Laddas nu av samtyckeskoden nedan
 <script>
@@ -79,7 +82,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })();
 </script>
 <!-- SLUT NY KOD -->
+<!-- BORTTAGEN KOD: raden låg för långt ner (efter spårningskoden), webbläsaren letar bara i början av filen (punkt 26)
 <meta charset="utf-8">
+-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -338,7 +343,77 @@ footer .bot{border-top:1px solid rgba(255,255,255,.14);padding:14px 20px;display
 .mblock{display:none}
 @media(max-width:899px){#stod .donate-aside{display:none}#stod .pane[data-pane="gava"] .lead,#stod .pane[data-pane="gava"] .bigfact{display:none}#stod .mblock{display:block;background:var(--navy);border-radius:15px;padding:22px;color:var(--paper);margin-top:14px;line-height:1.6}#stod .mblock p{color:var(--paper)}#stod .mblock b{color:var(--yellow);font-weight:800;font-size:16px}#stod #dc2m{background:transparent;padding:0;margin-top:18px}}
 </style>
-<script defer src="/__l5e/events.b979ee024b15adfd.js" data-artifact-kind="dwl_content_hash" data-artifact-id="11268f566d5da8472522ad6bcb18c255b29a72210a5c2aa9292f2215d6f737cd" data-commit-sha="d9a34df33a1f7ef0c6b262eb21c597fe48423c34" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MmpleTI4bXduOHp2dHE5cnYzZTJ4NnRndiIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiIxMTI2OGY1NjZkNWRhODQ3MjUyMmFkNmJjYjE4YzI1NWIyOWE3MjIxMGE1YzJhYTkyOTJmMjIxNWQ2ZjczN2NkIiwiY29tbWl0X3NoYSI6ImQ5YTM0ZGYzM2ExZjdlZjBjNmIyNjJlYjIxYzU5N2ZlNDg0MjNjMzQiLCJleHAiOjE3OTc3NzAxNTh9.f16sds15HsIyjWIZI_-uGCNzmngWS5jwPc7oJrt3fvI" data-autocapture="1" data-consent="1"></script></head>
+<script defer src="/__l5e/events.b979ee024b15adfd.js" data-artifact-kind="dwl_content_hash" data-artifact-id="11268f566d5da8472522ad6bcb18c255b29a72210a5c2aa9292f2215d6f737cd" data-commit-sha="d9a34df33a1f7ef0c6b262eb21c597fe48423c34" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MmpleTI4bXduOHp2dHE5cnYzZTJ4NnRndiIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiIxMTI2OGY1NjZkNWRhODQ3MjUyMmFkNmJjYjE4YzI1NWIyOWE3MjIxMGE1YzJhYTkyOTJmMjIxNWQ2ZjczN2NkIiwiY29tbWl0X3NoYSI6ImQ5YTM0ZGYzM2ExZjdlZjBjNmIyNjJlYjIxYzU5N2ZlNDg0MjNjMzQiLCJleHAiOjE3OTc3NzAxNTh9.f16sds15HsIyjWIZI_-uGCNzmngWS5jwPc7oJrt3fvI" data-autocapture="1" data-consent="1"></script>
+<!-- NY KOD: stilar för pressmaterialet och gåvosidorna, samma som på svenska sidan (punkt 27) -->
+<style>
+.mob-only{display:none}
+@media(max-width:899px){.mob-only{display:inline}.desk-only{display:none}}
+.press-kit-stack{display:flex;flex-direction:column;gap:24px}
+.kit-block{background:rgba(255,255,255,.06);border:1px solid rgba(255,215,0,.35);border-radius:12px;padding:20px}
+.kit-block h4{color:var(--yellow);font-size:18px;margin-bottom:14px}
+.logo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:760px){.logo-row{grid-template-columns:repeat(2,1fr)}}
+.logo-thumb{display:flex;flex-direction:column;gap:10px}
+.thumb-box{aspect-ratio:1;background:rgba(255,255,255,.08);border:1.5px dashed rgba(255,215,0,.4);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#C9D4EE;text-align:center;padding:10px;line-height:1.35}
+.thumb-box.has-img{background:#fff;border:1px solid rgba(255,255,255,.18);padding:8px;overflow:hidden}
+.thumb-box.has-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.thumb-cap{font-size:12px;color:#C9D4EE;text-align:center;margin:8px 0 6px;line-height:1.35}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.photo-grid{grid-template-columns:1fr}}
+.photo-grid figure{display:flex;flex-direction:column;gap:8px;margin:0}
+.photo-thumb{aspect-ratio:4/3;background:rgba(255,255,255,.08);border:1.5px dashed rgba(255,215,0,.4);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#C9D4EE;text-align:center;padding:10px;line-height:1.35}
+.photo-thumb.has-img{padding:0;border:1px solid rgba(255,255,255,.18);overflow:hidden;background:rgba(0,0,0,.25)}
+.photo-thumb.has-img img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-grid figcaption{font-size:13px;color:#fff}
+.photo-note{font-size:12.5px;color:#C9D4EE;margin-top:14px;line-height:1.55}
+.photo-note a{color:var(--yellow);font-weight:700}
+.facts-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:480px){.facts-row{grid-template-columns:1fr}}
+.kit-block .dlbtn{width:100%;background:var(--yellow);color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.09em;text-transform:uppercase;padding:11px;border-radius:8px;text-align:center}
+.kit-block .dlbtn.placeholder{background:transparent;border:1.5px dashed rgba(255,215,0,.5);color:var(--yellow)}
+.kit-block .dlbtn.placeholder:hover{background:rgba(255,215,0,.1)}
+.givecards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.givecard{background:#fff;border:1px solid #E3E8F2;border-radius:12px;padding:12px;cursor:pointer;transition:box-shadow .18s,transform .18s,border-color .18s;box-shadow:0 1px 3px rgba(16,32,60,.06)}
+.givecard:hover{box-shadow:0 10px 26px rgba(16,32,60,.13);transform:translateY(-3px);border-color:var(--blue)}
+.givecard .gc-ico{width:28px;height:28px;border-radius:8px;background:rgba(0,87,183,.09);display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.givecard .gc-ico svg{width:15px;height:15px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.givecard h4{color:var(--blue);font-size:15px;margin:0 0 2px;line-height:1.25}
+.givecard p{color:var(--mut);font-size:13px;margin:0;line-height:1.4}
+.givecard .gc-arrow{margin-top:6px;color:var(--blue);font-size:12px;font-weight:700}
+@media(max-width:980px){.givecards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.givecards{grid-template-columns:1fr}}
+@media(min-width:900px){#stod .donate-grid{grid-template-areas:"main aside" "cards aside"}#stod .donate-main{grid-area:main}#stod .donate-aside{grid-area:aside}#stod .givecards{grid-area:cards;margin-top:0}#stod .donate-grid.single{grid-template-columns:1fr;grid-template-areas:"main" "cards"}}
+.givealt{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.givealt .altcard{background:#fff;border:1px solid #E3E8F2;border-radius:14px;padding:22px}
+.givealt .altcard h4{color:var(--navy);margin:0 0 10px;font-size:17px}
+@media(max-width:820px){.givealt{grid-template-columns:1fr}}
+.motifgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.motifgrid figure{margin:0;background:#fff;border:1px solid #E3E8F2;border-radius:12px;padding:10px;text-align:center}
+.motifgrid figure.rec{border-color:var(--blue);box-shadow:0 0 0 2px rgba(0,87,183,.18)}
+.motifgrid img{width:100%;height:110px;object-fit:cover;border-radius:8px;background:#F0F3F9}
+.motifgrid figcaption{font-size:13px;font-weight:700;color:var(--navy);margin-top:8px}
+.motifgrid .rec-tag{display:block;font-size:11px;color:var(--blue);font-weight:700}
+@media(max-width:820px){.motifgrid{grid-template-columns:repeat(2,1fr)}}
+.stepper{counter-reset:st;list-style:none;padding:0;margin:22px 0 0}
+.stepper li{position:relative;padding:0 0 22px 52px}
+.stepper li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.stepper li h4{margin:6px 0 6px;color:var(--navy);font-size:16px}
+.stepper li p{margin:0;color:var(--ink)}
+.quotebox{background:#F0F5FC;border-left:4px solid var(--blue);border-radius:0 12px 12px 0;padding:20px 22px;font-style:italic;color:var(--navy);margin-top:18px}
+.whygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.whygrid .why{background:#fff;border:1px solid #E3E8F2;border-radius:14px;padding:20px}
+.whygrid .why h4{color:var(--navy);margin:0 0 8px;font-size:16px}
+.whygrid .why p{margin:0;font-size:14px;color:var(--mut);line-height:1.55}
+@media(max-width:980px){.whygrid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.whygrid{grid-template-columns:1fr}}
+.insform{background:#fff;border:1px solid #E3E8F2;border-radius:14px;padding:24px;margin-top:22px;max-width:560px}
+.insform label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:14px}
+.insform input,.insform textarea{display:block;width:100%;margin-top:5px;padding:11px 12px;border:1px solid #CBD5E4;border-radius:9px;font-size:15px;font-family:inherit;box-sizing:border-box}
+.insform textarea{min-height:110px;resize:vertical}
+.insform .frm-status{font-size:13px;font-weight:700;margin-top:10px}
+</style>
+<!-- SLUT NY KOD -->
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <!-- BORTTAGEN KOD: GTM laddades utan samtycke (noscript-varianten tas bort helt)
@@ -349,17 +424,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
   <div class="wrap hbar">
     <button class="logo" onclick="go('hem')">
+      <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
       <img src="/images/logo.png" alt="Blue/Yellow">
+-->
+      <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+      <img width="220" height="220" src="/images/logo.png" alt="Blue/Yellow">
+      <!-- SLUT NY KOD -->
       <b>BLUE/YELLOW <em>SWEDEN</em></b>
     </button>
     <button class="burger" aria-label="Open menu" onclick="document.getElementById('mnav').classList.toggle('open')">☰</button>
     <nav class="main" id="mnav">
+      <!-- BORTTAGEN KOD: menyn var knappar utan adress, gick inte att öppna i ny flik (punkt 22)
       <button data-nav="vad" onclick="go('vad')">What We Do</button>
       <button data-nav="eng" onclick="go('eng')">Get Involved</button>
       <button data-nav="om" onclick="go('om')">About Us</button>
       <button data-nav="nyh" onclick="go('nyh')">Latest</button>
       <button data-nav="res" onclick="go('res')">Results</button>
       <button data-nav="press" onclick="go('press')">Press</button>
+-->
+      <!-- NY KOD: menyn är riktiga länkar med adress (punkt 22) -->
+      <a data-nav="vad" href="/en/what-we-do" onclick="return navClick(event,'vad')">What We Do</a>
+      <a data-nav="eng" href="/en/get-involved" onclick="return navClick(event,'eng')">Get Involved</a>
+      <a data-nav="om" href="/en/about-us" onclick="return navClick(event,'om')">About Us</a>
+      <a data-nav="nyh" href="/en/news-and-stories" onclick="return navClick(event,'nyh')">Latest</a>
+      <a data-nav="res" href="/en/results" onclick="return navClick(event,'res')">Results</a>
+      <a data-nav="press" href="/en/press" onclick="return navClick(event,'press')">Press</a>
+      <!-- SLUT NY KOD -->
     </nav>
     <button class="donate-btn" onclick="go('stod','gava')">Donate</button>
     <a class="eng-btn" href="/" hreflang="sv" aria-label="Switch to Swedish" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">SVE</a>
@@ -401,7 +491,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="kick b">What Decides the Battle</div>
     <h2 class="sec disp">What Your Support Becomes</h2>
     <div class="grid3">
+      <!-- BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent"
       <div class="card clk" tabindex="0" role="button" onclick="openInfo('drone')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openInfo('drone')}"><h4 aria-level="3">Drone Systems</h4><p>Reconnaissance, situational awareness, and countermeasures. Drones and complete drone systems account for 70 to 80 percent of all support delivered. Over 12,000 systems have been delivered and the need remains substantial. The Vampire, DJI Mavic 3T, and fibre-guided Ptashka are representative examples.</p></div>
+-->
+      <!-- NY KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent" -->
+      <div class="card clk" tabindex="0" role="button" onclick="openInfo('drone')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openInfo('drone')}"><h4 aria-level="3">Drone Systems</h4><p>Reconnaissance, situational awareness, and countermeasures. Drones and complete drone systems account for 70 to 80 per cent of all support delivered. Over 12,000 systems have been delivered and the need remains substantial. The Vampire, DJI Mavic 3T, and fibre-guided Ptashka are representative examples.</p></div>
+      <!-- SLUT NY KOD -->
       <div class="card clk" tabindex="0" role="button" onclick="openInfo('fordon')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openInfo('fordon')}"><h4 aria-level="3">Vehicles</h4><p>Transport, evacuation, and logistics. Trucks, pick-up trucks, armoured ambulances, and passenger vehicles form a central part of on-site support. The Toyota Hilux and Nissan Navara are among the most widely deployed platforms.</p></div>
       <div class="card clk" tabindex="0" role="button" onclick="openInfo('optik')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openInfo('optik')}"><h4 aria-level="3">Optics</h4><p>Night vision equipment and thermal technology. Binoculars, thermal sights, and optical systems for observation and reconnaissance under adverse conditions. Pulsar, Infiray, and PVS-31 are representative examples.</p></div>
       <div class="card clk" tabindex="0" role="button" onclick="openInfo('samband')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openInfo('samband')}"><h4 aria-level="3">Communications</h4><p>Radio and communications systems. Starlink terminals and robust communications even under jamming and in exposed environments. The Motorola DP4801E is a recurring system in deliveries.</p></div>
@@ -431,10 +526,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('stod','ftg')">Read about partnerships</button></div>
       -->
       <!-- NY KOD: engelska sidan har ingen sida för företagsgåvor. Knappen leder till kontaktformuläret med ämnet Corporate Support förvalt -->
+      <!-- BORTTAGEN KOD: knappen ledde till kontaktformuläret eftersom det saknades en partnerskapssida
       <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('kon');var t=document.getElementById('cf-topic');if(t)t.value='Corporate Support'">Read about partnerships</button></div>
+-->
+      <!-- NY KOD: knappen leder till den nya sidan Corporate Support &amp; Partnership (punkt 27) -->
+      <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('stod','foretag')">Read about partnerships</button></div>
+      <!-- SLUT NY KOD -->
       <!-- SLUT NY KOD -->
     </div>
+    <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
     <img src="/images/partnerskap.jpg" alt="Leverans av markrobotar" style="height:300px">
+-->
+    <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+    <img width="820" height="948" loading="lazy" src="/images/partnerskap.jpg" alt="Leverans av markrobotar" style="height:300px">
+    <!-- SLUT NY KOD -->
   </div></section>
 
   <section class="block bg-w"><div class="wrap">
@@ -466,16 +571,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="split">
         <div>
           <h3 class="disp" style="font-size:24px;color:var(--navy);margin-bottom:10px">The Drone War is Decisive</h3>
+          <!-- BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent"
           <p class="lead">Between 70 and 80 percent of what we deliver consists of drones, countermeasures, and electronic systems. The majority are airborne, but the numbers are growing.</p>
+-->
+          <!-- NY KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent" -->
+          <p class="lead">Between 70 and 80 per cent of what we deliver consists of drones, countermeasures, and electronic systems. The majority are airborne, but the numbers are growing.</p>
+          <!-- SLUT NY KOD -->
           <p class="lead" style="margin-top:12px">Electronic warfare disrupts navigation and severs the radio link between operator and drone. A model that functions one week may be rendered unusable the next. Continuous adaptation is a prerequisite for sustained effectiveness.</p>
         </div>
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/samband.jpg" alt="Reconnaissance drone above a ground robot" style="height:340px">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="900" height="845" loading="lazy" src="/images/samband.jpg" alt="Reconnaissance drone above a ground robot" style="height:340px">
+        <!-- SLUT NY KOD -->
       </div>
     </div>
 
     <div data-pane="medical" class="pane" style="display:none">
       <div class="split">
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/medical.jpg" alt="Vård i mobil klinik" style="height:340px;object-position:center 22%">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="811" height="1100" loading="lazy" src="/images/medical.jpg" alt="Vård i mobil klinik" style="height:340px;object-position:center 22%">
+        <!-- SLUT NY KOD -->
         <div>
           <h3 class="disp" style="font-size:24px;color:var(--navy);margin-bottom:10px">Two Tracks, One Mission</h3>
           <p class="lead">At the zero line, combat surgeons and anaesthesiologists participate in trauma care, with armoured ambulances retrieving the critically injured under active fire. In liberated communities, mobile clinics are established to serve elderly, sick, and children left without medical care, electricity, or water.</p>
@@ -488,7 +608,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h3 class="disp" style="font-size:24px;color:var(--navy)">From krona to signed-for delivery</h3>
       <div class="steps">
         <div class="step">An active Ukrainian unit submits a written needs request.</div>
+        <!-- BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent"
         <div class="step">Approximately 90 percent of procurement takes place locally in Ukraine, close to the point of need. This reduces lead times and strengthens the country's own supply capacity.</div>
+-->
+        <!-- NY KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent" -->
+        <div class="step">Approximately 90 per cent of procurement takes place locally in Ukraine, close to the point of need. This reduces lead times and strengthens the country's own supply capacity.</div>
+        <!-- SLUT NY KOD -->
         <div class="step">Delivery goes directly to the unit, often within days.</div>
         <div class="step">The recipient signs for the delivery with documentation and photographic evidence.</div>
         <div class="step">Donors can follow the entire chain. What is financed can be traced, and what is delivered can be verified.</div>
@@ -503,11 +628,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="lead">Blue/Yellow's strength and credibility rest not on what the organisation states it intends or aspires to do, but on what has actually been delivered to those defending Ukraine's freedom. Every operation must be traceable to a concrete delivery at the frontline.</p>
           <p class="lead" style="margin-top:12px">Forbes ranks Blue/Yellow among the ten foremost Ukraine-focused organisations in the world. In 2022, the organisation was awarded the European Parliament's European medborgarpris.</p>
           <p class="lead" style="margin-top:12px">Blue/Yellow is the only international civilian organisation to have been awarded a medal for contributions to the defence of Avdiivka.</p>
+          <!-- BORTTAGEN KOD: Felstavning: "andh drone warfare" → "and drone warfare"
           <p class="lead" style="margin-top:12px">In May 2026, Blue/Yellow, as the sole invited civilian organisation, presented its frontline assessment of the drone threat andh drone warfare in the current conflict.</p>
+-->
+          <!-- NY KOD: Felstavning: "andh drone warfare" → "and drone warfare" -->
+          <p class="lead" style="margin-top:12px">In May 2026, Blue/Yellow, as the sole invited civilian organisation, presented its frontline assessment of the drone threat and drone warfare in the current conflict.</p>
+          <!-- SLUT NY KOD -->
           <div class="hbtns"><button class="ghost" style="border-color:var(--blue);color:var(--blue)" onclick="go('om','dok')">Documents &amp; Reports</button></div>
         </div>
         <div>
+          <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
           <img src="/images/dokument.jpg" alt="The State Visit to Vilnius 2026" style="height:215px;object-position:center 35%">
+-->
+          <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+          <img width="1000" height="721" loading="lazy" src="/images/dokument.jpg" alt="The State Visit to Vilnius 2026" style="height:215px;object-position:center 35%">
+          <!-- SLUT NY KOD -->
           <p class="cap">Above, the state visit in Vilnius, 2026.</p>
         </div>
       </div>
@@ -520,7 +655,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="block bg-p"><div class="wrap">
     <div class="kick b">Donate</div>
     <div class="donate-grid"><div class="donate-main">
+    <!-- BORTTAGEN KOD: rubriken var inte uppdelad för dator och mobil
     <h1 class="sec disp">Your Donation Reaches Its Destination</h1>
+-->
+    <!-- NY KOD: samma rubrik för dator och mobil som på svenska sidan (punkt 27) -->
+    <h1 class="sec disp"><span class="desk-only">Your Donation Reaches Its Destination</span><span class="mob-only">Support Our Work</span></h1>
+    <!-- SLUT NY KOD -->
     <div data-pane="gava" class="pane">
       <div style="margin-top:8px"><div>
         <p class="lead">Your donation saves lives at the frontline and protects the civilian population of Ukraine through urgent deliveries of drone systems, medical supplies, vehicles and protective equipment.</p>
@@ -528,39 +668,257 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="dc2m" class="mblock"></div>
       </div></div>
     </div>
+    <!-- NY KOD: sidan Ongoing Fundraisers and Campaigns (Coming soon), samma som på svenska sidan -->
+    <div data-pane="kamp" class="pane givesub" style="display:none">
+      <h2 class="disp" style="font-size:26px;color:var(--navy);margin:0 0 12px">Ongoing Fundraisers and Campaigns</h2>
+      <p>Coming soon</p>
+    </div>
+    <!-- SLUT NY KOD -->
+    <!-- NY KOD: de fem gåvosidorna översatta från svenska sidan (punkt 27) -->
+    <div data-pane="minnesgava" class="pane givesub" style="display:none">
+      <h2 class="disp" style="font-size:26px;color:var(--navy);margin:0 0 12px">Memorial Gift</h2>
+      <h3 class="disp" style="font-size:19px;color:var(--blue);margin:0 0 10px">Let the memory live on through a gift</h3>
+      <p>When someone we hold dear leaves us, life changes. What remains are the memories, the stories and all the moments that will always have a special place in our hearts.</p>
+      <p>Honouring a loved one with a memorial gift is a beautiful way to let love and care live on. Instead of flowers or other gifts, family and friends can make a contribution to our association. A personal greeting can accompany the gift and become a heartfelt expression of appreciation, gratitude and loss.</p>
+      <p>Every memorial gift carries its own story. It can be an expression of love for a parent, a life partner, a friend or someone else who left a lasting mark on life.</p>
+      <p>Let the memory of a loved one live on through a gift that makes a difference for others.</p>
+      <p><b>Thank you for honouring someone's memory by supporting our work.</b></p>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">How to give a memorial gift</h3>
+      <div class="givealt">
+        <div class="altcard">
+          <h4>Option 1: Give directly via the QR code</h4>
+          <p class="desk-only">Scan the QR code with the Swish app. Right after your donation you can download a gift certificate for yourself or to give to someone else.</p>
+          <p class="mob-only">Tap Open Swish or scan the code. Right after your donation you can download a gift certificate for yourself or to give to someone else.</p>
+          <button class="donate-btn" style="margin-top:12px" onclick="go('stod','gava')">Give via Swish</button>
+        </div>
+        <div class="altcard">
+          <h4>Option 2: Give via bank transfer or Swish directly</h4>
+          <p>Swish to <b>123 696 42 41</b> or transfer to bank account <b>8169-5844 167 393-9</b>.</p>
+          <p>Then send an email to <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a> with:</p>
+          <ul style="margin:0 0 10px;padding-left:20px">
+            <li>Amount and date of the gift</li>
+            <li>Name of the recipient (yourself, or another person if it is a gift)</li>
+            <li>Email address to send the gift certificate to</li>
+            <li>Preferred design (see below)</li>
+          </ul>
+          <p>We will send your gift certificate within 24 hours.</p>
+        </div>
+      </div>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Choose a design for the gift certificate</h3>
+      <div class="motifgrid">
+        <figure class="rec"><img width="1920" height="1280" loading="lazy" src="/images/certificates/church_kyiv.jpg" alt="St Andrew's Church in Kyiv"><figcaption>St Andrew's Church<span class="rec-tag">Recommended for memorial gifts</span></figcaption></figure>
+        <figure class="rec"><img width="1024" height="1024" loading="lazy" src="/images/certificates/trident_watermark.png" alt="Formal design with the Ukrainian coat of arms" style="object-fit:contain"><figcaption>Formal (The Trident)<span class="rec-tag">Recommended for memorial gifts</span></figcaption></figure>
+        <figure><img width="1280" height="1920" loading="lazy" src="/images/certificates/christmas_kyiv.jpg" alt="Christmas atmosphere in Kyiv"><figcaption>Christmas card</figcaption></figure>
+        <figure><img width="1920" height="1280" loading="lazy" src="/images/certificates/children_flag.jpg" alt="Children under the Ukrainian flag"><figcaption>Children under the flag</figcaption></figure>
+      </div>
+    </div>
+
+    <div data-pane="hogtidsgava" class="pane givesub" style="display:none">
+      <h2 class="disp" style="font-size:26px;color:var(--navy);margin:0 0 12px">Celebration &amp; Tribute Gift</h2>
+      <h3 class="disp" style="font-size:19px;color:var(--blue);margin:0 0 10px">Give a gift that means a little extra</h3>
+      <p>Life's big moments are worth celebrating. A birthday, a wedding, a christening, a confirmation, a graduation or an anniversary are occasions when we gather around the people we care about and want to show our appreciation.</p>
+      <p>What if the celebration could mean even more?</p>
+      <p>By asking for a gift to our association instead of traditional presents, you can turn your special day into something valuable for more people. You give family, friends and guests the chance to mark your day by contributing to work that makes a difference.</p>
+      <p>A celebration gift is a personal gesture that combines the joy of celebrating with care for others. It does not have to be a large gift. Every contribution is valuable, and together the gifts can provide meaningful support for our work.</p>
+      <p>Let your special day be remembered for more than the celebration itself. Let it also be a day when kindness takes its place.</p>
+      <p><b>Celebrate from the heart and let your special day become a gift to others.</b></p>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">How to give a celebration gift</h3>
+      <div class="givealt">
+        <div class="altcard">
+          <h4>Option 1: Give directly via the QR code</h4>
+          <p class="desk-only">Scan the QR code with the Swish app. Right after your donation you can download a gift certificate for yourself or to give to someone else.</p>
+          <p class="mob-only">Tap Open Swish or scan the code. Right after your donation you can download a gift certificate for yourself or to give to someone else.</p>
+          <button class="donate-btn" style="margin-top:12px" onclick="go('stod','gava')">Give via Swish</button>
+        </div>
+        <div class="altcard">
+          <h4>Option 2: Give via bank transfer or Swish directly</h4>
+          <p>Swish to <b>123 696 42 41</b> or transfer to bank account <b>8169-5844 167 393-9</b>.</p>
+          <p>Then send an email to <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a> with:</p>
+          <ul style="margin:0 0 10px;padding-left:20px">
+            <li>Amount and date of the gift</li>
+            <li>Name of the recipient (yourself, or another person if it is a gift)</li>
+            <li>Email address to send the gift certificate to</li>
+            <li>Preferred design (see below)</li>
+          </ul>
+          <p>We will send your gift certificate within 24 hours.</p>
+        </div>
+      </div>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Choose a design for the gift certificate</h3>
+      <div class="motifgrid">
+        <figure><img width="1024" height="1024" loading="lazy" src="/images/certificates/trident_watermark.png" alt="Formal design with the Ukrainian coat of arms" style="object-fit:contain"><figcaption>Formal (The Trident)</figcaption></figure>
+        <figure><img width="1280" height="1920" loading="lazy" src="/images/certificates/christmas_kyiv.jpg" alt="Christmas atmosphere in Kyiv"><figcaption>Christmas card</figcaption></figure>
+        <figure><img width="1920" height="1280" loading="lazy" src="/images/certificates/church_kyiv.jpg" alt="St Andrew's Church in Kyiv"><figcaption>St Andrew's Church</figcaption></figure>
+        <figure><img width="1920" height="1280" loading="lazy" src="/images/certificates/children_flag.jpg" alt="Children under the Ukrainian flag"><figcaption>Children under the flag</figcaption></figure>
+      </div>
+    </div>
+
+    <div data-pane="testamente" class="pane givesub" style="display:none">
+      <h2 class="disp" style="font-size:26px;color:var(--navy);margin:0 0 12px">Legacy Gift</h2>
+      <h3 class="disp" style="font-size:19px;color:var(--blue);margin:0 0 10px">A legacy that makes a difference when it truly matters</h3>
+      <p>Let your legacy defend freedom and life.</p>
+      <p>Including Blue/Yellow Sweden in your will is a way of taking a stand beyond your own lifetime. It is a promise to stand by Ukraine for as long as it takes, and to ensure that vital equipment, protection and support continue to reach all the way to those defending Europe's freedom.</p>
+      <p>Whether it is a share of your estate, a fixed sum or a specific asset, every contribution makes a direct difference on the ground.</p>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Why leave a gift to Blue/Yellow Sweden?</h3>
+      <div class="whygrid">
+        <div class="why"><h4>Direct impact</h4><p>We have short decision paths and our own logistics chains. Your legacy does not get stuck in bureaucracy but is turned directly into material support, medical care and protective equipment.</p></div>
+        <div class="why"><h4>Tax-exempt</h4><p>As a non-profit association, Blue/Yellow Sweden pays no inheritance tax or capital gains tax. This means that every krona you leave reaches its destination in full.</p></div>
+        <div class="why"><h4>Security for your loved ones</h4><p>Your family and heirs always come first. You choose whether to leave a certain percentage of what remains, or a specific amount.</p></div>
+      </div>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">How to do it, step by step</h3>
+      <ol class="stepper">
+        <li><h4>Decide what you want to leave</h4><p>You can choose to leave a fixed sum, a property, shares or a certain percentage of your total estate.</p></li>
+        <li><h4>Include our legal details</h4><p>To ensure that the gift reaches the right organisation, the following details need to appear in your will:</p><ul style="margin:8px 0 0;padding-left:20px"><li>Legal name: Blue/Yellow Sweden</li><li>Organisation number: 802552-3724</li><li>Registered office: Stockholm</li></ul></li>
+        <li><h4>Sign with two witnesses</h4><p>A will must be in writing, dated and signed in the simultaneous presence of two witnesses. The witnesses must not be related to you or named in the will.</p></li>
+      </ol>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Example wording for a will</h3>
+      <div class="quotebox">"I hereby declare as my last will and testament that [……… of my estate / specific property] shall pass to the non-profit association Blue/Yellow Sweden (org. no. 802552-3724), with its registered office in Stockholm, to be used in the association's work."</div>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Contact us, we are here to help</h3>
+      <p><b>We help you free of charge with questions and wording</b></p>
+      <p>Writing a will often raises practical, legal, ethical and moral questions. We are happy to offer guidance in full confidence and without obligation.</p>
+      <ul style="margin:0;padding-left:20px">
+        <li>Email: <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a></li>
+        <li>Phone: <a href="tel:+46739403092">+46 739 40 30 92</a></li>
+        <li>Contact person: Alexander Admell</li>
+      </ul>
+    </div>
+
+    <div data-pane="foretag" class="pane givesub" style="display:none">
+      <h2 class="disp" style="font-size:26px;color:var(--navy);margin:0 0 12px">Corporate Support &amp; Partnership</h2>
+      <h3 class="disp" style="font-size:19px;color:var(--blue);margin:0 0 10px">A partnership for Ukraine's freedom and Europe's future</h3>
+      <p>A company is much more than a balance sheet. Behind every decision are people with a conscience, feelings and an understanding of the suffering that the brutal war on our doorstep brings. It is about the right to live, about protecting the innocent and about daring to take a stand when history forces us to choose a side.</p>
+      <p>Blue/Yellow is not a traditional fundraising organisation. We are a professional operational force working at the very heart of the war. We have been on the ground since 2014, long before the world turned its attention there. For more than a decade we have built relationships with units and medics on the ground. These are bonds that stand firm on mutual respect, care and shared hardship. Our team of logisticians and specialists knows exactly what the needs are and how heavy equipment reaches all the way to the deepest trenches and the most exposed positions along the front.</p>
+      <p>When your company works with us, the support goes straight to those defending democracy with their own lives at stake. We work with strict security protocols and without any bureaucratic detours. We hand over the equipment personally to the receiving units. Every krona invested is immediately turned into concrete power to resist, in the form of drone systems, tactical medical supplies, vehicles and life-saving protective equipment.</p>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Why partnering with us is the right way</h3>
+      <div class="whygrid">
+        <div class="why"><h4>Real operational professionalism</h4><p>Our deeply rooted local presence and experienced team guarantee that your support ends up exactly where it makes a real difference. We manage complex logistics chains in an extreme environment with full control from purchase to handover.</p></div>
+        <div class="why"><h4>Field reports and direct verification</h4><p>You receive crystal-clear feedback and full transparency about exactly whose lives your contribution has affected, through continuous field reports and regular situation updates directly from the front.</p></div>
+        <div class="why"><h4>Communication material and documentation</h4><p>We provide you with correct invoice documentation for purchased services, formal partnership certificates and tailored communication material. You get access to verified photo and video material from our operations to use in your own corporate communication and reporting.</p></div>
+        <div class="why"><h4>Opportunity to join us in the field</h4><p>For strategic partners we offer the opportunity to send company representatives with our convoys to Ukraine to see the work and the needs with their own eyes. This is always discussed and planned separately based on the current security situation.</p></div>
+        <div class="why"><h4>Maximum power in every krona</h4><p>At least 95 öre of every donated krona goes in full to the operations and materiel on the ground.</p></div>
+      </div>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">How your company can make a difference today</h3>
+      <div class="faq-acc" style="margin-top:12px">
+        <details><summary>Lectures, training and workshops</summary><div><p>Hire us to give a lecture or hold training for your management team. It is an investment that provides valuable insight into crisis management, logistics and resilience under extreme pressure.</p></div></details>
+        <details><summary>Fund strategic equipment packages</summary><div><p>Make a targeted gift and fund specific vehicles for medical evacuation or crucial shipments of medical supplies.</p></div></details>
+        <details><summary>Joint internal fundraising</summary><div><p>Start an internal fundraiser where your company leads the way by matching the donations made by your staff.</p></div></details>
+      </div>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Contact</h3>
+      <p><b>Time costs human lives</b></p>
+      <p>Every day counts for the people at the front. Contact us directly to establish a partnership, book a lecture or discuss larger material donations.</p>
+      <ul style="margin:0 0 16px;padding-left:20px">
+        <li>Email: <a href="mailto:info@blue-yellow.se">info@blue-yellow.se</a></li>
+        <li>Contact person: Alexander Admell, <a href="mailto:alexander@blue-yellow.se">alexander@blue-yellow.se</a></li>
+      </ul>
+      <a class="donate-btn" style="display:inline-block;text-decoration:none" href="mailto:alexander@blue-yellow.se">Contact us</a>
+    </div>
+
+    <div data-pane="insamling" class="pane givesub" style="display:none">
+      <h2 class="disp" style="font-size:26px;color:var(--navy);margin:0 0 12px">Start a Campaign</h2>
+      <h3 class="disp" style="font-size:19px;color:var(--blue);margin:0 0 10px">Start your own fundraiser and let something personal make a difference</h3>
+      <p>There are many occasions in life when we want to mark something very special. A birthday, a wedding, a christening, a celebration or an anniversary. There are also moments when we want to honour the memory of someone close to us, or give a personal event a deeper meaning.</p>
+      <p>What if one of those occasions could pass on something valuable?</p>
+      <p>By starting your own fundraiser with us, you can turn a personal event into support for our work. Instead of presents or flowers, you can ask for gifts to our association. You can also start a fundraiser entirely on your own initiative, perhaps to draw attention to a cause close to your heart or to contribute to our continued work.</p>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">A fundraiser with a personal thought behind it</h3>
+      <p>No particular reason is needed to start a fundraiser. Perhaps you are celebrating a milestone birthday and want to give it extra meaning. Perhaps you are getting married and would like your guests to contribute to a good cause instead of buying presents. At a christening, a confirmation or a graduation, a fundraiser can be a lovely way to let the celebration matter far beyond your own family.</p>
+      <p>A fundraiser can also be a way of honouring someone who has passed away. By inviting relatives, friends and acquaintances to give a gift in memory of a loved one, grief can share its place with care and a wish to help others.</p>
+      <p>You decide what your fundraiser is about. It is your story, your reason and your opportunity to invite others to contribute.</p>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Small gifts can make a big difference</h3>
+      <p>It is not the size of the gift that decides the value of a fundraiser. Every contribution matters. When family, friends, colleagues and acquaintances gather around a shared idea, many small gifts together can make a valuable addition to our work.</p>
+      <p>Your fundraiser can become a way of spreading knowledge about the association's work. It can spark curiosity, build understanding and give more people the chance to contribute to something that reaches beyond their own everyday lives.</p>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">How to start your own fundraiser</h3>
+      <ol class="stepper">
+        <li><h4>Fill in the form below</h4><p>Tell us who you are and what your fundraiser is about. We need your name, your email address, your phone number, what the fundraiser should be called and how much you hope to raise.</p></li>
+        <li><h4>We create your campaign</h4><p>Within 24 hours you will receive a personal QR code linked to your fundraiser, together with your own campaign page on blue-yellow.se with a progress bar that shows how the fundraiser is going.</p></li>
+        <li><h4>Share your fundraiser</h4><p>Share your campaign link and QR code with family, friends and colleagues by email, on social media or in print. All gifts are registered and the progress bar is updated continuously.</p></li>
+      </ol>
+      <h3 class="disp" style="font-size:19px;color:var(--navy);margin:26px 0 4px">Start your fundraiser</h3>
+      <form class="insform" id="insForm">
+        <label>Your name *<input type="text" name="creatorName" required maxlength="120" autocomplete="name"></label>
+        <label>Email address *<input type="email" name="creatorEmail" required maxlength="255" autocomplete="email" placeholder="name@example.com"></label>
+        <label>Phone number *<input type="tel" name="creatorPhone" required maxlength="40" autocomplete="tel" placeholder="+46 70 000 00 00"></label>
+        <label>Name of your fundraiser *<input type="text" name="name" required minlength="2" maxlength="120" placeholder="e.g. Anna's birthday fundraiser"></label>
+        <label>Target amount (SEK) *<input type="number" name="goalAmount" required min="1" max="100000000" inputmode="numeric" placeholder="e.g. 25000"></label>
+        <label>Description: tell us briefly about your fundraiser<textarea name="description" maxlength="500" placeholder="Optional, max 500 characters"></textarea></label>
+        <label>Image for your fundraiser (optional, JPG/PNG, max 5 MB)<input type="file" name="image" id="insImage" accept="image/jpeg,image/png"></label>
+        <img id="insImagePreview" alt="Preview of the selected image" style="display:none;max-width:100%;max-height:260px;border-radius:9px;margin:-4px 0 14px;object-fit:contain">
+        <button type="submit" class="donate-btn">Start my fundraiser</button>
+        <p class="frm-status" id="insStatus" style="display:none"></p>
+      </form>
+      <div class="insform" id="insThanks" style="display:none">
+        <h4 style="color:var(--navy);margin:0 0 10px;font-size:18px">Thank you for your initiative!</h4>
+        <p style="margin:0 0 8px">We have received your fundraiser and are getting started. Within 24 hours you will receive an email with your personal QR code and a link to your campaign page.</p>
+        <p style="margin:0">In the meantime, you can start telling family and friends about your fundraiser.</p>
+      </div>
+      <p style="margin-top:26px">You do not need any previous fundraising experience. The most important thing is your wish to do something meaningful.</p>
+      <h3 class="disp" style="font-size:19px;color:var(--blue);margin:26px 0 10px">Turn your idea into something valuable</h3>
+      <p>Perhaps you already have an occasion in mind. Perhaps you have long wondered how you could contribute in a personal way. Whatever the reason, you are warmly welcome to start your own fundraiser.</p>
+      <p>Thank you for wanting to support our work. Through your initiative, more people get the chance to discover our association and contribute to our work.</p>
+      <p><b>A personal thought can be the start of something big. Start your own fundraiser today!</b></p>
+    </div>
+    <!-- SLUT NY KOD -->
     </div>
     <div class="givecards">
+      <!-- BORTTAGEN KOD: kortet ledde till den svenska sidan
       <a class="givecard" href="/donera/minnesgava">
+-->
+      <!-- NY KOD: kortet leder till den nya engelska sidan (punkt 27) -->
+      <a class="givecard" href="/en/donate/memorial-gift" onclick="return navClick(event,'stod','minnesgava')">
+      <!-- SLUT NY KOD -->
         <div class="gc-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.3-9A5.4 5.4 0 0 1 12 6.3 5.4 5.4 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg></div>
         <h4>Memorial Gift</h4>
         <p>A gift in memory of someone close to you.</p>
         <div class="gc-arrow">Read more →</div>
       </a>
+      <!-- BORTTAGEN KOD: kortet ledde till den svenska sidan
       <a class="givecard" href="/donera/hogtidsgava">
+-->
+      <!-- NY KOD: kortet leder till den nya engelska sidan (punkt 27) -->
+      <a class="givecard" href="/en/donate/celebration-gift" onclick="return navClick(event,'stod','hogtidsgava')">
+      <!-- SLUT NY KOD -->
         <div class="gc-ico"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4"/><rect x="5" y="12" width="14" height="9"/><path d="M12 8v13M12 8s-4 0-4-2.5S11 3 12 5c1-2 4-1.5 4 .5S12 8 12 8z"/></svg></div>
         <h4>Celebration &amp; Tribute Gift</h4>
         <p>Let your special day become a gift to others.</p>
         <div class="gc-arrow">Read more →</div>
       </a>
+      <!-- BORTTAGEN KOD: kortet ledde till den svenska sidan
       <a class="givecard" href="/donera/testamente">
+-->
+      <!-- NY KOD: kortet leder till den nya engelska sidan (punkt 27) -->
+      <a class="givecard" href="/en/donate/legacy-gift" onclick="return navClick(event,'stod','testamente')">
+      <!-- SLUT NY KOD -->
         <div class="gc-ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5M9 13h8M9 17h8"/></svg></div>
         <h4>Legacy Gift</h4>
         <p>Let your legacy defend freedom and life.</p>
         <div class="gc-arrow">Read more →</div>
       </a>
+      <!-- BORTTAGEN KOD: kortet ledde till den svenska sidan
       <a class="givecard" href="/donera/foretag">
+-->
+      <!-- NY KOD: kortet leder till den nya engelska sidan (punkt 27) -->
+      <a class="givecard" href="/en/donate/corporate-partnership" onclick="return navClick(event,'stod','foretag')">
+      <!-- SLUT NY KOD -->
         <div class="gc-ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div>
         <h4>Corporate Support &amp; Partnership</h4>
         <p>Your company can make a direct difference.</p>
         <div class="gc-arrow">Read more →</div>
       </a>
+      <!-- BORTTAGEN KOD: kortet ledde till den svenska sidan
       <a class="givecard" href="/donera/starta-insamling">
+-->
+      <!-- NY KOD: kortet leder till den nya engelska sidan (punkt 27) -->
+      <a class="givecard" href="/en/donate/start-a-campaign" onclick="return navClick(event,'stod','insamling')">
+      <!-- SLUT NY KOD -->
         <div class="gc-ico"><svg viewBox="0 0 24 24"><path d="M3 11l14-5v12L3 13v-2z"/><path d="M7 13v5a2 2 0 0 0 4 0v-3.5M17 8a4 4 0 0 1 0 8"/></svg></div>
         <h4>Start a Campaign</h4>
         <p>Create a campaign and invite others to contribute.</p>
         <div class="gc-arrow">Read more →</div>
       </a>
+      <!-- BORTTAGEN KOD: kortet ledde till den svenska sidan
       <a class="givecard" href="/donera/gava/insamlingarochkampanjer">
+      -->
+      <!-- NY KOD: kortet leder till den nya engelska sidan Ongoing Fundraisers and Campaigns -->
+      <a class="givecard" href="/en/donate/campaigns" onclick="go('stod','kamp');return false">
+      <!-- SLUT NY KOD -->
         <div class="gc-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
         <h4>Active Campaigns</h4>
         <p>See active campaigns and contribute directly.</p>
@@ -574,7 +932,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="gform signup-form" data-source="gava" style="margin-top:18px"><label class="fl">Email address *<input type="email" class="signup-email" placeholder="name@example.com"></label><label class="chk"><input type="checkbox" class="signup-newsletter"> I would like to receive information by email</label><p class="cap">Your email is used for receipt and confirmation purposes. We do not share your information with third parties. <a href="#" onclick="openInfo('integritet');return false">Read more in the privacy policy</a>.</p><button type="button" class="dgo signup-submit" style="margin-top:6px">Register email</button><p class="signup-status" style="margin-top:8px;font-size:13px;font-weight:700;color:var(--navy);display:none"></p></div>
     </div>
     <div id="camp-list" hidden></div>
+    <!-- BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent"
     <div class="faq-acc"><div class="kick b">Frequently Asked Questions</div><details><summary>What proportion of funds reaches Ukraine and the frontline?</summary><div><p>When you donate to Blue/Yellow Sweden, you can do so with full confidence. We keep costs minimal, and 95 percent of every krona goes directly to our operational work.</p><p>The remaining 5 percent covers necessary administration, quality control, and fundraising operations. Planning, coordination, insurance, and careful financial stewardship.</p></div></details><details><summary>How is my donation used?</summary><div><p>Our objective is always to support the defence forces and civilian population with swift and concrete operations. We procure and deliver equipment directly where the need exists.</p><p>The majority of support, 70 to 80 percent, is directed toward defensive technology such as drone systems and countermeasures. The remainder goes to transport, medical care, and protective equipment.</p></div></details><details><summary>Why should I become a monthly donor?</summary><div><p>As a monthly donor, you contribute every day to securing sustained and resilient support for Ukraine's struggle for freedom. The war demands sustained effort.</p><p>Thanks to our monthly donors, we can act with immediacy when acute needs arise at the frontline. Giving via direct debit or recurring Swish is moreover tax-deductible.</p></div></details><details><summary>Can I contribute in other ways?</summary><div><p>Yes, there are several options. In addition to financial contributions, you may launch a personal fundraising campaign in support of Blue/Yellow Sweden on the occasion of a birthday or other event. You may spread awareness of our work through social media. Raising visibility and keeping support for Ukraine alive is an invaluable contribution in itself. If you represent a company, our strategic partnerships offer options including specific technical support or employee donation matching.</p></div></details><details><summary>Do you accept clothing, equipment or other donations?</summary><div><p>As a general principle, over 90 percent of all materiel and equipment is procured directly in Ukraine or in the surrounding region. This strengthens local supply chains, reduces lead times, and supports Ukraine's own economic resilience.</p><p>The exception is vehicles and heavier materiel. We gratefully accept functioning vehicles, particularly four-wheel-drive pick-up trucks, transport vehicles, and trucks, as well as construction machinery such as excavators, wheel loaders, and tractors for fortification work and logistics. If you or your company wish to donate a vehicle or machine, please contact us directly at logistik@blue-yellow.se.</p></div></details><details><summary>Can I change my monthly donation at any time?</summary><div><p>You may pause, adjust, or cancel your monthly donation at any time. Please contact our donor services team at donera@blue-yellow.se for assistance with increasing or reducing your monthly amount, updating your bank or account details, pausing payments temporarily, or cancelling your monthly donation.</p><p>If you donate monthly via Swish, you can manage or cancel your recurring donation directly in the Swish application.</p><p>Note. To cancel a pending direct debit payment, we require notification no later than five banking days before the due date, ordinarily the 28th of each month.</p></div></details></div>
+-->
+    <!-- NY KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent" -->
+    <div class="faq-acc"><div class="kick b">Frequently Asked Questions</div><details><summary>What proportion of funds reaches Ukraine and the frontline?</summary><div><p>When you donate to Blue/Yellow Sweden, you can do so with full confidence. We keep costs minimal, and 95 per cent of every krona goes directly to our operational work.</p><p>The remaining 5 per cent covers necessary administration, quality control, and fundraising operations. Planning, coordination, insurance, and careful financial stewardship.</p></div></details><details><summary>How is my donation used?</summary><div><p>Our objective is always to support the defence forces and civilian population with swift and concrete operations. We procure and deliver equipment directly where the need exists.</p><p>The majority of support, 70 to 80 per cent, is directed toward defensive technology such as drone systems and countermeasures. The remainder goes to transport, medical care, and protective equipment.</p></div></details><details><summary>Why should I become a monthly donor?</summary><div><p>As a monthly donor, you contribute every day to securing sustained and resilient support for Ukraine's struggle for freedom. The war demands sustained effort.</p><p>Thanks to our monthly donors, we can act with immediacy when acute needs arise at the frontline. Giving via direct debit or recurring Swish is moreover tax-deductible.</p></div></details><details><summary>Can I contribute in other ways?</summary><div><p>Yes, there are several options. In addition to financial contributions, you may launch a personal fundraising campaign in support of Blue/Yellow Sweden on the occasion of a birthday or other event. You may spread awareness of our work through social media. Raising visibility and keeping support for Ukraine alive is an invaluable contribution in itself. If you represent a company, our strategic partnerships offer options including specific technical support or employee donation matching.</p></div></details><details><summary>Do you accept clothing, equipment or other donations?</summary><div><p>As a general principle, over 90 per cent of all materiel and equipment is procured directly in Ukraine or in the surrounding region. This strengthens local supply chains, reduces lead times, and supports Ukraine's own economic resilience.</p><p>The exception is vehicles and heavier materiel. We gratefully accept functioning vehicles, particularly four-wheel-drive pick-up trucks, transport vehicles, and trucks, as well as construction machinery such as excavators, wheel loaders, and tractors for fortification work and logistics. If you or your company wish to donate a vehicle or machine, please contact us directly at logistik@blue-yellow.se.</p></div></details><details><summary>Can I change my monthly donation at any time?</summary><div><p>You may pause, adjust, or cancel your monthly donation at any time. Please contact our donor services team at donera@blue-yellow.se for assistance with increasing or reducing your monthly amount, updating your bank or account details, pausing payments temporarily, or cancelling your monthly donation.</p><p>If you donate monthly via Swish, you can manage or cancel your recurring donation directly in the Swish application.</p><p>Note. To cancel a pending direct debit payment, we require notification no later than five banking days before the due date, ordinarily the 28th of each month.</p></div></details></div>
+    <!-- SLUT NY KOD -->
   </div></section>
 </main>
 
@@ -602,7 +965,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div data-pane="dela" class="pane" style="display:none">
       <div class="split">
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/dela.jpg" alt="Rally in support of Ukraine" style="height:300px">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="1000" height="667" loading="lazy" src="/images/dela.jpg" alt="Rally in support of Ukraine" style="height:300px">
+        <!-- SLUT NY KOD -->
         <div>
           <p class="lead">Spreading awareness costs nothing and means a great deal. Ready-made packages with images, texts, and posters are available for social media, the workplace, and community groups.</p>
           <!-- BORTTAGEN KOD: knappen var inte kopplad till något
@@ -825,9 +1193,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div data-pane="styr" class="pane" style="display:none">
       <div class="grid2 board-grid">
         <div class="card wt"><div class="bport" style="background-image:url('/images/styrelse-1.jpg')"></div><h4 aria-level="3">Jonas Öhman</h4><p>Jonas is a co-founder of Blue/Yellow and has been active in supporting Ukraine since 2014. He is a journalist and author with extensive experience in the Baltics and Eastern Europe and has spent many years contributing to public discussions on Ukraine, Russia and security issues in the region. His journalistic work and presence on the ground have built a deep network of contacts and a distinct understanding of the region’s security realities. This shaped Blue/Yellow’s work from the very start.</p></div>
+        <!-- BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "organization" → "organisation"
         <div class="card wt"><div class="bport" style="background-image:url('/images/styrelse-2.jpg')"></div><h4 aria-level="3">Paulius Kijauskas</h4><p>Paulius is a co-founder of Blue/Yellow and has been active in supporting Ukraine since 2014. He sits on the organization’s board and has worked for a long time on matters relating to security, civil society and support for Ukrainian defenders. His experience navigating complex security issues and working with civil society actors has made him a central force in building Blue/Yellow’s operational capacity and long-term strategy.</p></div>
+-->
+        <!-- NY KOD: Ändrat från amerikansk till brittisk stavning: "organization" → "organisation" -->
+        <div class="card wt"><div class="bport" style="background-image:url('/images/styrelse-2.jpg')"></div><h4 aria-level="3">Paulius Kijauskas</h4><p>Paulius is a co-founder of Blue/Yellow and has been active in supporting Ukraine since 2014. He sits on the organisation’s board and has worked for a long time on matters relating to security, civil society and support for Ukrainian defenders. His experience navigating complex security issues and working with civil society actors has made him a central force in building Blue/Yellow’s operational capacity and long-term strategy.</p></div>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "organization" → "organisation"
         <div class="card wt"><div class="bport" style="background-image:url('/images/styrelse-3.jpg')"></div><h4 aria-level="3">Laura Paukštė</h4><p>Laura leads Blue/Yellow's operations in Lithuania and has worked in support of Ukraine for many years. She has a background in television and documentary production, with a focus on Eastern Europe and social issues, and a central role in the organization's development of humanitarian and medical efforts. Her ability to combine storytelling with operational leadership has helped Blue/Yellow highlight Ukraine's needs and build effective structures for support.</p>
+-->
+        <!-- NY KOD: Ändrat från amerikansk till brittisk stavning: "organization" → "organisation" -->
+        <div class="card wt"><div class="bport" style="background-image:url('/images/styrelse-3.jpg')"></div><h4 aria-level="3">Laura Paukštė</h4><p>Laura leads Blue/Yellow's operations in Lithuania and has worked in support of Ukraine for many years. She has a background in television and documentary production, with a focus on Eastern Europe and social issues, and a central role in the organisation's development of humanitarian and medical efforts. Her ability to combine storytelling with operational leadership has helped Blue/Yellow highlight Ukraine's needs and build effective structures for support.</p>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "organization" → "organisation"
         </div><div class="card wt"><div class="bport" style="background-image:url('/__l5e/assets-v1/08f21fca-32be-41a7-8f6a-8458537f064d/zydrunas.jpg')"></div><h4 aria-level="3">Žydrūnas Gaudiešius</h4><p>Žydrūnas sits on Blue/Yellow’s board and brings extensive experience in communications and strategic advisory work as a partner at the communications firm Fabula Rud Pedersen Group in Lithuania. He leads efforts to strengthen the organization’s communications strategy and raise public awareness of Ukraine’s needs. His background in public opinion and brand building helps Blue/Yellow reach new audiences and build trust around the organization’s work, in Lithuania and internationally.</p></div>
+-->
+        <!-- NY KOD: Ändrat från amerikansk till brittisk stavning: "organization" → "organisation" -->
+        </div><div class="card wt"><div class="bport" style="background-image:url('/__l5e/assets-v1/08f21fca-32be-41a7-8f6a-8458537f064d/zydrunas.jpg')"></div><h4 aria-level="3">Žydrūnas Gaudiešius</h4><p>Žydrūnas sits on Blue/Yellow’s board and brings extensive experience in communications and strategic advisory work as a partner at the communications firm Fabula Rud Pedersen Group in Lithuania. He leads efforts to strengthen the organisation’s communications strategy and raise public awareness of Ukraine’s needs. His background in public opinion and brand building helps Blue/Yellow reach new audiences and build trust around the organisation’s work, in Lithuania and internationally.</p></div>
+        <!-- SLUT NY KOD -->
       </div>
     </div>
 
@@ -849,7 +1232,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div data-pane="press" class="pane" style="display:none">
       <div class="split">
+        <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
         <img src="/images/press.jpg" alt="Jonas Öhman and President Zelenskyy" style="height:300px;object-position:center 25%">
+-->
+        <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+        <img width="1000" height="667" loading="lazy" src="/images/press.jpg" alt="Jonas Öhman and President Zelenskyy" style="height:300px;object-position:center 25%">
+        <!-- SLUT NY KOD -->
         <div>
           <p class="lead">Press images, logotypes, and press releases available for download. The press contact responds within four hours on working days.</p>
           <!-- BORTTAGEN KOD: "Download" var bara text och gick inte att klicka på
@@ -909,7 +1297,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="mrbtn" href="https://blue-yellow.lt/en/monthly-reports/" target="_blank" rel="noopener">Monthly Reporter</a>
     </div>
     <div class="split storyflow" id="storyfeature">
+      <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
       <img src="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" alt="Blue/Yellow's first drone, a Phantom 3, Kharkiv 2015" style="object-position:center 50%">
+-->
+      <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+      <img width="1600" height="1066" loading="lazy" src="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" alt="Blue/Yellow's first drone, a Phantom 3, Kharkiv 2015" style="object-position:center 50%">
+      <!-- SLUT NY KOD -->
       <div>
         <span class="ntag b">Story</span>
         <h3 class="disp" style="font-size:24px;color:var(--navy);margin:10px 0">It all began with a drone</h3>
@@ -943,10 +1336,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .cf-err{display:none;color:#b00020;font-size:13px;margin:-6px 0 8px;line-height:1.35}
         .cf-err.on{display:block}
       </style>
+      <!-- BORTTAGEN KOD: kontaktformuläret hade bara platshållartext och inga etiketter (punkt 21)
       <input id="cf-name" placeholder="Name" required><span id="cf-name-err" class="cf-err"></span>
       <input id="cf-email" type="email" placeholder="Email" required><span id="cf-email-err" class="cf-err"></span>
       <select id="cf-topic"><option>General Enquiry</option><option>Corporate Support</option><option>Press</option><option>Volunteer</option></select>
       <textarea id="cf-msg" placeholder="Message" rows="4" required></textarea><span id="cf-msg-err" class="cf-err"></span>
+-->
+      <!-- NY KOD: etiketter ovanför varje fält, samma stil som volontärformuläret (punkt 21) -->
+      <label class="vol-l" for="cf-name">Name *</label>
+      <input id="cf-name" autocomplete="name" required><span id="cf-name-err" class="cf-err"></span>
+      <label class="vol-l" for="cf-email">Email address *</label>
+      <input id="cf-email" type="email" autocomplete="email" placeholder="name@example.com" required><span id="cf-email-err" class="cf-err"></span>
+      <label class="vol-l" for="cf-topic">Subject</label>
+      <select id="cf-topic"><option>General Enquiry</option><option>Corporate Support</option><option>Press</option><option>Volunteer</option></select>
+      <label class="vol-l" for="cf-msg">Message *</label>
+      <textarea id="cf-msg" rows="4" required></textarea><span id="cf-msg-err" class="cf-err"></span>
+      <!-- SLUT NY KOD -->
       <button class="fbtn" id="cf-btn" onclick="sendContact()">Send Message</button>
       <p id="cf-status" style="display:none;margin-top:10px;font-size:14px"></p>
     </div>
@@ -1009,13 +1414,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="press" class="page">
   <section class="block"><div class="wrap">
     <div class="kick b">Press</div>
+    <!-- BORTTAGEN KOD: rubrik och ingress skilde sig från svenska sidan
     <h1 class="sec">Press</h1>
     <p class="lead">External news and features about Blue/Yellow Sweden, plus downloadable press material for journalists and media professionals.</p>
+-->
+    <!-- NY KOD: samma rubrik och ingress som svenska sidan, översatt (punkt 27) -->
+    <h1 class="sec">Press and media</h1>
+    <p class="lead">A selection of articles, radio interviews, TV features and coverage about Blue/Yellow and its founder Jonas Öhman.</p>
+    <!-- SLUT NY KOD -->
 
     <h3 class="sec" style="font-size:clamp(22px,2.6vw,30px);margin-top:42px">Coverage</h3>
+    <!-- BORTTAGEN KOD: extra ingress som inte finns på svenska sidan (punkt 27)
     <p class="lead">A chronological selection of mentions of Blue/Yellow in Swedish and international media.</p>
+-->
     <div id="pressCoverage" class="press-coverage"></div>
 
+    <!-- BORTTAGEN KOD: pressmaterialet hade bara "coming soon"-knappar och en faktaruta som inte finns på svenska sidan
     <div class="press-kit">
       <h3 class="disp">For the media</h3>
       <p class="lead">Downloadable press material and quick facts about the organisation. Files are added continuously – buttons are activated once each file is available.</p>
@@ -1038,7 +1452,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <ul class="facts-list">
+        <!- - BORTTAGEN KOD: Konsekvent stavningsändring: "Blue / Yellow" → "Blue/Yellow"
         <li><b>Name:</b> Blue / Yellow Sweden</li>
+- ->
+        <!- - NY KOD: Konsekvent stavningsändring: "Blue / Yellow" → "Blue/Yellow" - ->
+        <li><b>Name:</b> Blue/Yellow Sweden</li>
+        <!- - SLUT NY KOD - ->
         <li><b>Org.no:</b> 802552-3724</li>
         <li><b>Founded:</b> 2014</li>
         <li><b>Mandate:</b> Non-lethal humanitarian and military support to Ukraine</li>
@@ -1046,34 +1465,189 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
       <p class="press-contact">Press enquiries: <a href="mailto:kontakt@blue-yellow.se">kontakt@blue-yellow.se</a></p>
     </div>
+-->
+    <!-- NY KOD: logotyper, pressfoton och kortfakta med fungerande nedladdning, samma som svenska sidan, översatt. Kortfakta på engelska först (punkt 27) -->
+    <div class="press-kit">
+      <h3 class="disp">For the media</h3>
+      <p class="lead">Downloadable press material and quick facts about the organisation. Files are added continuously – buttons are activated once each file is available.</p>
+
+      <div class="press-kit-stack">
+        <div class="kit-block">
+          <h4>Logos</h4>
+          <div class="logo-row">
+            <div class="logo-thumb">
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/4e5ebf49-b17f-4481-8ac0-d1384582a93f/blueyellow-logo-blue-on-yellow.png" alt="Blue/Yellow logo, blue icon on yellow background" loading="lazy"></div>
+              <div class="thumb-cap">Logo, blue icon on yellow background</div>
+              <a class="dlbtn" href="/__l5e/assets-v1/4e5ebf49-b17f-4481-8ac0-d1384582a93f/blueyellow-logo-blue-on-yellow.png" download>Download PNG</a>
+            </div>
+            <div class="logo-thumb">
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/7f969b05-207f-4dec-bf00-eda072eafc7e/blueyellow-logo-yellow-on-blue.png" alt="Blue/Yellow logo, yellow icon on blue background" loading="lazy"></div>
+              <div class="thumb-cap">Logo, yellow icon on blue background</div>
+              <a class="dlbtn" href="/__l5e/assets-v1/7f969b05-207f-4dec-bf00-eda072eafc7e/blueyellow-logo-yellow-on-blue.png" download>Download PNG</a>
+            </div>
+            <div class="logo-thumb">
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/5353f464-9632-466c-8522-f19e2dd5b8bc/blueyellow-logo-bw-light.png" alt="Blue/Yellow logo, black and white for light backgrounds" loading="lazy"></div>
+              <div class="thumb-cap">Logo, black and white for light backgrounds</div>
+              <a class="dlbtn" href="/__l5e/assets-v1/5353f464-9632-466c-8522-f19e2dd5b8bc/blueyellow-logo-bw-light.png" download>Download PNG</a>
+            </div>
+            <div class="logo-thumb">
+              <div class="thumb-box has-img"><img width="1920" height="1920" src="/__l5e/assets-v1/e5ef3a52-ef80-4f30-9371-71d7122a880f/blueyellow-logo-bw-dark.png" alt="Blue/Yellow logo, black and white for dark backgrounds" loading="lazy"></div>
+              <div class="thumb-cap">Logo, black and white for dark backgrounds</div>
+              <a class="dlbtn" href="/__l5e/assets-v1/e5ef3a52-ef80-4f30-9371-71d7122a880f/blueyellow-logo-bw-dark.png" download>Download PNG</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-block">
+          <h4>Press photos</h4>
+          <div class="photo-grid">
+            <figure>
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" alt="Blue/Yellow hands over its first drone, a DJI Phantom 3, to Ukrainian units, January 2015" loading="lazy"></div>
+              <figcaption>Blue/Yellow hands over its first drone, a DJI Phantom 3, to Ukrainian units, January 2015</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/a89759e1-54e3-4f74-8074-66ab556ec174/press-01-forsta-dronaren-2015.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="720" height="960" src="/__l5e/assets-v1/17019ac8-0fa7-49e7-9060-6cc95d2a4f2c/press-02-jonas-pervomaisk-2015.jpg" alt="Jonas Öhman with supplies for the 28th Brigade at Pervomaisk, the last village before the bridge towards Donetsk airport, October 2015" loading="lazy"></div>
+              <figcaption>Jonas Öhman with supplies for the 28th Brigade at Pervomaisk, the last village before the bridge towards Donetsk airport, October 2015</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/17019ac8-0fa7-49e7-9060-6cc95d2a4f2c/press-02-jonas-pervomaisk-2015.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1920" height="1281" src="/__l5e/assets-v1/7b9db9e3-2bbe-4789-8322-a11d1937f7d0/press-03-jonas-zelenskyj.jpg" alt="Jonas Öhman meets President Zelensky" loading="lazy"></div>
+              <figcaption>Jonas Öhman meets President Zelensky</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/7b9db9e3-2bbe-4789-8322-a11d1937f7d0/press-03-jonas-zelenskyj.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1920" height="1080" src="/__l5e/assets-v1/0ad0518b-0f1e-4733-92c2-59f56f3b81a0/press-04-jonas-kungen.jpg" alt="Jonas Öhman meets King Carl XVI Gustaf" loading="lazy"></div>
+              <figcaption>Jonas Öhman meets King Carl XVI Gustaf</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/0ad0518b-0f1e-4733-92c2-59f56f3b81a0/press-04-jonas-kungen.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1920" height="1080" src="/__l5e/assets-v1/7f48de71-ee6a-4579-ba14-7bcfedb913f0/press-05-jonas-kungen-dronare.png" alt="Jonas Öhman shows King Carl XVI Gustaf a captured Russian drone" loading="lazy"></div>
+              <figcaption>Jonas Öhman shows King Carl XVI Gustaf a captured Russian drone</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/7f48de71-ee6a-4579-ba14-7bcfedb913f0/press-05-jonas-kungen-dronare.png" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/e28295fa-4ab8-4d4f-87d7-23bc83a78798/press-06-jonas-karlivka-2015.jpg" alt="Jonas Öhman at Karlivka, the approach to Donetsk airport, February 2015" loading="lazy"></div>
+              <figcaption>Jonas Öhman at Karlivka, the approach to Donetsk airport, February 2015</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/e28295fa-4ab8-4d4f-87d7-23bc83a78798/press-06-jonas-karlivka-2015.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/82dd3a35-08de-4085-96e3-13e22fb4048e/press-07-marinkarssoldater-mariupol-2014.jpg" alt="Marines with supplies from Blue/Yellow, Mariupol, October 2014" loading="lazy"></div>
+              <figcaption>Marines with supplies from Blue/Yellow, Mariupol, October 2014</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/82dd3a35-08de-4085-96e3-13e22fb4048e/press-07-marinkarssoldater-mariupol-2014.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/03e94f3f-7b9e-4707-8b0a-415b36f99af0/press-08-reservister-kramatorsk-2014.jpg" alt="Reservists from the 8th Special Regiment looking at boots from Blue/Yellow, Kramatorsk airport, October 2014" loading="lazy"></div>
+              <figcaption>Reservists from the 8th Special Regiment looking at boots from Blue/Yellow, Kramatorsk airport, October 2014</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/03e94f3f-7b9e-4707-8b0a-415b36f99af0/press-08-reservister-kramatorsk-2014.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1066" height="1600" src="/__l5e/assets-v1/8384e51f-b788-440e-981b-2744f09b180a/press-09-soldater-pervomaisk-2014.jpg" alt="Soldiers of the 28th Mechanised Regiment with protective vests and helmets from Blue/Yellow, October 2014, at the bridge at Pervomaisk that the soldiers called the Bridge Republic" loading="lazy"></div>
+              <figcaption>Soldiers of the 28th Mechanised Regiment with protective vests and helmets from Blue/Yellow, October 2014, at the bridge at Pervomaisk that the soldiers called the Bridge Republic</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/8384e51f-b788-440e-981b-2744f09b180a/press-09-soldater-pervomaisk-2014.jpg" download>Download</a>
+            </figure>
+            <figure>
+              <div class="photo-thumb has-img"><img width="1600" height="1066" src="/__l5e/assets-v1/f4baf7df-4fb1-4811-a55a-46186fb4476d/press-10-stridsvagnsmodell-2015.jpg" alt="Paper model used for staff planning in the 3rd Separate Tank Battalion Zvirobiy, April 2015" loading="lazy"></div>
+              <figcaption>Paper model used for staff planning in the 3rd Separate Tank Battalion Zvirobiy, April 2015</figcaption>
+              <a class="dlbtn" href="/__l5e/assets-v1/f4baf7df-4fb1-4811-a55a-46186fb4476d/press-10-stridsvagnsmodell-2015.jpg" download>Download</a>
+            </figure>
+          </div>
+          <p class="photo-note">Photos may be used in an editorial context with Blue/Yellow credited as the source. Contact <a href="mailto:press@blue-yellow.se">press@blue-yellow.se</a> with any questions about use.</p>
+        </div>
+
+        <div class="kit-block">
+          <h4>Fact sheet</h4>
+          <div class="facts-row">
+            <a class="dlbtn" href="/__l5e/assets-v1/04a68373-4c92-475d-9b4a-9b0cc0f50c88/BlueYellow-KeyFacts-EN.pdf" target="_blank" rel="noopener" download>Fact sheet in English, PDF</a>
+            <a class="dlbtn" href="/__l5e/assets-v1/78035911-4b5b-4301-9817-7a8aa0e5cc29/BlueYellow-Kortfakta-SV.pdf" target="_blank" rel="noopener" download>Fact sheet in Swedish, PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="press-contact">Press enquiries: <a href="mailto:kontakt@blue-yellow.se">kontakt@blue-yellow.se</a></p>
+    </div>
+    <!-- SLUT NY KOD -->
   </div></section>
 </main>
 
+<!-- BORTTAGEN KOD: Resultat hade en annan uppbyggnad än svenska sidan och saknade "Want to know more" under fyra kategorier
 <main id="res" class="page">
   <section class="block bg-p"><div class="wrap">
     <div class="kick b">Results &amp; Impact</div>
     <h1>No promises. Just delivery.</h1>
     <p class="lead" style="max-width:none">The figures below represent Blue/Yellow's cumulative support delivered between 2022 and 2025. Reporting is continuously updated throughout 2026. All equipment is procured near the front line, delivered directly to the units in need, and signed for on-site.</p>
+    <!- - BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "Specialized" → "Specialised", "specialized" → "specialised", "stabilization" → "stabilisation", "armor" → "armour", "theater" → "theatre", "optimized" → "optimised", "hemostatic" → "haemostatic", "Hemorrhage" → "Haemorrhage", "hemorrhaging" → "haemorrhaging", "caliber" → "calibre", "Fiber" → "Fibre", "Defense" → "Defence", "Decentralized" → "Decentralised"
     <div class="res-acc"><details class="cat"><summary><span class="ct">Drones &amp; Unmanned Systems</span><span class="cn">34,445 systems</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Drone accessories &amp; spare parts</span><b>21,339</b></div><div class="nrow"><span>Reconnaissance drones</span><b>11,563</b></div><div class="nrow"><span>Anti-drone systems &amp; countermeasures</span><b>881</b></div><div class="nrow"><span>FPV drones</span><b>627</b></div><div class="nrow"><span>Signal &amp; range boosters</span><b>35</b></div></div><p>Drone capability relies on a coherent ecosystem of aerial platforms, sensors, signal infrastructure, and protection against electronic threats. Reconnaissance drones serve as the unit's eyes in the sky: lightweight platforms like the DJI Mavic 3T provide thermal night vision, while heavier assets like the Bayraktar TB2 deliver broad situational awareness across vast distances. Frontline workhorses such as Shmotka, Khortytsia, and Kazhan operate alongside fixed-wing platforms like Shark, Leleka-100, and Fury to monitor deep behind enemy lines.</p><p>FPV drones are agile, cost-effective, and rapidly deployed in high numbers, piloted via real-time video goggles directly at the zero line. Protection against enemy drones is established through handheld systems like the EDM4S SkyWiper, as well as vehicle-mounted solutions including Piranha AVD 360 and Bukovel-AD.</p><details class="deep"><summary>How drone systems operate in the field</summary><div class="deepbody"><p><b>Reconnaissance &amp; Situational Awareness:</b> DJI Mavic 3 and Mavic 3T platforms provide real-time thermal surveillance, detecting movement, personnel, and vehicles in total darkness and complex terrain.</p><p><b>Airborne Logistics:</b> Vampire platforms transport vital medicine, communication equipment, and critical spare parts to positions where ground transport is either cut off or too hazardous.</p><p><b>Strategic Monitoring:</b> Bayraktar TB2 platforms provide long-range observation, early warning, and broad theater-level situational awareness.</p><p><b>Power &amp; Field Operations:</b> Backup batteries, field charging stations, and dedicated operator gear ensure continuous operation independent of the civil grid.</p><p><b>Electronic Warfare &amp; Countermeasures:</b> Handheld disruptors (EDM4S SkyWiper) and vehicle-mounted jamming systems sever hostile control links to protect personnel and infrastructure.</p><p><b>Integrated Operational Ecosystem:</b> Modern drone capabilities function as an interdependent network of sensors, communications, energy, and countermeasures where operational value is delivered as a complete system.</p></div></details></div></details><details class="cat"><summary><span class="ct">Vehicles, Transport &amp; Evacuation</span><span class="cn">1,033 vehicles</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Passenger cars &amp; light utility vehicles</span><b>500</b></div><div class="nrow"><span>Bicycles</span><b>480</b></div><div class="nrow"><span>Ambulances</span><b>16</b></div><div class="nrow"><span>Motorcycles</span><b>12</b></div><div class="nrow"><span>Trucks</span><b>8</b></div><div class="nrow"><span>Trailers</span><b>5</b></div><div class="nrow"><span>Boats</span><b>5</b></div><div class="nrow"><span>ATVs / Quads</span><b>4</b></div><div class="nrow"><span>Semi-trailer trucks (tractor units)</span><b>2</b></div></div><p>Operational success depends on the ability to keep personnel, supplies, and equipment moving — and to rapidly evacuate the wounded. Pickups like the Toyota Hilux, Mitsubishi L200, and Ford Ranger handle last-mile logistics across rough terrain, while reinforced 4x4s like the Toyota Land Cruiser and Nissan Patrol provide safer transport through high-risk sectors. Ambulances bridge the gap to higher echelons of medical care, and ATVs access areas where standard vehicles cannot pass.</p><p>Bicycles have proven to be exceptionally effective near the front line. Silent, cost-free to operate, and simple to maintain, they provide a reliable alternative for the most exposed final stretch where engine noise compromises positions and fuel supplies are uncertain.</p><p>Between January 1 and May 31, 2026, Blue/Yellow delivered an additional 136 UGVs (Unmanned Ground Vehicles) while testing Unmanned Surface Vessels (USVs) for resupply and evacuation missions where crewed boats face severe risk.</p></div></details><details class="cat"><summary><span class="ct">Personal Equipment &amp; Protection</span><span class="cn">142,357 items</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Ballistic plates</span><b>47,819</b></div><div class="nrow"><span>Helmets</span><b>29,710</b></div><div class="nrow"><span>Uniforms &amp; tactical apparel</span><b>20,473</b></div><div class="nrow"><span>Body armor vests / plate carriers</span><b>16,227</b></div><div class="nrow"><span>Tactical boots</span><b>2,557</b></div><div class="nrow"><span>Gas masks &amp; filters</span><b>2,141</b></div></div><p>Modern protective gear is designed to ensure soldiers can sustain operations over prolonged periods in severe environments. Modular plate carriers with MOLLE attachments are fitted with ballistic plates rated to NIJ Level IV or Ukrainian DSTU Level 6, stopping high-caliber rounds and shrapnel. FAST and High-Cut helmets serve as mounting platforms for night vision optics and tactical communications.</p><p>Durable boots withstand extreme cold, moisture, and heavy marches, while uniforms balance mobility with weather resistance. Gear configurations are optimized for emergency medical extraction, allowing rapid removal to administer life-saving care.</p><details class="deep"><summary>Operational protection framework</summary><div class="deepbody"><p><b>Ballistic Protection:</b> Vests, plate carriers, and ballistic inserts mitigate fragmentation and penetration injuries; tactical helmets protect against blunt trauma and fragments while mounting vital mission accessories.</p><p><b>Sustained Endurance:</b> High-grade uniforms, footwear, and load-bearing systems allow extended operations across fluctuating climates and harsh terrain.</p><p><b>Environmental &amp; Auditory Defense:</b> Active hearing protection and CBRN gas masks defend against explosive noise levels and hazardous atmospheres.</p></div></details></div></details><details class="cat"><summary><span class="ct">Communications, Optics &amp; IT</span><span class="cn">22,332 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>IT &amp; communication equipment</span><b>8,144</b></div><div class="nrow"><span>Handheld two-way radios</span><b>3,784</b></div><div class="nrow"><span>Batteries &amp; charging hardware</span><b>2,544</b></div><div class="nrow"><span>Fixed / base radio stations</span><b>2,174</b></div><div class="nrow"><span>Thermal optics &amp; weapon sights</span><b>2,081</b></div><div class="nrow"><span>Red dot &amp; optical sights</span><b>1,623</b></div></div><p>Thermal observation systems (such as Pulsar Helion, Pulsar Axion, and ATN Mars) detect heat signatures through darkness, fog, and smoke, while PVS-14 night-vision goggles enable movement and combat casualty care in pitch-black conditions. Motorola MOTOTRBO radios maintain AES-256 encrypted tactical communication across units.</p><p>Fiber-optic connections provide critical resilience against heavy electronic jamming and interception, serving as secure command lines for drone operations and signals intelligence. When terrestrial infrastructure fails, Starlink V2 and Starlink Mini terminals restore vital satellite connectivity for command, triage coordination, and unit sync.</p><details class="deep"><summary>Tactical information systems in the field</summary><div class="deepbody"><p><b>Electro-Optical Systems:</b> Thermal sights, night vision, and laser rangefinders enable rapid target identification in degraded visual environments.</p><p><b>Radio Infrastructure:</b> Encrypted handheld and vehicle-mounted base stations secure internal tactical communications.</p><p><b>Satellite Networks:</b> Decentralized satellite data uplinks ensure resilient operational command independent of terrestrial networks.</p><p><b>Tactical Computing:</b> Rugged laptops, tablets, and field devices power mission planning, mapping, and real-time coordination.</p></div></details></div></details><details class="cat"><summary><span class="ct">Medical Care &amp; Emergency Equipment</span><span class="cn">293,205 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Medical consumables &amp; pharmaceuticals</span><b>250,605</b></div><div class="nrow"><span>Tourniquets</span><b>34,679</b></div><div class="nrow"><span>Trauma / medic bags</span><b>5,859</b></div><div class="nrow"><span>Individual First Aid Kits (IFAK)</span><b>775</b></div><div class="nrow"><span>Paramedic field backpacks</span><b>680</b></div><div class="nrow"><span>Stretchers &amp; evacuation gear</span><b>94</b></div></div><p>On the battlefield, minutes determine survival. C-A-T Gen 7 tourniquets stop catastrophic hemorrhaging in accordance with TCCC protocols, while QuikClot Combat Gauze is deployed for wound packing. SAM Chest Seals and HyFin Vent dressings seal penetrating chest injuries to prevent tension pneumothorax.</p><p>IFAKs are secured directly to body armor for immediate self- or buddy-aid, while foldable and rigid tactical stretchers allow casualty evacuation over difficult terrain. Through these deliveries, over 3,600 individuals have received direct field medical care, including approximately 2,000 civilians in liberated areas cut off from healthcare infrastructure.</p><details class="deep"><summary>The medical chain of survival</summary><div class="deepbody"><p><b>Hemorrhage Control:</b> Tourniquets, hemostatic gauze, and compression dressings deployed at the point of injury.</p><p><b>Field Evacuation:</b> Tactical stretchers and specialized trauma packs for rapid stabilization during transit.</p><p><b>Advanced Field Care:</b> Defibrillators, ECG units, and fluid/blood warmers supporting stabilization points close to the zero line.</p></div></details></div></details><details class="cat"><summary><span class="ct">Energy, Tools &amp; Field Support</span><span class="cn">427,011 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Tools &amp; maintenance hardware</span><b>305,320</b></div><div class="nrow"><span>Electrical grid equipment &amp; components</span><b>69,409</b></div><div class="nrow"><span>Field rations (MREs)</span><b>33,164</b></div><div class="nrow"><span>Holsters &amp; tactical mounts</span><b>7,401</b></div><div class="nrow"><span>Generators</span><b>1,488</b></div><div class="nrow"><span>Portable power stations &amp; battery packs</span><b>125</b></div></div><p>When power fails, operations grind to a halt. EcoFlow Delta and Jackery Explorer power stations silently recharge drones, radios, and night vision devices at forward operating posts, while 2–10 kW diesel generators keep command posts and field clinics running during extensive grid outages.</p><p>Hand tools, hardware, and maintenance components represent the behind-the-scenes backbone required to repair vehicles and technical equipment around the clock. Diesel heaters and chemical heat packs maintain soldier and equipment readiness throughout winter conditions, while field rations sustain units when regular logistics lines are interrupted.</p></div></details><details class="cat"><summary><span class="ct">People, Volunteers &amp; Training</span><span class="cn">1,166 people</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Volunteers active in Ukraine</span><b>450</b></div><div class="nrow"><span>Ukrainian soldiers trained (TCCC/tactical)</span><b>371</b></div><div class="nrow"><span>Volunteers active in Lithuania</span><b>250</b></div><div class="nrow"><span>Medical personnel trained (war surgery &amp; trauma)</span><b>68</b></div><div class="nrow"><span>Medical field mission deployments</span><b>27</b></div></div><p>Equipment alone does not create operational capability. A dedicated volunteer network spanning Lithuania, Sweden, and Ukraine coordinates procurement, cross-border freight, warehousing, and direct delivery to recipient units.</p><p>Certified TCCC instructors have trained 371 Ukrainian soldiers in point-of-injury care, bleeding control, and high-threat triage. Additionally, 27 medical missions have been executed by specialized physicians and paramedics, while 68 healthcare professionals have completed advanced training in battlefield trauma surgery.</p></div></details><details class="cat"><summary><span class="ct">Specialized Systems &amp; Advanced Technology</span><span class="cn">36 advanced platforms</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Tactical radar systems</span><b>17</b></div><div class="nrow"><span>Specialized medical equipment units</span><b>15</b></div><div class="nrow"><span>Mobile radar carrier platforms</span><b>4</b></div></div><p>Specialized challenges require integrated system-level solutions. Vehicle-mounted electronic warfare suites (such as Bukovel-AD and Khortytsia) conduct wide-area signals intelligence and countermeasure operations, while tactical radar units provide critical early warning against low-flying aerial targets, incoming drones, and cruise missiles.</p><p>Specialized medical platforms provide intensive stabilization for critical trauma patients prior to secondary transport. For operational security, specific technical designations and unit recipients for select items in this category remain classified.</p></div></details></div>
+- ->
+    <!- - NY KOD: Ändrat från amerikansk till brittisk stavning: "Specialized" → "Specialised", "specialized" → "specialised", "stabilization" → "stabilisation", "armor" → "armour", "theater" → "theatre", "optimized" → "optimised", "hemostatic" → "haemostatic", "Hemorrhage" → "Haemorrhage", "hemorrhaging" → "haemorrhaging", "caliber" → "calibre", "Fiber" → "Fibre", "Defense" → "Defence", "Decentralized" → "Decentralised" - ->
+    <div class="res-acc"><details class="cat"><summary><span class="ct">Drones &amp; Unmanned Systems</span><span class="cn">34,445 systems</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Drone accessories &amp; spare parts</span><b>21,339</b></div><div class="nrow"><span>Reconnaissance drones</span><b>11,563</b></div><div class="nrow"><span>Anti-drone systems &amp; countermeasures</span><b>881</b></div><div class="nrow"><span>FPV drones</span><b>627</b></div><div class="nrow"><span>Signal &amp; range boosters</span><b>35</b></div></div><p>Drone capability relies on a coherent ecosystem of aerial platforms, sensors, signal infrastructure, and protection against electronic threats. Reconnaissance drones serve as the unit's eyes in the sky: lightweight platforms like the DJI Mavic 3T provide thermal night vision, while heavier assets like the Bayraktar TB2 deliver broad situational awareness across vast distances. Frontline workhorses such as Shmotka, Khortytsia, and Kazhan operate alongside fixed-wing platforms like Shark, Leleka-100, and Fury to monitor deep behind enemy lines.</p><p>FPV drones are agile, cost-effective, and rapidly deployed in high numbers, piloted via real-time video goggles directly at the zero line. Protection against enemy drones is established through handheld systems like the EDM4S SkyWiper, as well as vehicle-mounted solutions including Piranha AVD 360 and Bukovel-AD.</p><details class="deep"><summary>How drone systems operate in the field</summary><div class="deepbody"><p><b>Reconnaissance &amp; Situational Awareness:</b> DJI Mavic 3 and Mavic 3T platforms provide real-time thermal surveillance, detecting movement, personnel, and vehicles in total darkness and complex terrain.</p><p><b>Airborne Logistics:</b> Vampire platforms transport vital medicine, communication equipment, and critical spare parts to positions where ground transport is either cut off or too hazardous.</p><p><b>Strategic Monitoring:</b> Bayraktar TB2 platforms provide long-range observation, early warning, and broad theatre-level situational awareness.</p><p><b>Power &amp; Field Operations:</b> Backup batteries, field charging stations, and dedicated operator gear ensure continuous operation independent of the civil grid.</p><p><b>Electronic Warfare &amp; Countermeasures:</b> Handheld disruptors (EDM4S SkyWiper) and vehicle-mounted jamming systems sever hostile control links to protect personnel and infrastructure.</p><p><b>Integrated Operational Ecosystem:</b> Modern drone capabilities function as an interdependent network of sensors, communications, energy, and countermeasures where operational value is delivered as a complete system.</p></div></details></div></details><details class="cat"><summary><span class="ct">Vehicles, Transport &amp; Evacuation</span><span class="cn">1,033 vehicles</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Passenger cars &amp; light utility vehicles</span><b>500</b></div><div class="nrow"><span>Bicycles</span><b>480</b></div><div class="nrow"><span>Ambulances</span><b>16</b></div><div class="nrow"><span>Motorcycles</span><b>12</b></div><div class="nrow"><span>Trucks</span><b>8</b></div><div class="nrow"><span>Trailers</span><b>5</b></div><div class="nrow"><span>Boats</span><b>5</b></div><div class="nrow"><span>ATVs / Quads</span><b>4</b></div><div class="nrow"><span>Semi-trailer trucks (tractor units)</span><b>2</b></div></div><p>Operational success depends on the ability to keep personnel, supplies, and equipment moving — and to rapidly evacuate the wounded. Pickups like the Toyota Hilux, Mitsubishi L200, and Ford Ranger handle last-mile logistics across rough terrain, while reinforced 4x4s like the Toyota Land Cruiser and Nissan Patrol provide safer transport through high-risk sectors. Ambulances bridge the gap to higher echelons of medical care, and ATVs access areas where standard vehicles cannot pass.</p><p>Bicycles have proven to be exceptionally effective near the front line. Silent, cost-free to operate, and simple to maintain, they provide a reliable alternative for the most exposed final stretch where engine noise compromises positions and fuel supplies are uncertain.</p><p>Between January 1 and May 31, 2026, Blue/Yellow delivered an additional 136 UGVs (Unmanned Ground Vehicles) while testing Unmanned Surface Vessels (USVs) for resupply and evacuation missions where crewed boats face severe risk.</p></div></details><details class="cat"><summary><span class="ct">Personal Equipment &amp; Protection</span><span class="cn">142,357 items</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Ballistic plates</span><b>47,819</b></div><div class="nrow"><span>Helmets</span><b>29,710</b></div><div class="nrow"><span>Uniforms &amp; tactical apparel</span><b>20,473</b></div><div class="nrow"><span>Body armour vests / plate carriers</span><b>16,227</b></div><div class="nrow"><span>Tactical boots</span><b>2,557</b></div><div class="nrow"><span>Gas masks &amp; filters</span><b>2,141</b></div></div><p>Modern protective gear is designed to ensure soldiers can sustain operations over prolonged periods in severe environments. Modular plate carriers with MOLLE attachments are fitted with ballistic plates rated to NIJ Level IV or Ukrainian DSTU Level 6, stopping high-calibre rounds and shrapnel. FAST and High-Cut helmets serve as mounting platforms for night vision optics and tactical communications.</p><p>Durable boots withstand extreme cold, moisture, and heavy marches, while uniforms balance mobility with weather resistance. Gear configurations are optimised for emergency medical extraction, allowing rapid removal to administer life-saving care.</p><details class="deep"><summary>Operational protection framework</summary><div class="deepbody"><p><b>Ballistic Protection:</b> Vests, plate carriers, and ballistic inserts mitigate fragmentation and penetration injuries; tactical helmets protect against blunt trauma and fragments while mounting vital mission accessories.</p><p><b>Sustained Endurance:</b> High-grade uniforms, footwear, and load-bearing systems allow extended operations across fluctuating climates and harsh terrain.</p><p><b>Environmental &amp; Auditory Defence:</b> Active hearing protection and CBRN gas masks defend against explosive noise levels and hazardous atmospheres.</p></div></details></div></details><details class="cat"><summary><span class="ct">Communications, Optics &amp; IT</span><span class="cn">22,332 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>IT &amp; communication equipment</span><b>8,144</b></div><div class="nrow"><span>Handheld two-way radios</span><b>3,784</b></div><div class="nrow"><span>Batteries &amp; charging hardware</span><b>2,544</b></div><div class="nrow"><span>Fixed / base radio stations</span><b>2,174</b></div><div class="nrow"><span>Thermal optics &amp; weapon sights</span><b>2,081</b></div><div class="nrow"><span>Red dot &amp; optical sights</span><b>1,623</b></div></div><p>Thermal observation systems (such as Pulsar Helion, Pulsar Axion, and ATN Mars) detect heat signatures through darkness, fog, and smoke, while PVS-14 night-vision goggles enable movement and combat casualty care in pitch-black conditions. Motorola MOTOTRBO radios maintain AES-256 encrypted tactical communication across units.</p><p>Fibre-optic connections provide critical resilience against heavy electronic jamming and interception, serving as secure command lines for drone operations and signals intelligence. When terrestrial infrastructure fails, Starlink V2 and Starlink Mini terminals restore vital satellite connectivity for command, triage coordination, and unit sync.</p><details class="deep"><summary>Tactical information systems in the field</summary><div class="deepbody"><p><b>Electro-Optical Systems:</b> Thermal sights, night vision, and laser rangefinders enable rapid target identification in degraded visual environments.</p><p><b>Radio Infrastructure:</b> Encrypted handheld and vehicle-mounted base stations secure internal tactical communications.</p><p><b>Satellite Networks:</b> Decentralised satellite data uplinks ensure resilient operational command independent of terrestrial networks.</p><p><b>Tactical Computing:</b> Rugged laptops, tablets, and field devices power mission planning, mapping, and real-time coordination.</p></div></details></div></details><details class="cat"><summary><span class="ct">Medical Care &amp; Emergency Equipment</span><span class="cn">293,205 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Medical consumables &amp; pharmaceuticals</span><b>250,605</b></div><div class="nrow"><span>Tourniquets</span><b>34,679</b></div><div class="nrow"><span>Trauma / medic bags</span><b>5,859</b></div><div class="nrow"><span>Individual First Aid Kits (IFAK)</span><b>775</b></div><div class="nrow"><span>Paramedic field backpacks</span><b>680</b></div><div class="nrow"><span>Stretchers &amp; evacuation gear</span><b>94</b></div></div><p>On the battlefield, minutes determine survival. C-A-T Gen 7 tourniquets stop catastrophic haemorrhaging in accordance with TCCC protocols, while QuikClot Combat Gauze is deployed for wound packing. SAM Chest Seals and HyFin Vent dressings seal penetrating chest injuries to prevent tension pneumothorax.</p><p>IFAKs are secured directly to body armour for immediate self- or buddy-aid, while foldable and rigid tactical stretchers allow casualty evacuation over difficult terrain. Through these deliveries, over 3,600 individuals have received direct field medical care, including approximately 2,000 civilians in liberated areas cut off from healthcare infrastructure.</p><details class="deep"><summary>The medical chain of survival</summary><div class="deepbody"><p><b>Haemorrhage Control:</b> Tourniquets, haemostatic gauze, and compression dressings deployed at the point of injury.</p><p><b>Field Evacuation:</b> Tactical stretchers and specialised trauma packs for rapid stabilisation during transit.</p><p><b>Advanced Field Care:</b> Defibrillators, ECG units, and fluid/blood warmers supporting stabilisation points close to the zero line.</p></div></details></div></details><details class="cat"><summary><span class="ct">Energy, Tools &amp; Field Support</span><span class="cn">427,011 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Tools &amp; maintenance hardware</span><b>305,320</b></div><div class="nrow"><span>Electrical grid equipment &amp; components</span><b>69,409</b></div><div class="nrow"><span>Field rations (MREs)</span><b>33,164</b></div><div class="nrow"><span>Holsters &amp; tactical mounts</span><b>7,401</b></div><div class="nrow"><span>Generators</span><b>1,488</b></div><div class="nrow"><span>Portable power stations &amp; battery packs</span><b>125</b></div></div><p>When power fails, operations grind to a halt. EcoFlow Delta and Jackery Explorer power stations silently recharge drones, radios, and night vision devices at forward operating posts, while 2–10 kW diesel generators keep command posts and field clinics running during extensive grid outages.</p><p>Hand tools, hardware, and maintenance components represent the behind-the-scenes backbone required to repair vehicles and technical equipment around the clock. Diesel heaters and chemical heat packs maintain soldier and equipment readiness throughout winter conditions, while field rations sustain units when regular logistics lines are interrupted.</p></div></details><details class="cat"><summary><span class="ct">People, Volunteers &amp; Training</span><span class="cn">1,166 people</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Volunteers active in Ukraine</span><b>450</b></div><div class="nrow"><span>Ukrainian soldiers trained (TCCC/tactical)</span><b>371</b></div><div class="nrow"><span>Volunteers active in Lithuania</span><b>250</b></div><div class="nrow"><span>Medical personnel trained (war surgery &amp; trauma)</span><b>68</b></div><div class="nrow"><span>Medical field mission deployments</span><b>27</b></div></div><p>Equipment alone does not create operational capability. A dedicated volunteer network spanning Lithuania, Sweden, and Ukraine coordinates procurement, cross-border freight, warehousing, and direct delivery to recipient units.</p><p>Certified TCCC instructors have trained 371 Ukrainian soldiers in point-of-injury care, bleeding control, and high-threat triage. Additionally, 27 medical missions have been executed by specialised physicians and paramedics, while 68 healthcare professionals have completed advanced training in battlefield trauma surgery.</p></div></details><details class="cat"><summary><span class="ct">Specialised Systems &amp; Advanced Technology</span><span class="cn">36 advanced platforms</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Tactical radar systems</span><b>17</b></div><div class="nrow"><span>Specialised medical equipment units</span><b>15</b></div><div class="nrow"><span>Mobile radar carrier platforms</span><b>4</b></div></div><p>Specialised challenges require integrated system-level solutions. Vehicle-mounted electronic warfare suites (such as Bukovel-AD and Khortytsia) conduct wide-area signals intelligence and countermeasure operations, while tactical radar units provide critical early warning against low-flying aerial targets, incoming drones, and cruise missiles.</p><p>Specialised medical platforms provide intensive stabilisation for critical trauma patients prior to secondary transport. For operational security, specific technical designations and unit recipients for select items in this category remain classified.</p></div></details></div>
+    <!- - SLUT NY KOD - ->
     <p class="cap" style="margin-top:18px">Data compiled from Blue/Yellow Annual Reports (2022–2025). For detailed financial statements and audit reports, please visit the About Us &gt; Documents &amp; Reports section.</p>
   </div></section>
 </main>
+-->
+<!-- NY KOD: Resultat kopierat från svenska sidan och översatt. Datum skrivna på brittiskt vis (punkt 27) -->
+<main id="res" class="page">
+  <section class="block bg-p"><div class="wrap">
+    <div class="kick b">Results &amp; Impact</div>
+    <h1>No promises. Just delivery.</h1>
+    <p class="lead" style="max-width:none">The figures below show Blue/Yellow's combined support between 2022 and 2025. The reporting is updated continuously throughout 2026. Everything is procured close to the front and delivered directly to the units that need it, and every delivery is signed for on site.</p>
+    <div class="res-acc"><details class="cat"><summary><span class="ct">Drones &amp; drone systems</span><span class="cn">34,445 systems</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Reconnaissance drones</span><b>11,563</b></div><div class="nrow"><span>FPV drones</span><b>627</b></div><div class="nrow"><span>Drone accessories and spare parts</span><b>21,339</b></div><div class="nrow"><span>Signal and range boosters</span><b>35</b></div><div class="nrow"><span>Anti-drone systems and countermeasures</span><b>881</b></div></div><p>Drone capability is built on a coherent ecosystem of aerial platforms, sensors, signal equipment and protection against electronic threats. Reconnaissance drones are the units' eyes in the sky: light platforms such as the DJI Mavic 3T see in the dark with thermal cameras, while the heavy Bayraktar TB2 provides a broad situational picture over vast distances. At the front, Ukrainian workhorses such as Shmotka, Khortytsia and Kazhan are in service, while fixed-wing drones such as Shark, Leleka-100 and Fury comb areas deep behind enemy lines.</p><p>FPV drones are small, lightning-fast and cheap to deploy in large numbers, flown in real time with video goggles right at the front line. Protection against drones is built up from handheld systems such as the EDM4S SkyWiper and vehicle-based systems such as the Piranha AVD 360 and Bukovel-AD.</p><details class="deep"><summary>Want to know more about how the drone systems are used in the field?</summary><div class="deepbody"><p>Drone systems are used for reconnaissance, situational awareness, documentation, logistics, evacuation and the protection of both military and civilian structures. They are a central part of the modern information chain in a combat environment.</p><h4 aria-level="3">Reconnaissance and situational awareness</h4><p>The DJI Mavic 3 and Mavic 3T are used for real-time surveillance, where thermal sensors make it possible to detect movement, vehicles and people in the dark and in difficult terrain.</p><h4 aria-level="3">Logistical aerial systems</h4><p>The Vampire is used to transport medicine, communications equipment and spare parts to positions where ground transport is risky or impossible.</p><h4 aria-level="3">Strategic surveillance</h4><p>The Bayraktar TB2 is used for long-range observation and contributes to regional situational understanding and early warning.</p><h4 aria-level="3">Power and operating environment</h4><p>Spare batteries, charging systems and operator equipment ensure continuous operation in field environments without infrastructure.</p><h4 aria-level="3">Electronic warfare and protection</h4><p>Systems such as the EDM4S SkyWiper and vehicle-based jamming systems are used to break hostile drone control and protect personnel and infrastructure.</p><h4 aria-level="3">A coherent operational whole</h4><p>Drone systems have developed into a coherent system of sensors, communications, power and protection, where capability comes from the whole rather than from individual components.</p></div></details></div></details><details class="cat"><summary><span class="ct">Vehicles, transport &amp; evacuation</span><span class="cn">1,033 vehicles</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Cars</span><b>500</b></div><div class="nrow"><span>Ambulances</span><b>16</b></div><div class="nrow"><span>Motorcycles</span><b>12</b></div><div class="nrow"><span>Lorries</span><b>8</b></div><div class="nrow"><span>Trailers</span><b>5</b></div><div class="nrow"><span>Boats</span><b>5</b></div><div class="nrow"><span>Quad bikes</span><b>4</b></div><div class="nrow"><span>Tractor units with trailers</span><b>2</b></div><div class="nrow"><span>Bicycles</span><b>480</b></div></div><p>On a battlefield, much more is decided than the fighting at the very front. At least as decisive is the ability to keep people, equipment and supplies moving, and to get the wounded out of the danger zone quickly. The Toyota Hilux, Mitsubishi L200 and Ford Ranger are used for last-mile logistics in difficult terrain, while reinforced SUVs such as the Toyota Land Cruiser and Nissan Patrol provide safer transport of personnel in high-risk areas. Ambulances take the wounded to the next level of care, while all-terrain quad bikes get through where ordinary vehicles cannot.</p><p>Bicycles have proved to be an exceptional means of transport near the front line. They are silent, cheap, need no fuel and are easy to maintain in the field, qualities that make them one of the most reliable options for the last and most sensitive stretch, where engine noise can give away a position and fuel supply cannot always be guaranteed.</p><p>Between 1 January and 31 May 2026, Blue/Yellow also delivered 136 UGVs (unmanned ground vehicles), while tests of unmanned surface vessels (USVs) have been under way to bring forward supplies and evacuate where crewed boats face great risk.</p><details class="deep"><summary>Want to know more about how the vehicle chain works in the field?</summary><div class="deepbody"><p>Vehicle systems form a coherent logistics chain where transport, evacuation and maintenance work together to keep units operational.</p><h4 aria-level="3">Medical evacuation</h4><p>Ambulances are used for rapid transport from zones near the front to levels of care with greater capacity.</p><h4 aria-level="3">Field transport</h4><p>Four-wheel-drive vehicles are used for personnel, equipment and systems in terrain where conventional logistics does not work.</p><h4 aria-level="3">Heavy logistics</h4><p>Lorries and tractor units are used to move larger systems and supplies.</p><h4 aria-level="3">Light mobility</h4><p>Motorcycles and quad bikes make rapid movement between dispersed positions possible.</p><h4 aria-level="3">Water logistics</h4><p>Boats are used where roads are missing or destroyed.</p><h4 aria-level="3">A coherent operational whole</h4><p>The vehicle system forms an integrated chain for mobility and evacuation, where every part affects the overall operational capability.</p></div></details></div></details><details class="cat"><summary><span class="ct">Personal equipment &amp; protection</span><span class="cn">142,357 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Ballistic plates</span><b>47,819</b></div><div class="nrow"><span>Helmets</span><b>29,710</b></div><div class="nrow"><span>Uniforms and clothing</span><b>20,473</b></div><div class="nrow"><span>Protective vests</span><b>16,227</b></div><div class="nrow"><span>Boots</span><b>2,557</b></div><div class="nrow"><span>Gas masks and filters</span><b>2,141</b></div></div><p>Modern protective equipment is not only about reducing the risk of injury; it must enable the soldier to carry out their task for long periods in a demanding environment. Modular plate carriers are expanded with MOLLE attachments and fitted with protective plates to NIJ Level IV or Ukrainian DSTU Level 6, which protect against large-calibre rounds and shrapnel. FAST and High-Cut helmets are fitted with rails for night-vision optics and hearing protection.</p><p>Boots must cope with cold, wet and long marches; uniforms must allow freedom of movement and withstand heavy wear in changing climates. Medical care and evacuation have also shaped the design: in the event of an injury, the equipment must be quick to handle so that care and onward transport are possible.</p><details class="deep"><summary>Want to know more about how the protective equipment is used in the field?</summary><div class="deepbody"><p>Protective equipment works as a coherent system for survival, mobility and endurance in the field.</p><h4 aria-level="3">Ballistic protection</h4><p>Vests and plates reduce the risk of shrapnel and penetration injuries. Helmets protect the head and often serve as a platform for equipment.</p><h4 aria-level="3">Equipment for endurance</h4><p>Uniforms, boots and carrying systems make long-term operations possible in varying terrain and climate.</p><h4 aria-level="3">Protection against noise and the environment</h4><p>Hearing protection and gas masks reduce the risks from explosive noise levels and hazardous environments.</p><h4 aria-level="3">A coherent operational whole</h4><p>The protection system forms an integrated structure where personal equipment directly affects the ability to operate and survive.</p></div></details></div></details><details class="cat"><summary><span class="ct">Communications, optics &amp; IT</span><span class="cn">22,332 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Computer and communications technology (combined item)</span><b>8,144</b></div><div class="nrow"><span>Two-way radios</span><b>3,784</b></div><div class="nrow"><span>Batteries and charging equipment</span><b>2,544</b></div><div class="nrow"><span>Radio stations</span><b>2,174</b></div><div class="nrow"><span>Thermal sights and thermal imaging sights</span><b>2,081</b></div><div class="nrow"><span>Red dot sights and optical sights</span><b>1,623</b></div></div><p>Thermal observation systems such as the Pulsar Helion, Pulsar Axion and ATN Mars detect movement in darkness, haze and smoke, while image-intensifying PVS-14 goggles make movement and medical care possible in total darkness. Motorola MOTOTRBO provides encrypted radio communication with AES-256 between units.</p><p>The war in Ukraine has shown that fibre optics have become increasingly important: fibre connections create stable links where radio communication can be jammed or intercepted, which is crucial for drone control and signals intelligence. When ground-based infrastructure is knocked out, Starlink V2 and Starlink Mini provide satellite-based connectivity for command, medical care and coordination.</p><details class="deep"><summary>Want to know more about how the information systems work in the field?</summary><div class="deepbody"><p>Information systems are used to create, transmit and maintain a situational picture in environments where interference and uncertainty are constant.</p><h4 aria-level="3">Optical systems</h4><p>Thermal sights, laser sights and observation optics are used for identification in the dark and in difficult conditions.</p><h4 aria-level="3">Radio communication</h4><p>Two-way radios and fixed radio stations make coordination between units and command possible.</p><h4 aria-level="3">Satellite communication</h4><p>Satellite systems are used where ground-based infrastructure is missing or knocked out.</p><h4 aria-level="3">IT and data support</h4><p>Computers, tablets and phones are used for planning, analysis and operational coordination.</p><h4 aria-level="3">A coherent operational whole</h4><p>The information systems form an integrated chain where sensors, communication and analysis together create operational understanding.</p></div></details></div></details><details class="cat"><summary><span class="ct">Medical care &amp; medical equipment</span><span class="cn">293,205 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Medical supplies and medicines</span><b>250,605</b></div><div class="nrow"><span>Tourniquets</span><b>34,679</b></div><div class="nrow"><span>First aid bags</span><b>5,859</b></div><div class="nrow"><span>First aid kits</span><b>775</b></div><div class="nrow"><span>Paramedic backpacks</span><b>680</b></div><div class="nrow"><span>Stretchers and evacuation equipment</span><b>94</b></div></div><p>In a war environment, the time from injury to treatment is decisive. C-A-T Gen 7 tourniquets quickly stop severe bleeding in line with TCCC standards, while QuikClot Combat Gauze packs deep wounds. The SAM Chest Seal and HyFin Vent seal penetrating chest injuries and reduce the risk of complications when air enters the chest cavity, a type of injury that quickly becomes life-threatening without the right dressing.</p><p>IFAK pouches are carried on the personal protective equipment so that emergency care is immediately at hand, and folding stretchers are used when terrain or the security situation makes ordinary transport impossible. Through these efforts, more than 3,600 people have received field care, around 2,000 of them civilians in liberated areas who had been without access to care for several years.</p><details class="deep"><summary>Want to know more about how medical care works in the field?</summary><div class="deepbody"><p>Medical work is built on rapid response, stabilisation and evacuation under extreme conditions.</p><h4 aria-level="3">Emergency bleeding control</h4><p>Tourniquets and first aid kits are used to stop life-threatening bleeding directly in the field.</p><h4 aria-level="3">Evacuation and field care</h4><p>Stretchers and medical backpacks are used to transport and stabilise the wounded.</p><h4 aria-level="3">Advanced medical technology</h4><p>ECGs, defibrillators and blood-warming systems are used in care settings near the front.</p><h4 aria-level="3">A coherent operational whole</h4><p>The medical chain forms an integrated system from first response to stabilisation and evacuation.</p></div></details></div></details><details class="cat"><summary><span class="ct">Power, tools &amp; field supplies</span><span class="cn">427,011 units</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Tools</span><b>305,320</b></div><div class="nrow"><span>Power grid equipment and components</span><b>69,409</b></div><div class="nrow"><span>Food rations</span><b>33,164</b></div><div class="nrow"><span>Holsters and mounts</span><b>7,401</b></div><div class="nrow"><span>Generators</span><b>1,488</b></div><div class="nrow"><span>Power stations and external batteries</span><b>125</b></div></div><p>Without power, everything stops. EcoFlow Delta and Jackery Explorer units silently charge drones, radios and night-vision optics in forward positions, while 2 to 10 kW diesel generators supply command posts and field hospitals when the civilian power grid is down.</p><p>Tools and consumables, the single largest item in the category, represent the quiet work that keeps vehicles and technical systems running around the clock. Diesel heaters and chemical heat packs keep both people and equipment working in winter conditions, and field rations ensure food even when regular supply routes are cut off.</p><details class="deep"><summary>Want to know more about how the power systems work in the field?</summary><div class="deepbody"><p>Power and maintenance form the basis that allows all other systems to function over time.</p><h4 aria-level="3">Power generation and backup power</h4><p>Generators and power stations run command posts, medical care and communications.</p><h4 aria-level="3">Mobile power</h4><p>Portable power stations are used to charge equipment in the field.</p><h4 aria-level="3">Maintenance and repair</h4><p>Tools and spare parts ensure the continuous operation of vehicles and systems.</p><h4 aria-level="3">Field supplies</h4><p>Food, beds and basic equipment support endurance in long-term operations.</p><h4 aria-level="3">A coherent operational whole</h4><p>The power system is the stabilising infrastructure that makes it possible to operate the entire operational chain.</p></div></details></div></details><details class="cat"><summary><span class="ct">People, volunteers &amp; training</span><span class="cn">1,166 people</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Volunteers in Lithuania</span><b>250</b></div><div class="nrow"><span>Volunteers in Ukraine</span><b>450</b></div><div class="nrow"><span>Trained Ukrainian soldiers</span><b>371</b></div><div class="nrow"><span>Medical field missions</span><b>27</b></div><div class="nrow"><span>Trained in war surgery and trauma care</span><b>68</b></div></div><p>Materiel does not create capability on its own. A network of hundreds of volunteers in Lithuania and Ukraine handles logistics, transport, warehousing and distribution all the way to the receiving units.</p><p>TCCC instructors have trained 371 Ukrainian soldiers in combat casualty care, bleeding control, evacuation and prioritisation under time pressure, while 27 Lithuanian doctors and medics have carried out medical field missions and 68 people have been trained in war surgery and trauma care.</p><details class="deep"><summary>Want to know more about how training and volunteer work function in the field?</summary><div class="deepbody"><p>Operational effect arises from the interplay between people, logistics and technical systems.</p><h4 aria-level="3">Volunteer network</h4><p>Hundreds of volunteers handle logistics, transport, warehousing and distribution of materiel to recipients near the front.</p><h4 aria-level="3">Medical missions</h4><p>Field teams carry out work in mobile clinics and care settings near the front.</p><h4 aria-level="3">Medical training</h4><p>Doctors are trained in field medicine and war surgery, as well as trauma-based methods under simulated conditions.</p><h4 aria-level="3">Operator training</h4><p>Ukrainian personnel are trained in drones, communications, sensor systems and technical implementation.</p><h4 aria-level="3">A coherent operational whole</h4><p>Human resources are the connecting system that allows all materiel to be turned into actual operational capability.</p></div></details></div></details><details class="cat"><summary><span class="ct">Special systems &amp; advanced equipment</span><span class="cn">36 systems</span></summary><div class="catbody"><div class="nums"><div class="nrow"><span>Radar systems</span><b>17</b></div><div class="nrow"><span>Specialised medical equipment</span><b>15</b></div><div class="nrow"><span>Special vehicles for radar</span><b>4</b></div></div><p>Some needs cannot be met with individual products. Vehicle-mounted systems such as Bukovel-AD and Khortytsia conduct signals intelligence and electronic countermeasures over large areas, while integrated radar units give early warning of incoming drones and missiles, valuable time for protection and coordination.</p><p>Specialised medical equipment makes advanced stabilisation of the seriously wounded possible before onward transport. For security reasons, some functions and recipients cannot be described in more detail publicly.</p><details class="deep"><summary>Want to know more about how larger systems are used in the field?</summary><div class="deepbody"><p>Larger systems act as integrated nodes in a national protection and warning system where early detection and rapid response are decisive.</p><h4 aria-level="3">Tactical radar systems</h4><p>Radar systems are used for air surveillance and early warning against low-flying and fast threats.</p><h4 aria-level="3">Mobile platforms</h4><p>Special vehicles are used to transport and protect sensitive sensor systems in the field.</p><h4 aria-level="3">Specialised medical capability</h4><p>Advanced medical technology is used in stabilisation settings near the front.</p><h4 aria-level="3">Protection and evacuation systems</h4><p>Some systems are covered by security classification and combine several technical functions.</p><h4 aria-level="3">A coherent operational whole</h4><p>Larger systems form an integrated strategic level where technology and mobility work together to protect lives and critical infrastructure.</p></div></details></div></details></div>
+    <p class="cap" style="margin-top:18px">The figures are taken from the annual reports 2022 to 2025. For more detailed information, see the annual reports under About Us, Documents &amp; Reports.</p>
+  </div></section>
+</main>
+<!-- SLUT NY KOD -->
 
 <footer>
   <div class="wrap cols">
     <div>
+      <!-- BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
       <div class="ft-brand"><img src="/images/logo.png" alt="Blue/Yellow"><b>BLUE/YELLOW <em>SWEDEN</em></b></div>
+-->
+      <!-- NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23) -->
+      <div class="ft-brand"><img width="220" height="220" loading="lazy" src="/images/logo.png" alt="Blue/Yellow"><b>BLUE/YELLOW <em>SWEDEN</em></b></div>
+      <!-- SLUT NY KOD -->
       <p class="small">Providing support to Ukraine since 2014<br>Never stop supporting Ukraine<br>For a free Europe</p>
     </div>
     <div>
       <h5>Explore</h5>
       <p class="small">
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('vad');return false">What We Do</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/en/what-we-do" onclick="return navClick(event,'vad')">What We Do</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('nyh');return false">Latest</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/en/news-and-stories" onclick="return navClick(event,'nyh')">Latest</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('res');return false">Results</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/en/results" onclick="return navClick(event,'res')">Results</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('eng');return false">Get Involved</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/en/get-involved" onclick="return navClick(event,'eng')">Get Involved</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('press');return false">Press</a><br>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/en/press" onclick="return navClick(event,'press')">Press</a><br>
+        <!-- SLUT NY KOD -->
+        <!-- BORTTAGEN KOD: sidfotslänken saknade adress (href="#") (punkt 22)
         <a href="#" onclick="go('om','dok');return false">Documents &amp; Reports</a>
+-->
+        <!-- NY KOD: riktig adress så att länken går att öppna i ny flik och kopiera (punkt 22) -->
+        <a href="/en/about-us/documents-and-reports" onclick="return navClick(event,'om','dok')">Documents &amp; Reports</a>
+        <!-- SLUT NY KOD -->
       </p>
     </div>
     <div>
@@ -1094,7 +1668,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
     </div>
   </div>
+  <!-- BORTTAGEN KOD: årtalet var fast och blev inaktuellt
   <div class="bot" style="justify-content:center"><span>© 2025 Blue/Yellow Sweden · Nackagatan 4, 116 49 Stockholm · Org.nr 802552-3724</span></div>
+  -->
+  <!-- NY KOD: årtalet sätts automatiskt till aktuellt år (2026 visas om skriptet inte körs) -->
+  <div class="bot" style="justify-content:center"><span>© <span id="by-year">2026</span> Blue/Yellow Sweden · Nackagatan 4, 116 49 Stockholm · Org.nr 802552-3724</span></div>
+  <script>document.getElementById("by-year").textContent=new Date().getFullYear();</script>
+  <!-- SLUT NY KOD -->
 </footer>
 
 <script>
@@ -1102,7 +1682,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 const CAMPS=[
  {n:"Ground Robot with Stretcher",g:250000,r:187300,img:"/images/kampanj-markrobot.jpg",d:"An unmanned evacuation robot retrieving the wounded where no driver can operate."},
  {n:"Reconnaissance Drones to the Frontline",g:500000,r:342500,img:"/images/kampanj-spaningsdronare.jpg",d:"Reconnaissance drones and countermeasures delivered to three units in Donetsk."},
- {n:"Armored ambulance",g:1000000,r:615000,img:"/images/kampanj-ambulans.jpg",d:"An ambulance retrieving the critically injured at the zero line, under active fire."}];
+ // BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "Armored" → "Armoured"
+ //{n:"Armored ambulance",g:1000000,r:615000,img:"/images/kampanj-ambulans.jpg",d:"An ambulance retrieving the critically injured at the zero line, under active fire."}];
+ // NY KOD: Ändrat från amerikansk till brittisk stavning: "Armored" → "Armoured"
+ {n:"Armoured ambulance",g:1000000,r:615000,img:"/images/kampanj-ambulans.jpg",d:"An ambulance retrieving the critically injured at the zero line, under active fire."}];
 const NEWS=[
  {t:"Field report",d:"5 June 2026",h:"Delivery of 40 ground robots signed off by the receiving unit"},
  {t:"Story",d:"30 May 2026",h:"The anaesthesiologist who travels between Vilnius and the zero line"},
@@ -1162,7 +1745,8 @@ async function swishDynQR(imgEl,amount,thank,statusEl,silent){
   var data=await res.json();
   if(seq!==imgEl.__swseq)return;
   var paymentId=data.paymentId,token=data.token;
-  console.log('[Swish] QR created:',paymentId,silent?'(silent renewal)':'');
+  // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+  //console.log('[Swish] QR created:',paymentId,silent?'(silent renewal)':'');
   imgEl.src='/api/public/swish-qr?token='+encodeURIComponent(token)+'&size=300';
   imgEl.style.visibility='visible';
   var n=0,iv=setInterval(async function(){
@@ -1179,7 +1763,8 @@ async function swishDynQR(imgEl,amount,thank,statusEl,silent){
     // FALL 2: the user scanned/opened Swish and cancelled, or the payment was declined.
     // No automatic renewal – show message + button that creates a new QR only on click.
     if(userCancel){
-     console.log('[Swish] user cancelled/declined:',d&&d.status);
+     // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+     //console.log('[Swish] user cancelled/declined:',d&&d.status);
      if(statusEl){
       statusEl.textContent=EN?'The payment was cancelled. Would you like to try again? ':'Betalningen avbröts. Vill du försöka igen? ';
       var rb=document.createElement('button');rb.type='button';rb.textContent=EN?'Try again':'Försök igen';
@@ -1194,7 +1779,8 @@ async function swishDynQR(imgEl,amount,thank,statusEl,silent){
      if(statusEl)statusEl.textContent=(EN?'The request timed out. Please try again.':'Tidsgränsen nåddes. Försök gärna igen.');
      return;
     }
-    console.log('[Swish] silent renewal, ignored callback:',d&&d.status);
+    // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+    //console.log('[Swish] silent renewal, ignored callback:',d&&d.status);
     swishDynQR(imgEl,amt,thank,statusEl,true);
   },2000);
  }catch(e){console.error('[Swish] QR error',e);
@@ -1228,14 +1814,17 @@ function swishMobile(host,lang){
   try{const res=await fetch(`${SWISH_PROXY}/api/swish/create`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({amount:sel,message:'Donation Blue/Yellow'})});
    if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e.error||'err');}
    const data=await res.json();
-   console.log('[Swish] /api/swish/create response:',data);
-   console.log('[Swish] deepLink:',data.deepLink);
+   // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+   //console.log('[Swish] /api/swish/create response:',data);
+   // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+   //console.log('[Swish] deepLink:',data.deepLink);
    const {paymentId,token,deepLink}=data;
    const cb=encodeURIComponent(window.location.origin+window.location.pathname+window.location.search);
    let swishUrl=deepLink||`swish://paymentrequest?token=${token}&callbackurl=`;
    swishUrl=/callbackurl=/.test(swishUrl)?swishUrl.replace(/callbackurl=[^&]*/,'callbackurl='+cb):(swishUrl+(swishUrl.indexOf('?')>-1?'&':'?')+'callbackurl='+cb);
    swishSavePending(paymentId,T.thank);
-   console.log('[Swish] Navigating to:',swishUrl);
+   // BORTTAGEN KOD: testutskrift i webbläsarens konsol (F12) som visade betal-ID, serverns svar och Swish-länken för den som betalar. Behövs inte för betalningen och ska inte ligga kvar på en publik sida (punkt 24)
+   //console.log('[Swish] Navigating to:',swishUrl);
    stat.innerHTML=T.opening;window.location.href=swishUrl;
    setTimeout(()=>{stat.innerHTML=T.waiting;let n=0;const iv=setInterval(async()=>{n++;try{const s=await fetch(`${SWISH_PROXY}/api/swish/status/${paymentId}`);const d=await s.json();
     if(d.status==='PAID'){clearInterval(iv);swishClearPending();stat.innerHTML=T.ok;setTimeout(()=>{window.location.href=`${T.thank}?id=${paymentId}`},1200);return;}
@@ -1292,7 +1881,10 @@ var rszT;window.addEventListener('resize',function(){clearTimeout(rszT);rszT=set
 
 // ---------- campaigns ----------
 function camp(c){const p=Math.min(100,Math.round(c.r/c.g*100));
- return `<div class="ccard"><img src="${c.img}" alt="" style="border-radius:9px;height:130px;width:100%;object-fit:cover;margin-bottom:12px">
+ // BORTTAGEN KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+ //return `<div class="ccard"><img src="${c.img}" alt="" style="border-radius:9px;height:130px;width:100%;object-fit:cover;margin-bottom:12px">
+ // NY KOD: bilden får sin storlek (width/height) och laddas först när man scrollar fram till den (punkt 23)
+ return `<div class="ccard"><img loading="lazy" src="${c.img}" alt="" style="border-radius:9px;height:130px;width:100%;object-fit:cover;margin-bottom:12px">
  <h4 class="disp">${c.n}</h4><p>${c.d}</p>
  <div class="prog"><div class="pl"><b>${c.r.toLocaleString("en-GB")} SEK</b><span>${p} % av ${c.g.toLocaleString("en-GB")} SEK</span></div>
  <div class="bar"><div class="fill" style="width:${p}%"></div></div></div>
@@ -1325,7 +1917,10 @@ var CAMPAIGN_SEG="campaign";
 var ROUTES={"hem": "/", "vad": "/what-we-do", "eng": "/get-involved", "om": "/about-us", "nyh": "/news-and-stories", "res": "/results", "press": "/press", "kon": "/contact", "stod": "/donate"};
 var TITLES={"hem": "Blue/Yellow Sweden — For and in Ukraine since 2014", "vad": "What We Do – Blue/Yellow Sweden", "eng": "Get Involved – Blue/Yellow Sweden", "om": "About Us – Blue/Yellow Sweden", "nyh": "Latest – Blue/Yellow Sweden", "res": "Results – Blue/Yellow Sweden", "press": "Press – Blue/Yellow Sweden", "kon": "Contact – Blue/Yellow Sweden", "stod": "Donate – Blue/Yellow Sweden"};
 var DESCS={"hem": "Since 2014 Blue/Yellow has stood side by side with those defending Ukraine's freedom.", "vad": "Drone systems, vehicles, optics, communications, protection and medical care – support turned into real capability.", "eng": "Become a monthly donor, volunteer, corporate partner or spread the word.", "om": "About Blue/Yellow Sweden: our model, history, board, team, documents and reports.", "nyh": "News, reports and stories from Blue/Yellow's work in Ukraine.", "res": "Delivered support since 2014 – category by category, in numbers.", "press": "Press contact and press material from Blue/Yellow Sweden.", "kon": "Contact Blue/Yellow Sweden.", "stod": "Donate via Swish or bank transfer. 95% of every krona reaches its destination."};
-var SUBSLUG={"om": {"dok": "documents-and-reports", "press": "press-and-media", "styr": "board", "team": "team", "modell": "our-model", "hist": "history"}, "stod": {"gava": "gift", "manad": "monthly", "kamp": "campaigns", "ftg": "corporate", "andra": "other-ways"}};
+// BORTTAGEN KOD: adresser saknades för de nya gåvosidorna
+//var SUBSLUG={"om": {"dok": "documents-and-reports", "press": "press-and-media", "styr": "board", "team": "team", "modell": "our-model", "hist": "history"}, "stod": {"gava": "gift", "manad": "monthly", "kamp": "campaigns", "ftg": "corporate", "andra": "other-ways"}};
+// NY KOD: adresser för de fem nya gåvosidorna (punkt 27)
+var SUBSLUG={"om": {"dok": "documents-and-reports", "press": "press-and-media", "styr": "board", "team": "team", "modell": "our-model", "hist": "history"}, "stod": {"gava": "gift", "minnesgava": "memorial-gift", "hogtidsgava": "celebration-gift", "testamente": "legacy-gift", "foretag": "corporate-partnership", "insamling": "start-a-campaign", "manad": "monthly", "kamp": "campaigns", "ftg": "corporate", "andra": "other-ways"}};
 function slugForSub(p,s){return (SUBSLUG[p]&&SUBSLUG[p][s])||s;}
 function subForSlug(p,sl){var m=SUBSLUG[p]||{};for(var k in m){if(m[k]===sl)return k;}return sl;}
 function urlFor(p,s){
@@ -1377,10 +1972,19 @@ function trackPageView(){
 }
 function render(p,s){
  document.querySelectorAll("main.page").forEach(function(m){m.classList.toggle("on",m.id===p);});
- document.querySelectorAll("nav.main button").forEach(function(b){b.classList.toggle("on",b.dataset.nav===p);});
+ // BORTTAGEN KOD: markeringen letade bara efter knappar i menyn (punkt 22)
+ //document.querySelectorAll("nav.main button").forEach(function(b){b.classList.toggle("on",b.dataset.nav===p);});
+ // NY KOD: markerar aktuell sida i menyn, nu när menyn består av länkar (punkt 22)
+ document.querySelectorAll("nav.main [data-nav]").forEach(function(b){b.classList.toggle("on",b.dataset.nav===p);});
  var mn=document.getElementById("mnav");if(mn)mn.classList.remove("open");
  window.scrollTo(0,0);
- if(p==="stod")s="gava";
+ // BORTTAGEN KOD: Donera visade alltid bara huvudsidan
+// if(p==="stod")s="gava";
+ // NY KOD: Donera kan nu även visa kampanjsidan
+ // BORTTAGEN KOD: tillät bara sidan kamp
+ //if(p==="stod"&&s!=="kamp")s="gava";
+ // NY KOD: alla gåvosidor kan visas, samma som på svenska sidan (punkt 27)
+ if(p==="stod"&&!s)s="gava";
  if(s)sub(p,s);
  initDonateBoxes();
 }
@@ -1396,8 +2000,12 @@ function go(p,s,skipPush){
 function sub(p,s){
  const m=document.getElementById(p);
  if(!m)return;
+ // NY KOD: okänd gåvosida visar huvudsidan, samma som på svenska sidan (punkt 27)
+ if(p==="stod"&&!m.querySelector('.pane[data-pane="'+s+'"]'))s="gava";
  m.querySelectorAll(".subnav [data-sub]").forEach(function(b){b.classList.toggle("on",b.dataset.sub===s);});
  m.querySelectorAll(".pane").forEach(function(pa){pa.style.display=(pa.dataset.pane===s)?"block":"none";});
+ // NY KOD: på gåvosidorna döljs Swish-rutan och sidan blir en spalt, samma som på svenska sidan (punkt 27)
+ if(p==="stod"){var as=m.querySelector(".donate-aside");if(as)as.style.display=(s==="gava")?"":"none";var g=m.querySelector(".donate-grid");if(g)g.classList.toggle("single",s!=="gava");}
 }
 (function(){
  function apply(){
@@ -1419,14 +2027,20 @@ function sub(p,s){
 </div>
 <script>
 const INFO={
- drone:{t:"Drone Systems",b:`<p>Reconnaissance, situational awareness, and countermeasures. Drone systems form the backbone of the modern battlefield and account for 70 to 80 percent of all support delivered by Blue/Yellow. They give units eyes in the sky, early warning, and the capacity to protect against hostile aircraft.</p><p>Over 12,000 systems have been delivered since 2014. All deliveries are defensive in nature, fully traceable, and signed off by the receiving unit.</p><p class="ex"><b>Examples:</b> Vampire heavy hexacopter, DJI Mavic 3T for reconnaissance, and fibre-guided Ptashka resistant to radio jamming.</p>`},
+ // BORTTAGEN KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent"
+ //drone:{t:"Drone Systems",b:`<p>Reconnaissance, situational awareness, and countermeasures. Drone systems form the backbone of the modern battlefield and account for 70 to 80 percent of all support delivered by Blue/Yellow. They give units eyes in the sky, early warning, and the capacity to protect against hostile aircraft.</p><p>Over 12,000 systems have been delivered since 2014. All deliveries are defensive in nature, fully traceable, and signed off by the receiving unit.</p><p class="ex"><b>Examples:</b> Vampire heavy hexacopter, DJI Mavic 3T for reconnaissance, and fibre-guided Ptashka resistant to radio jamming.</p>`},
+ // NY KOD: Ändrat från amerikansk till brittisk stavning: "percent" → "per cent"
+ drone:{t:"Drone Systems",b:`<p>Reconnaissance, situational awareness, and countermeasures. Drone systems form the backbone of the modern battlefield and account for 70 to 80 per cent of all support delivered by Blue/Yellow. They give units eyes in the sky, early warning, and the capacity to protect against hostile aircraft.</p><p>Over 12,000 systems have been delivered since 2014. All deliveries are defensive in nature, fully traceable, and signed off by the receiving unit.</p><p class="ex"><b>Examples:</b> Vampire heavy hexacopter, DJI Mavic 3T for reconnaissance, and fibre-guided Ptashka resistant to radio jamming.</p>`},
  fordon:{t:"Vehicles",b:`<p>Transport, evacuation, and logistics. Vehicles move materiel forward and the wounded back, often on roads where ordinary cars cannot operate. They represent the difference between a unit that can operate and one that cannot.</p><p>Pick-up trucks, freight vehicles, armoured ambulances, and passenger cars are procured in close proximity to the frontline and delivered directly to the units.</p><p class="ex"><b>Examples:</b> Toyota Hilux and Nissan Navara are among the most widely deployed and reliable platforms.</p>`},
  optik:{t:"Optics",b:`<p>Night vision and thermal technology. When combat does not pause in the darkness, optics determine who sees first. Thermal sights and night vision provides the unit with a decisive operational advantage.</p><p class="ex"><b>Examples:</b> Pulsar and Infiray thermal optics and PVS-31 night vision.</p>`},
  samband:{t:"Communications",b:`<p>Radio and connectivity that remain operational even under jamming. Robust communications bind together units, command, and medical services. Without secure communications, everything else stops.</p><p>Starlink terminals and encrypted radio provide communication in exposed environments where networks have been disabled.</p><p class="ex"><b>Examples:</b> The Motorola DP4801E is a recurring system in deliveries.</p>`},
  skydd:{t:"Protection",b:`<p>Personal protective equipment and emergency materiel. Helmets, body armour, and individual medical supplies determine who returns home. Straightforward, life-defining, and always in demand.</p><p class="ex"><b>Examples:</b> Body armour with ceramic plates, ballistic helmet, and individual trauma kit.</p>`},
   medical:{t:"Medical Care",b:`<p>Trauma care and acute medical treatment at the zero line. Care within the first minutes saves lives. Support reaches both the field and clinics in liberated areas.</p><p>Acute surgery capability, trauma equipment, and consumable materiel are delivered where the need is greatest.</p><p class="ex"><b>Examples:</b> Haemostatic dressings, field-portable trauma kits, and equipment for acute surgery.</p>`},
 
-  integritet:{t:"Privacy Policy",b:`<p><b>Blue / Yellow Sweden</b><br>Org.no: 802552-3724<br>Address: Nackagatan 4, 116 49 Stockholm<br>Contact: info@blue-yellow.se</p><h4 aria-level="3">1. Data Controller</h4><p>Blue / Yellow Sweden is the data controller for the processing of personal data on this website (.se). The English version is covered by the same controller, as it is operated by the same legal entity. Our .lt domain has its own separate data controller and is not covered by this policy.</p><h4 aria-level="3">2. Personal Data We Collect</h4><p>We only collect personal data necessary for our operations:</p><ul><li>Email address, when voluntarily registering for information or confirmation.</li><li>Email address and consent, when signing up for newsletters.</li></ul><p>We do not collect names, phone numbers, addresses, payment details or donation amounts via the website. We have no login, no account, no contact form and no chat function.</p><h4 aria-level="3">3. Payments</h4><p>Donation payments take place outside the website, via Swish or bank transfer. We do not receive or store card details, transaction data or payment confirmations on the website.</p><h4 aria-level="3">4. Why We Process Personal Data</h4><ul><li>To send newsletters to those who have signed up and given consent.</li><li>To send confirmations or information to those who have voluntarily registered their email address.</li><li>To ensure the website functions technically.</li></ul><h4 aria-level="3">5. Legal Basis</h4><p>Processing of email addresses for newsletters is based on your consent. Processing of email addresses for voluntary registration for information is also based on consent, as the information is entirely voluntary and not required to use the website.</p><h4 aria-level="3">6. How Long We Keep Data</h4><p>We keep your email address as long as you are subscribed to the newsletter or as long as it is relevant for the information you registered for. If you unsubscribe or withdraw your consent, we will delete the data without undue delay.</p><h4 aria-level="3">7. Who Can Access the Data</h4><p>We do not share personal data with third parties for marketing purposes. Data may be processed by our technical providers who help us operate the website and send emails:</p><ul><li>Lovable – web hosting/platform for the website.</li><li>Resend – provider for sending emails.</li></ul><p>These providers may only process data in accordance with our instructions and for the purposes stated in this policy.</p><h4 aria-level="3">8. Where Data Is Processed</h4><p>Our starting point is that personal data is primarily processed within the EU/EEA. If any of our providers processes data outside the EU/EEA, this will only occur if there are approved safeguards under applicable data protection rules.</p><h4 aria-level="3">9. Google Analytics and Future Tools</h4><p>We currently do not use any analytics service such as Google Analytics or any marketing pixel. If such tools are activated in the future, they will only be loaded after you have given your consent via our cookie solution.</p><h4 aria-level="3">10. Your Rights</h4><ul><li>Receive information about what personal data we process about you.</li><li>Request correction of inaccurate data.</li><li>Request deletion of your data.</li><li>Withdraw your consent at any time.</li><li>Object to processing based on consent.</li><li>Lodge a complaint with the supervisory authority.</li></ul><h4 aria-level="3">11. Contact</h4><p>If you have questions about this policy or wish to exercise your rights, please contact us at info@blue-yellow.se.</p>`},
+  // BORTTAGEN KOD: Konsekvent stavningsändring: "Blue / Yellow" → "Blue/Yellow"
+  //integritet:{t:"Privacy Policy",b:`<p><b>Blue / Yellow Sweden</b><br>Org.no: 802552-3724<br>Address: Nackagatan 4, 116 49 Stockholm<br>Contact: info@blue-yellow.se</p><h4 aria-level="3">1. Data Controller</h4><p>Blue / Yellow Sweden is the data controller for the processing of personal data on this website (.se). The English version is covered by the same controller, as it is operated by the same legal entity. Our .lt domain has its own separate data controller and is not covered by this policy.</p><h4 aria-level="3">2. Personal Data We Collect</h4><p>We only collect personal data necessary for our operations:</p><ul><li>Email address, when voluntarily registering for information or confirmation.</li><li>Email address and consent, when signing up for newsletters.</li></ul><p>We do not collect names, phone numbers, addresses, payment details or donation amounts via the website. We have no login, no account, no contact form and no chat function.</p><h4 aria-level="3">3. Payments</h4><p>Donation payments take place outside the website, via Swish or bank transfer. We do not receive or store card details, transaction data or payment confirmations on the website.</p><h4 aria-level="3">4. Why We Process Personal Data</h4><ul><li>To send newsletters to those who have signed up and given consent.</li><li>To send confirmations or information to those who have voluntarily registered their email address.</li><li>To ensure the website functions technically.</li></ul><h4 aria-level="3">5. Legal Basis</h4><p>Processing of email addresses for newsletters is based on your consent. Processing of email addresses for voluntary registration for information is also based on consent, as the information is entirely voluntary and not required to use the website.</p><h4 aria-level="3">6. How Long We Keep Data</h4><p>We keep your email address as long as you are subscribed to the newsletter or as long as it is relevant for the information you registered for. If you unsubscribe or withdraw your consent, we will delete the data without undue delay.</p><h4 aria-level="3">7. Who Can Access the Data</h4><p>We do not share personal data with third parties for marketing purposes. Data may be processed by our technical providers who help us operate the website and send emails:</p><ul><li>Lovable – web hosting/platform for the website.</li><li>Resend – provider for sending emails.</li></ul><p>These providers may only process data in accordance with our instructions and for the purposes stated in this policy.</p><h4 aria-level="3">8. Where Data Is Processed</h4><p>Our starting point is that personal data is primarily processed within the EU/EEA. If any of our providers processes data outside the EU/EEA, this will only occur if there are approved safeguards under applicable data protection rules.</p><h4 aria-level="3">9. Google Analytics and Future Tools</h4><p>We currently do not use any analytics service such as Google Analytics or any marketing pixel. If such tools are activated in the future, they will only be loaded after you have given your consent via our cookie solution.</p><h4 aria-level="3">10. Your Rights</h4><ul><li>Receive information about what personal data we process about you.</li><li>Request correction of inaccurate data.</li><li>Request deletion of your data.</li><li>Withdraw your consent at any time.</li><li>Object to processing based on consent.</li><li>Lodge a complaint with the supervisory authority.</li></ul><h4 aria-level="3">11. Contact</h4><p>If you have questions about this policy or wish to exercise your rights, please contact us at info@blue-yellow.se.</p>`},
+  // NY KOD: Konsekvent stavningsändring: "Blue / Yellow" → "Blue/Yellow"
+  integritet:{t:"Privacy Policy",b:`<p><b>Blue/Yellow Sweden</b><br>Org.no: 802552-3724<br>Address: Nackagatan 4, 116 49 Stockholm<br>Contact: info@blue-yellow.se</p><h4 aria-level="3">1. Data Controller</h4><p>Blue/Yellow Sweden is the data controller for the processing of personal data on this website (.se). The English version is covered by the same controller, as it is operated by the same legal entity. Our .lt domain has its own separate data controller and is not covered by this policy.</p><h4 aria-level="3">2. Personal Data We Collect</h4><p>We only collect personal data necessary for our operations:</p><ul><li>Email address, when voluntarily registering for information or confirmation.</li><li>Email address and consent, when signing up for newsletters.</li></ul><p>We do not collect names, phone numbers, addresses, payment details or donation amounts via the website. We have no login, no account, no contact form and no chat function.</p><h4 aria-level="3">3. Payments</h4><p>Donation payments take place outside the website, via Swish or bank transfer. We do not receive or store card details, transaction data or payment confirmations on the website.</p><h4 aria-level="3">4. Why We Process Personal Data</h4><ul><li>To send newsletters to those who have signed up and given consent.</li><li>To send confirmations or information to those who have voluntarily registered their email address.</li><li>To ensure the website functions technically.</li></ul><h4 aria-level="3">5. Legal Basis</h4><p>Processing of email addresses for newsletters is based on your consent. Processing of email addresses for voluntary registration for information is also based on consent, as the information is entirely voluntary and not required to use the website.</p><h4 aria-level="3">6. How Long We Keep Data</h4><p>We keep your email address as long as you are subscribed to the newsletter or as long as it is relevant for the information you registered for. If you unsubscribe or withdraw your consent, we will delete the data without undue delay.</p><h4 aria-level="3">7. Who Can Access the Data</h4><p>We do not share personal data with third parties for marketing purposes. Data may be processed by our technical providers who help us operate the website and send emails:</p><ul><li>Lovable – web hosting/platform for the website.</li><li>Resend – provider for sending emails.</li></ul><p>These providers may only process data in accordance with our instructions and for the purposes stated in this policy.</p><h4 aria-level="3">8. Where Data Is Processed</h4><p>Our starting point is that personal data is primarily processed within the EU/EEA. If any of our providers processes data outside the EU/EEA, this will only occur if there are approved safeguards under applicable data protection rules.</p><h4 aria-level="3">9. Google Analytics and Future Tools</h4><p>We currently do not use any analytics service such as Google Analytics or any marketing pixel. If such tools are activated in the future, they will only be loaded after you have given your consent via our cookie solution.</p><h4 aria-level="3">10. Your Rights</h4><ul><li>Receive information about what personal data we process about you.</li><li>Request correction of inaccurate data.</li><li>Request deletion of your data.</li><li>Withdraw your consent at any time.</li><li>Object to processing based on consent.</li><li>Lodge a complaint with the supervisory authority.</li></ul><h4 aria-level="3">11. Contact</h4><p>If you have questions about this policy or wish to exercise your rights, please contact us at info@blue-yellow.se.</p>`},
   cookies:{t:"Cookies and Consent",b:`<h4 aria-level="3">1. Current Status</h4><p>The website currently does not use cookies for analytics, marketing or tracking. Only technically necessary functions, if required by the platform, may occur.</p><h4 aria-level="3">2. Categories of Cookies</h4><p><b>Necessary Cookies</b><br>Required for the website to function technically. May be used without consent as they are strictly necessary.</p><p><b>Analytics Cookies</b><br>Used to understand how visitors use the website, for example via Google Analytics. Not currently used. Will require consent before being activated.</p><p><b>Marketing Cookies</b><br>Used for targeted communication or campaign follow-up. Not currently used. Will require consent before being activated.</p><h4 aria-level="3">3. Consent</h4><p>If and when analytics or marketing cookies are activated, a consent banner will be displayed with three clear choices:</p><ul><li>Accept all</li><li>Only necessary</li><li>Customise settings</li></ul><p>No checkboxes for non-necessary cookies will be pre-selected. It must be as easy to decline as to accept.</p><h4 aria-level="3">4. Change Your Choice</h4><p>You will be able to change or withdraw your consent at any time via a cookie settings link on the website, as soon as such a solution is implemented.</p><h4 aria-level="3">5. Cookies Not Yet Active</h4><p>This text will be updated when new tools such as Google Analytics or other third-party solutions are put into operation, so that the cookie list always reflects what is actually used.</p>`},
   gdpr:{t:"GDPR and Data within the EU",b:`<h4 aria-level="3">1. Legal Framework</h4><p>We process personal data in accordance with the EU General Data Protection Regulation (GDPR) and supplementary Swedish data protection legislation.</p><h4 aria-level="3">2. Where Data Is Processed</h4><p>Our starting point is that personal data is primarily processed within the EU/EEA through our providers.</p><h4 aria-level="3">3. Transfer Outside the EU/EEA</h4><p>If personal data is in any case processed outside the EU/EEA, this will only occur if there are adequate safeguards, such as standard contractual clauses approved under EU law.</p><h4 aria-level="3">4. Providers and Sub-processors</h4><ul><li>Lovable, for operation of the website.</li><li>Resend, for sending emails.</li></ul><p>These providers process data in accordance with our instructions and only for the purposes described in our privacy policy.</p><h4 aria-level="3">5. Separate Legal Entities</h4><p>Our .se domain and our .lt domain are operated by separate legal entities with separate data controllers. This text applies only to the .se domain and the English version of the same site.</p><h4 aria-level="3">6. Your Rights under GDPR</h4><p>You have the same rights regardless of where in the EU/EEA your data is processed: right to information, rectification, erasure, restriction, objection and the right to lodge a complaint with the supervisory authority.</p>`}
 };
@@ -1556,6 +2170,112 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeInfo();
     else{window.byConsent.save(document.getElementById('bycc-stats').checked,document.getElementById('bycc-mkt').checked);close();}
   };
   if(!window.byConsent.get())box.classList.add('open');
+})();
+</script>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: liten kopiera-ikon efter varje mejladress. Ett klick kopierar adressen (som Ctrl+C).
+     Läggs till automatiskt, även i rutor och text som visas senare (till exempel Integritetspolicy). -->
+<style>
+.by-copy{display:inline-flex;align-items:center;justify-content:center;width:1.5em;height:1.5em;margin-left:.2em;padding:0;border:0;border-radius:4px;background:none;color:inherit;opacity:.5;cursor:pointer;vertical-align:-.3em;position:relative;font:inherit}
+.by-copy:hover,.by-copy:focus-visible{opacity:1;background:rgba(127,127,127,.15)}
+.by-copy svg{width:.95em;height:.95em}
+.by-copy.done{opacity:1}
+.by-copy.done::after{content:attr(data-done);position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#00185C;color:#fff;font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;white-space:nowrap;pointer-events:none}
+</style>
+<script>
+(function(){
+  var EN=(document.documentElement.lang||'').indexOf('en')===0;
+  var TXT_COPY=EN?'Copy email address':'Kopiera mejladressen', TXT_DONE=EN?'Copied!':'Kopierad!';
+  var RE=/[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/g;
+  var ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+  // Här läggs ingen ikon: formulärens felmeddelanden, cookie-rutan och sådant som inte är vanlig text.
+  var SKIP='script,style,textarea,input,select,button,svg,.by-copy,.vol-err,[id$="-status"],#bycc';
+  function copy(text,btn){
+    function ok(){btn.classList.add('done');clearTimeout(btn._t);btn._t=setTimeout(function(){btn.classList.remove('done');},1500);}
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback);}else{fallback();}
+    function fallback(){var t=document.createElement('textarea');t.value=text;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';
+      document.body.appendChild(t);t.select();try{document.execCommand('copy');ok();}catch(e){}t.remove();}
+  }
+  function makeBtn(email){
+    var b=document.createElement('button');b.type='button';b.className='by-copy';b.innerHTML=ICON;
+    b.title=TXT_COPY;b.setAttribute('aria-label',TXT_COPY+' '+email);b.setAttribute('data-done',TXT_DONE);
+    b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();copy(email,b);});
+    return b;
+  }
+  function hasBtn(node){var n=node.nextSibling;return n&&n.nodeType===1&&n.classList.contains('by-copy');}
+  function scan(root){
+    // 1) Länkar av typen mailto: ikonen hamnar efter länken.
+    root.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+      if(a.closest(SKIP)||hasBtn(a))return;
+      var email=decodeURIComponent(a.getAttribute('href').slice(7).split('?')[0]);
+      if(email)a.after(makeBtn(email));
+    });
+    // 2) Mejladresser som står som vanlig text.
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),list=[],n;
+    while((n=w.nextNode())){
+      RE.lastIndex=0;
+      if(!RE.test(n.nodeValue)||hasBtn(n))continue;
+      var p=n.parentElement;
+      if(!p||p.closest(SKIP)||p.closest('a[href^="mailto:"]'))continue;
+      list.push(n);
+    }
+    list.forEach(function(node){
+      var text=node.nodeValue,frag=document.createDocumentFragment(),last=0,m;RE.lastIndex=0;
+      while((m=RE.exec(text))){
+        frag.appendChild(document.createTextNode(text.slice(last,m.index+m[0].length)));
+        frag.appendChild(makeBtn(m[0]));last=m.index+m[0].length;
+      }
+      frag.appendChild(document.createTextNode(text.slice(last)));
+      node.replaceWith(frag);
+    });
+  }
+  var queued=false;
+  function run(){queued=false;scan(document.body);}
+  run();
+  // Text som visas senare (rutor, nyheter, dokumentlistor) får också ikonen.
+  new MutationObserver(function(){if(!queued){queued=true;requestAnimationFrame(run);}})
+    .observe(document.body,{childList:true,subtree:true});
+})();
+</script>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: menyns och sidfotens länkar (punkt 22). Vanligt klick byter sida som förut; Ctrl/Cmd/Skift-klick och mittenklick öppnar i ny flik. -->
+<style>
+nav.main a{padding:12px 10px;border-radius:8px;color:#fff;font-weight:600;font-size:15.4px;white-space:nowrap;text-decoration:none;text-align:center}
+nav.main a.on{background:var(--yellow);color:var(--navy)}
+</style>
+<script>
+function navClick(e,p,s){if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button)return true;go(p,s);return false;}
+</script>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: bilder med width/height behåller sin vanliga form (punkt 23) -->
+<style>:where(img[width][height]){height:auto}</style>
+<!-- SLUT NY KOD -->
+<!-- NY KOD: skickar formuläret Start your fundraiser, samma som på svenska sidan men med engelska meddelanden (punkt 27) -->
+<script>
+(function(){
+ var f=document.getElementById("insForm");if(!f)return;
+ var imgIn=document.getElementById("insImage"),imgPv=document.getElementById("insImagePreview"),imgData=null;
+ imgIn.addEventListener("change",function(){
+  var st=document.getElementById("insStatus");imgData=null;imgPv.style.display="none";st.style.display="none";
+  var file=imgIn.files&&imgIn.files[0];if(!file)return;
+  if(!/^image\/(jpeg|png)$/.test(file.type)||file.size>5*1024*1024){imgIn.value="";st.style.display="block";st.style.color="#B00020";st.textContent="The image must be a JPG or PNG of no more than 5 MB.";return;}
+  var rd=new FileReader();rd.onload=function(){imgData=rd.result;imgPv.src=imgData;imgPv.style.display="block";};rd.readAsDataURL(file);
+ });
+ f.addEventListener("submit",async function(e){
+  e.preventDefault();
+  var st=document.getElementById("insStatus");
+  var btn=f.querySelector('button[type="submit"]');
+  var fd=new FormData(f);
+  var payload={creatorName:String(fd.get("creatorName")||"").trim(),creatorEmail:String(fd.get("creatorEmail")||"").trim(),creatorPhone:String(fd.get("creatorPhone")||"").trim(),name:String(fd.get("name")||"").trim(),goalAmount:parseInt(String(fd.get("goalAmount")||""),10),description:String(fd.get("description")||"").trim()||undefined,image:imgData||undefined};
+  if(!payload.creatorName||!payload.creatorEmail||!payload.creatorPhone||!payload.name||!(payload.goalAmount>0)){st.style.display="block";st.style.color="#B00020";st.textContent="Please fill in all required fields.";return;}
+  btn.disabled=true;btn.style.opacity=.6;st.style.display="block";st.style.color="var(--navy)";st.textContent="Sending…";
+  try{
+   var r=await fetch("/api/public/campaign-signup",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+   if(!r.ok)throw new Error("bad");
+   f.style.display="none";
+   document.getElementById("insThanks").style.display="block";
+  }catch(err){st.style.color="#B00020";st.textContent="Something went wrong. Please try again or email info@blue-yellow.se.";btn.disabled=false;btn.style.opacity=1;}
+ });
 })();
 </script>
 <!-- SLUT NY KOD -->
